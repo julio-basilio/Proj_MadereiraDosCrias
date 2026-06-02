@@ -1,0 +1,56 @@
+body{
+    color:#dcba60 ;
+    background-color: #6183db;
+}
+
+img{
+    width: 40%;
+    height:40%;
+    position: relative;
+    top: 10px;
+    left: 30%;
+    border-radius: 50%;
+
+
+}
+#paragrafo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75px;
+    position: relative;
+    top: -15px;
+    left: 525px;
+}
+
+#memoria{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 52px;
+    position: relative;
+    bottom: 100px;
+    left: 590px;
+}
+
+#frase{
+    font-family:monospace;
+    color: #ffffff;
+    font-size: 27px;
+    position: relative;
+    bottom: 100px;
+    left: 500px;
+}
+
+#aspas1{
+    color: #c861db;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150px;
+    position: relative;
+    bottom: 425px;
+    left: 425px;
+}
+#aspas2{
+    color: #c861db;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 150px;
+    position: relative;
+    bottom: 725px;
+    left: 1100px;
+}
