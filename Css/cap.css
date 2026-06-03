@@ -1,0 +1,182 @@
+/* ==========================================================================
+   Configurações Globais (Tema Capitão Pátria - Edição Suprema)
+   ========================================================================== */
+:root {
+    /* Paleta Oficial Vought */
+    --azul-uniforme: #0a192f;
+    --azul-claro: #172a45;
+    --vermelho-capa: #991b1b;
+    --vermelho-laser: #ff0000;
+    --dourado-aguia: #d4af37;
+    --dourado-brilho: #f59e0b;
+    --branco-puro: #ffffff;
+    
+    /* Efeitos de Energia e Iluminação */
+    --sombra-dourada: 0 0 35px rgba(212, 175, 55, 0.25);
+    --sombra-laser: 0 0 50px rgba(255, 0, 0, 0.65);
+    --transition-impacto: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reset de Margens e Suavização de Fontes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Layout Base (Ambiente de Arena/Cinema)
+   ========================================================================== */
+body {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    /* Triplo gradiente para simular fumaça de arena e holofotes de palco */
+    background: 
+        radial-gradient(circle at 50% 20%, rgba(23, 42, 69, 0.6) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(153, 27, 27, 0.15) 0%, transparent 50%),
+        linear-gradient(135deg, #020617 0%, var(--azul-uniforme) 100%);
+    background-attachment: fixed;
+    min-height: 100dvh; /* Altura dinâmica para mobile moderno */
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* A faixa superior patriótica estilizada */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, 
+        var(--vermelho-capa) 0%, 
+        var(--branco-puro) 25%, 
+        var(--azul-claro) 50%, 
+        var(--dourado-aguia) 75%, 
+        var(--vermelho-capa) 100%
+    );
+    box-shadow: 0 2px 25px rgba(212, 175, 55, 0.35);
+    z-index: 10;
+}
+
+/* ==========================================================================
+   Container Principal (Vought Command Card)
+   ========================================================================== */
+.capitao-container {
+    background: linear-gradient(145deg, rgba(23, 42, 69, 0.4) 0%, rgba(10, 25, 47, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 55px 40px;
+    border-radius: 32px;
+    border: 2px solid var(--dourado-aguia);
+    box-shadow: var(--sombra-dourada), inset 0 0 30px rgba(23, 42, 69, 0.6);
+    text-align: center;
+    max-width: 440px;
+    width: 100%;
+    will-change: transform, opacity;
+    animation: entrarEsmagando 0.9s var(--transition-impacto) forwards;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Efeito de fúria/laser ativo ao passar o mouse no container */
+.capitao-container:hover {
+    border-color: var(--vermelho-laser);
+    box-shadow: var(--sombra-laser), inset 0 0 40px rgba(153, 27, 27, 0.5);
+}
+
+/* ==========================================================================
+   Componentes Visuais
+   ========================================================================== */
+
+/* Moldura Blindada da Imagem */
+.moldura-imagem {
+    position: relative;
+    width: 210px;
+    height: 210px;
+    margin: 0 auto 38px auto;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--dourado-aguia) 0%, var(--vermelho-capa) 50%, var(--dourado-brilho) 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+    transition: transform 0.5s var(--transition-impacto), box-shadow 0.5s ease;
+}
+
+.moldura-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    background-color: #e4643b; /* Mantido para casar com o fundo nativo do seu webp */
+    border-radius: 50%;
+    border: 4px solid var(--azul-uniforme);
+    display: block;
+    transition: filter 0.4s ease;
+}
+
+/* Interação com a Imagem (Olhos Laser Ativando) */
+.capitao-container:hover .moldura-imagem {
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 0 45px var(--vermelho-laser);
+    background: linear-gradient(135deg, var(--vermelho-laser), #000000, var(--vermelho-laser));
+}
+
+.capitao-container:hover .moldura-imagem img {
+    filter: saturate(1.4) contrast(1.15) drop-shadow(0 0 12px rgba(255, 0, 0, 0.6));
+}
+
+/* O Título Patriótico de Alto Impacto */
+h1 {
+    font-size: clamp(3rem, 8vw, 4.5rem);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 0.95;
+    
+    /* Efeito de Texto Metálico Cromado (Dourado de Alta Definição) */
+    background: linear-gradient(to bottom, 
+        #ffffff 0%, 
+        #fef08a 40%, 
+        var(--dourado-aguia) 60%, 
+        #a16207 100%
+    );
+    -webkit-background-clip: text; 
+    background-clip: text; /* Correção do Aviso de Validação do Editor */
+    -webkit-text-fill-color: transparent;
+    
+    /* Sombras 3D agressivas projetadas para frente */
+    filter: drop-shadow(4px 4px 0px var(--vermelho-capa))
+            drop-shadow(-1px -1px 0px rgba(0, 0, 0, 0.9));
+            
+    animation: presencaAmeacadora 3s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   Animações de Alta Performance
+   ========================================================================== */
+
+/* Simula o Capitão Pátria aterrissando com força violenta na tela */
+@keyframes entrarEsmagando {
+    0% {
+        opacity: 0;
+        transform: scale(1.25) translateY(-80px);
+        filter: blur(12px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+        filter: blur(0);
+    }
+}
+
+/* Pulsação de ego/poder constante na tipografia */
+@keyframes presencaAmeacadora {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}

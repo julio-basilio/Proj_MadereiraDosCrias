@@ -1,0 +1,255 @@
+/* ==========================================================================
+   Tokens de Design Avançados (Variáveis)
+   ========================================================================== */
+:root {
+    /* Paleta Cromática - Light Mode (Inspirado em Tailwind Slate/Emerald/Rose) */
+    --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    --bg-card: rgba(255, 255, 255, 0.85);
+    --border-card: rgba(255, 255, 255, 0.6);
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    
+    /* Cores Semânticas */
+    --color-neutral: #e2e8f0;
+    --color-neutral-text: #334155;
+    --color-success: #10b981;
+    --color-success-glow: rgba(16, 185, 129, 0.35);
+    --color-danger: #f43f5e;
+    --color-danger-glow: rgba(244, 63, 94, 0.35);
+    
+    /* Efeitos de Iluminação e Profundidade */
+    --shadow-card: 
+        0 0 0 1px rgba(0, 0, 0, 0.03),
+        0 10px 30px -10px rgba(0, 0, 0, 0.08),
+        0 20px 40px -15px rgba(0, 0, 0, 0.05);
+    --shadow-btn-hover: 0 10px 20px -6px;
+    
+    /* Curvas de Transição Fluida */
+    --font-dynamic: clamp(1.4rem, 4vw + 0.5rem, 1.75rem);
+    --ease-elastic: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Suporte Nativo e Fluido ao Modo Escuro */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-gradient: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+        --bg-card: rgba(30, 41, 59, 0.7);
+        --border-card: rgba(255, 255, 255, 0.05);
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        
+        --color-neutral: #334155;
+        --color-neutral-text: #f1f5f9;
+        --color-success-glow: rgba(16, 185, 129, 0.2);
+        --color-danger-glow: rgba(244, 63, 94, 0.2);
+        
+        --shadow-card: 
+            0 0 0 1px rgba(255, 255, 255, 0.05),
+            0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ==========================================================================
+   Reset e Otimizações de Renderização
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent; /* Remove flash azul no mobile */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-main);
+    min-height: 100dvh; /* Suporte a telas mobile modernas */
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   Arquitetura do Layout (Containers)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 420px;
+    perspective: 1000px; /* Prepara o espaço para micro-interações 3D */
+    animation: entranceRender 0.8s var(--ease-out-expo) forwards;
+}
+
+/* Glassmorphic Card */
+.card-form {
+    background-color: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-card);
+    padding: 48px 32px;
+    border-radius: 28px;
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   Elementos de UI
+   ========================================================================== */
+.logo {
+    max-width: 110px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s var(--ease-elastic);
+}
+
+.logo:hover {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+h1 {
+    font-size: var(--font-dynamic);
+    font-weight: 850; /* Peso ultra-bold para visual moderno */
+    letter-spacing: -0.04em;
+    color: var(--text-main);
+    margin-bottom: 36px;
+    line-height: 1.25;
+}
+
+.botoes-container {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Botões Modernos (<button> ou input) */
+button, 
+input[type="button"] {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 28px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    border-radius: 14px;
+    cursor: pointer;
+    flex: 1;
+    max-width: 160px;
+    user-select: none;
+    position: relative;
+    overflow: hidden;
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease, 
+        transform 0.4s var(--ease-elastic), 
+        box-shadow 0.3s ease;
+}
+
+/* Acessibilidade por Teclado */
+button:focus-visible,
+input[type="button"]:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 3px;
+}
+
+/* --- Estilização Dinâmica: Botão NÃO --- */
+#botaoNao {
+    background-color: var(--color-neutral);
+    color: var(--color-neutral-text);
+}
+
+#botaoNao:hover {
+    background-color: var(--color-success);
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-btn-hover) var(--color-success-glow);
+    animation: subtleShake 0.4s ease-in-out; /* Dá um leve susto ao passar o mouse */
+}
+
+/* --- Estilização Dinâmica: Botão SIM --- */
+#botaoSim {
+    background-color: var(--color-success);
+    color: #ffffff;
+    /* Pulsa levemente para induzir visualmente o clique positivo */
+    animation: pulseAttraction 2s infinite ease-in-out;
+}
+
+#botaoSim:hover {
+    animation: none; /* Para de pulsar no hover */
+    background-color: var(--color-danger);
+    color: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-btn-hover) var(--color-danger-glow);
+}
+
+/* Clique Físico Profundo */
+button:active,
+input[type="button"]:active {
+    transform: translateY(-1px) scale(0.94);
+}
+
+/* --- Resposta do JavaScript --- */
+#Resposta {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* Classe utilitária para disparar via JS quando a resposta aparecer */
+.feedback-active {
+    animation: popInResponse 0.4s var(--ease-elastic) forwards;
+}
+
+/* ==========================================================================
+   Animações de Alta Performance (Uso de Transform e Opacity)
+   ========================================================================== */
+@keyframes entranceRender {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes pulseAttraction {
+    0%, 100% { box-shadow: 0 0 0 0 var(--color-success-glow); }
+    50% { box-shadow: 0 0 0 12px transparent; }
+}
+
+@keyframes subtleShake {
+    0%, 100% { transform: translateY(-6px) translateX(0); }
+    25% { transform: translateY(-6px) translateX(-4px); }
+    75% { transform: translateY(-6px) translateX(4px); }
+}
+
+@keyframes popInResponse {
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
