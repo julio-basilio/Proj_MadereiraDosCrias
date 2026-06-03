@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Configurações Globais e Variáveis
+   ========================================================================== */
+:root {
+    --bg-primary: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    
+    /* Cores dos Botões */
+    --color-neutral: #e2e8f0;
+    --color-neutral-hover: #cbd5e1;
+    --color-success: #10b981;
+    --color-success-hover: #059669;
+    --color-danger: #ef4444;
+    --color-danger-hover: #dc2626;
+    
+    /* Sombras e Animações */
+    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05);
+    --shadow-lg: 0 10px 25px -5px rgb(0 0 0 / 0.05), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+    --transition-fast: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* ==========================================================================
+   Layout Base
+   ========================================================================== */
+body {
+    background-color: var(--bg-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+/* Container de animação suave de entrada */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 420px;
+    animation: fadeIn 0.6s var(--transition-fast);
+}
+
+/* ==========================================================================
+   Componentes
+   ========================================================================== */
+
+/* Imagem / Logo */
+.logo {
+    max-width: 140px;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s var(--transition-fast);
+}
+
+.logo:hover {
+    transform: scale(1.03);
+}
+
+/* Card do Formulário */
+.card-form {
+    background-color: var(--bg-card);
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 24px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+h1 {
+    color: var(--text-main);
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+}
+
+/* Agrupamento dos Botões */
+.botoes-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Estilo Base dos Botões */
+input[type="button"] {
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1; /* Faz os botões dividirem o espaço igualmente */
+    max-width: 140px;
+    transition: background-color 0.2s var(--transition-fast), 
+                transform 0.2s var(--transition-fast), 
+                box-shadow 0.2s var(--transition-fast);
+}
+
+input[type="button"]:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* --- Botão NÃO --- */
+#botaoNao {
+    background-color: var(--color-neutral);
+    color: var(--text-main);
+}
+
+/* Hover do Não: Fica VERDE */
+#botaoNao:hover {
+    background-color: var(--color-success);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+}
+
+/* --- Botão SIM --- */
+#botaoSim {
+    background-color: var(--color-success);
+    color: #ffffff;
+}
+
+/* Hover do Sim: Fica VERMELHO */
+#botaoSim:hover {
+    background-color: var(--color-danger);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3);
+}
+
+/* Efeito de clique físico em ambos */
+input[type="button"]:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* --- Container de Resposta do JavaScript --- */
+#Resposta {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-main);
+    text-align: center;
+    min-height: 30px;
+    margin-top: 8px;
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   Animações
+   ========================================================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

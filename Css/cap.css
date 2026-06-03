@@ -1,0 +1,128 @@
+/* ==========================================================================
+   Configurações Globais (Tema Capitão Pátria)
+   ========================================================================== */
+:root {
+    --azul-uniforme: #0d2346;
+    --azul-claro: #1a3a6d;
+    --vermelho-capa: #b91c1c;
+    --dourado-aguia: #d4af37;
+    --dourado-brilho: #f39c12;
+    --branco-puro: #ffffff;
+    
+    --sombra-dourada: 0 0 25px rgba(212, 175, 55, 0.4);
+    --transition-suave: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+/* ==========================================================================
+   Layout Base (Fundo Temático)
+   ========================================================================== */
+body {
+    background: linear-gradient(135deg, #050b14 0%, var(--azul-uniforme) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, var(--vermelho-capa), var(--dourado-aguia), var(--vermelho-capa));
+}
+
+/* ==========================================================================
+   Container Principal
+   ========================================================================== */
+.capitao-container {
+    background: rgba(26, 58, 109, 0.2);
+    padding: 40px;
+    border-radius: 24px;
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--dourado-aguia);
+    box-shadow: var(--sombra-dourada), inset 0 0 20px rgba(26, 58, 109, 0.5);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    animation: surgir 0.8s var(--transition-suave);
+}
+
+/* ==========================================================================
+   Componentes Visual
+   ========================================================================== */
+
+.moldura-imagem {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 30px auto;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, var(--dourado-aguia), var(--vermelho-capa), var(--dourado-brilho));
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    transition: transform 0.4s var(--transition-suave);
+}
+
+/* ALTERAÇÃO AQUI: Mudamos para 'contain' e adicionamos uma cor de fundo interna */
+.moldura-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    background-color: #e4643b; /* Cor idêntica ao fundo da sua imagem para sumir com as bordas vazias */
+    border-radius: 50%;
+    border: 4px solid var(--azul-uniforme);
+    display: block;
+}
+
+.moldura-imagem:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px var(--dourado-brilho);
+}
+
+h1 {
+    color: var(--branco-puro);
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px var(--vermelho-capa), 
+                 -1px -1px 0px var(--dourado-aguia),
+                 0px 0px 20px rgba(255, 255, 255, 0.4);
+    animation: pulsarTexto 2s infinite ease-in-out;
+}
+
+/* ==========================================================================
+   Animações
+   ========================================================================== */
+@keyframes surgir {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes pulsarTexto {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+        color: #f8fafc;
+    }
+}
