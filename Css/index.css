@@ -14,10 +14,6 @@
             --color-light: #EAE4DD;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             color: var(--color-text);
@@ -26,7 +22,15 @@
         }
 
         /* ==================== HEADER & NAVBAR ==================== */
+
+        .container {
+            background-color: #3B2618;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+        }
         header {
+            grid-area: header;
             position: fixed;
             top: 0;
             left: 0;
