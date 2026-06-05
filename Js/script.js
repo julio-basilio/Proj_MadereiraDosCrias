@@ -30,4 +30,8 @@ document.addEventListener('keydown', (tecla) => { // O caractere '{' deve vir AN
         window.location.href = "super.php";
         historicoTeclas = '';
     }
-}); // O caractere '}' fecha a função aqui dentro do parêntese
+});
+
+
+
+

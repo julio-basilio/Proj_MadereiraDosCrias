@@ -17,10 +17,10 @@
 
         <div id="retangulo"></div>
         <div id="outraspaginas" >
-            <p id="pg" > <a href="">PÁGINA INICIAL</a></p>
-            <p id="produtos" ><a href="">PRODUTOS</a> </p>
-            <p id="contatos" > <a href="">CONTATO</a></p>
-            <p id="orcamento" ><a href="">ORÇAMENTOS</a> </p>
+            <p id="pg" > <a href="" class="textHeader" >PÁGINA INICIAL</a></p>
+            <p id="produtos" ><a href="" class="textHeader" >PRODUTOS</a> </p>
+            <p id="contatos" > <a href="" class="textHeader" >CONTATO</a></p>
+            <p id="orcamento" ><a href="" class="textHeader" >ORÇAMENTOS</a> </p>
         </div>
         <img id="carrinho" src="Img/Carrinho.png" alt="Carrinho">
     </header>
@@ -72,7 +72,7 @@
         <img src="Img/YouTube_full-color_icon_(2017).svg.png" alt="imagem logo Youtube">
         <img src="Img/Instagram_icon.png" alt="imagem logo Instagram">
 
-        <img src="Img/Logo Triple T.png" alt="Logo Triple T, Sahur">
+        <img id="logoTTT" src="Img/Logo Triple T.png" alt="Logo Triple T, Sahur">
         <p>© 2025 Madereira Sahur</p>
 
     </footer>
