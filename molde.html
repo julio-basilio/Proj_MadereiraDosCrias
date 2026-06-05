@@ -13,48 +13,39 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="Css/index.css">
 </head>
-
 <body>
 
-    <!-- HEADER & NAVBAR -->
-    <header id="header">
-        <nav>
-            <div class="logo">
-                Madeireira Nobre <span class="logo-span">Prime</span>
-            </div>
-            
-            <ul class="nav-menu">
-                <li><a href="index.php">Home</a></li>
-                <li><a href="Categorias.php">Produtos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#contato">Contato</a></li>
-                <li><a href="#orcamentos">Orçamentos</a></li>
-            </ul>
-            
-            <div class="nav-icons">
-                <button class="icon-btn" id="searchBtn" title="Pesquisar">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                    </svg>
-                </button>
+    <div class="container">
+    
+        <!-- HEADER & NAVBAR -->
+        <header id="header">
+            <nav>
+                <div class="logo">
+                    Madeireira Nobre <span class="logo-span">Prime</span>
+                </div>
                 
-                <button class="icon-btn" id="userBtn" title="Minha Conta">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
-                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
-                    </svg>
-                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="Categorias.php">Produtos</a></li>
+                    <li><a href="http://localhost:80/Proj_MadereiraDosCrias/sobrenos.php">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#orcamentos">Orçamentos</a></li>
+                </ul>
                 
-                <button class="icon-btn" id="cartBtn" title="Carrinho" style="position: relative;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                    </svg>
-                    <span class="cart-badge">0</span>
-                </button>
-            </div>
-        </nav>
-    </header>
-       <!-- HERO SECTION -->
-    <section class="hero" id="home">
+                <div class="nav-icons">
+                    
+                    <button class="icon-btn" id="cartBtn" title="Carrinho" style="position: relative;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                        </svg>
+                        <span class="cart-badge">0</span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+                <section class="hero" id="home">
 
         <div class="hero-content">
             <h1>
@@ -71,35 +62,49 @@
             </div>
         </div>
 
+        <div> 
+            <img src="Img/images.jpeg" height="500vh" width="500vh" alt="">
+        </div>
+
     </section>
 
-    <footer>
-        
-Eco System Madeiras logotipo empresa branco
-Fornecemos mão de obra especializada em construções rústicas de eucalipto tratado em autoclave.
+    <section class="Sobre" >
 
-Facebook-f
- Instagram
- Whatsapp
- Envelope
-Links Rápidos
-Home
-Sobre
-Produtos e Serviços
-Projetos
-Contato
-Como chegar
-Rodovia Alkindar Monteiro Junqueira, Km 32.5 - Bairro dos Pires, Itatiba - SP.
-(11) 4487-9001
-(11) 95762-7363
-Funcionamento
-Seg – Sex: 7:00 - 18:00
-Sab: 8:00 - 12:00
-ecosystemmadeiras@gmail.com
-EcoSystem © 2026 Itatiba, São Paulo | Desenvolvido por Indexa Brasil icone_indexabrasil
-    </footer>
+        <div class="hero-content">
+            <h1>
+                Transformando projetos em <span class="accent">obras de excelência</span>.
+            </h1>
+            
+            <p class="subtitle">
+                Madeiras nobres, acabamento impecável e atendimento especializado para quem busca qualidade sem compromissos.
+            </p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Ver Catálogo</button>
+                <button class="btn btn-secondary">Solicitar Orçamento</button>
+            </div>
+        </div>
 
-    <!-- JAVASCRIPT -->
+        <div> 
+            <img src="Img/images.jpeg" height="500vh" width="500vh" alt="">
+        </div>
+
+    </section>
+        </main>
+
+        <footer>
+            <h1>Siga em nossas redes sociais</h1>
+            <img src="Img/YouTube_full-color_icon_(2017).svg.png" alt="imagem logo Youtube">
+            <img src="Img/Instagram_icon.png" alt="imagem logo Instagram">
+
+            <img src="Img/Logo Triple T.png" alt="Logo Triple T, Sahur">
+            <p>© 2025 Madereira Sahur</p>
+
+        </footer>
+
+    </div>
+    
+ <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="Js/index.js"></script>
 </body>
