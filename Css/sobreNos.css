@@ -19,12 +19,15 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto; 
+  grid-template-rows: auto auto auto auto; 
   grid-template-areas: 
     "header"
     "main"
-    "footer";
+    "aside"
+    "footer"
+  ;
   min-height: 100vh;
+  gap: 20px;
 }
 
 /* ── HEADER ── */
@@ -78,18 +81,26 @@ header > div:first-child /* Define que a última imagem filha direta do header t
   gap: 36px;
 }
 
-#outraspaginas p {
+#outraspaginas a {
+  transition: color 0.3s ease;
   color: #dd9c3e;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase; /*Tansforma em maiusculo*/
-  cursor: pointer;
-  margin: 0;
+  text-decoration: none;
+  position: relative;
 }
 
-#outraspaginas p:hover /*Quando o usuario colocar o ponteiro do mouse em cima de um dos textos, o texto vai acender na cor laranja de forma instantânea.*/{
-  color: #d76d44;
+#outraspaginas a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d76d44;
+  transition: width 0.3s ease;
+}
+
+#outraspaginas a:hover::after {
+  width: 100%; /* cresce da esquerda para direita */
 }
 
 header > img:last-child /*Carrinho de compras, apenas, pois ela é a imagem filha direta do <header> e é o último elemento antes de fechar a tag </header> */ {
@@ -114,6 +125,8 @@ main h3{
   color: white;
 }
 
+
+
 main p{
   font-size: 18px ;
   color: white;
@@ -134,6 +147,30 @@ main ul{
   position: relative  ;
   top:10px;
 }
+
+/*Aside*/
+
+aside {
+  grid-area: aside;
+  border-top: 5px solid white; 
+}
+
+.mapa{
+  display: grid;
+  place-items: center;
+}
+
+
+
+#local{
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Playfair Display", serif; 
+}
+
+
 
 
 /* ── FOOTER ── */
@@ -166,3 +203,228 @@ footer p /* paragrafos do footer*/{
   margin: 0;
 }
 
+/*Responsivel, Tablet e Celular*/
+
+/*Telas menores, tipo tablete*/
+@media (max-width: 850px) {
+
+  /* CONTAINER */
+  .container {
+    gap: 0;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  /* HEADER */
+  #logoFooter {
+    height: 35px;
+  }
+
+  #nomeLogo {
+    font-size: 10px;
+  }
+
+  #retangulo {
+    align-self: center;
+    margin: 0 16px;
+  }
+
+  #outraspaginas {
+    gap: 9px;
+  }
+
+  .textHeader {
+    font-size: 12px;
+  }
+
+  #carrinho {
+    height: 20px;
+    width: auto;
+  }
+
+  /* MAIN */
+  main {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  main h1 {
+    font-size: 25px;
+  }
+
+  main h3 {
+    font-size: 25px;
+  }
+
+  main p {
+    font-size: 9px;
+    color: white;
+    text-align: center;
+  }
+
+  main ul {
+    font-size: 9px;
+    color: white;
+    text-align: center;
+  }
+
+  #fraseTop {
+    font-size: 10px;
+  }
+
+  /* ASIDE */
+  aside {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  #local {
+    position: relative;
+    top: -15px;
+  }
+
+  .mapa {
+    display: grid;
+    place-items: center;
+  }
+
+  /* FOOTER */
+  footer h1 {
+    font-size: 7px;
+  }
+
+  footer p {
+    font-size: 6px;
+  }
+
+  footer img {
+    height: 20px;
+    width: auto;
+  }
+
+  #logoTTT {
+    height: 20px;
+    width: auto;
+  }
+
+}
+
+/*Telas menores, tipo celular*/
+@media (max-width: 600px){
+   /* CONTAINER */
+  .container {
+    gap: 0.5%;
+    grid-template-rows: auto auto auto auto;
+  }
+
+
+  /* HEADER */
+
+  header{
+    height: auto;
+  }
+
+  #logoFooter {
+    height: 15px;
+  }
+
+  #nomeLogo {
+    font-size: 6px;
+  }
+
+   #retangulo {
+    align-self: center;
+    position: relative;
+    right: auto;
+    height: 25px;
+  }
+
+  #outraspaginas {
+    gap: 9px;
+  }
+
+  .textHeader {
+    font-size: 6px;
+  }
+
+  #carrinho {
+    padding-left: 5px;
+    height: 15px;
+    width: auto;
+  }
+
+  /* MAIN */
+  main {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  main h1 {
+    font-size: 15px;
+  }
+
+  main h3 {
+    font-size: 15px;
+  }
+
+  main p {
+    font-size: 9px;
+    color: white;
+    text-align: center;
+  }
+
+  main ul {
+    font-size: 9px;
+    color: white;
+    text-align: center;
+  }
+
+  #fraseTop {
+    font-size: 8px;
+  }
+
+  /* ASIDE */
+  aside {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  #local {
+    position: relative;
+    font-size: 15px;
+    top: -10px;
+  }
+
+  aside iframe {
+  width: 50%;
+  height: 100px;
+
+}
+
+  .mapa {
+    display: grid;
+    place-items: center;
+
+  }
+
+  /* FOOTER */
+  footer h1 {
+    font-size: 7px;
+  }
+
+  footer p {
+    font-size: 6px;
+  }
+
+  footer img {
+    height: 15px;
+    width: auto;
+    padding: 5px 5px 5px 5px;
+  }
+
+  #logoTTT {
+    height: 20px;
+    width: auto;
+  }
+}

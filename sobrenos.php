@@ -17,10 +17,10 @@
 
         <div id="retangulo"></div>
         <div id="outraspaginas" >
-            <p id="pg" >PÁGINA INICIAL</p>
-            <p id="produtos" >PRODUTOS</p>
-            <p id="contatos" >CONTATO</p>
-            <p id="orcamento" >ORÇAMENTOS</p>
+            <p id="pg" > <a href="" class="textHeader" >PÁGINA INICIAL</a></p>
+            <p id="produtos" ><a href="" class="textHeader" >PRODUTOS</a> </p>
+            <p id="contatos" > <a href="" class="textHeader" >CONTATO</a></p>
+            <p id="orcamento" ><a href="" class="textHeader" >ORÇAMENTOS</a> </p>
         </div>
         <img id="carrinho" src="Img/Carrinho.png" alt="Carrinho">
     </header>
@@ -50,14 +50,29 @@
 
             <p id="fraseTop"><em>Madereira Sahur: Sólida como a madeira, confiável como a nossa história.</em></p>
         </section>
-    </main>
 
+    </main>
+  
+<aside>
+    <p id="local">Localização:</p>
+    <div class="mapa" >
+        <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d2293429.467214184!2d-124.4067029!3d-48.5294017!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDjCsDUyJzM2LjEiUyAxMjPCsDIzJzM1LjkiVw!5e1!3m2!1spt-BR!2sbr!4v1780673502456!5m2!1spt-BR!2sbr" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+    </div>
+         
+
+ </aside>
+    
     <footer>
         <h1>Siga em nossas redes sociais</h1>
         <img src="Img/YouTube_full-color_icon_(2017).svg.png" alt="imagem logo Youtube">
         <img src="Img/Instagram_icon.png" alt="imagem logo Instagram">
 
-        <img src="Img/Logo Triple T.png" alt="Logo Triple T, Sahur">
+        <img id="logoTTT" src="Img/Logo Triple T.png" alt="Logo Triple T, Sahur">
         <p>© 2025 Madereira Sahur</p>
 
     </footer>
