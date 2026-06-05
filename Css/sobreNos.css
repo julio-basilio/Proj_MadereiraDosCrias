@@ -23,8 +23,11 @@ body {
   grid-template-areas: 
     "header"
     "main"
-    "footer";
+    "aside"
+    "footer"
+;
   min-height: 100vh;
+  gap: 20px;
 }
 
 /* ── HEADER ── */
@@ -78,18 +81,26 @@ header > div:first-child /* Define que a última imagem filha direta do header t
   gap: 36px;
 }
 
-#outraspaginas p {
+#outraspaginas a {
+  transition: color 0.3s ease;
   color: #dd9c3e;
-  font-size: 14px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase; /*Tansforma em maiusculo*/
-  cursor: pointer;
-  margin: 0;
+  text-decoration: none;
+  position: relative;
 }
 
-#outraspaginas p:hover /*Quando o usuario colocar o ponteiro do mouse em cima de um dos textos, o texto vai acender na cor laranja de forma instantânea.*/{
-  color: #d76d44;
+#outraspaginas a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #d76d44;
+  transition: width 0.3s ease;
+}
+
+#outraspaginas a:hover::after {
+  width: 100%; /* cresce da esquerda para direita */
 }
 
 header > img:last-child /*Carrinho de compras, apenas, pois ela é a imagem filha direta do <header> e é o último elemento antes de fechar a tag </header> */ {
@@ -114,6 +125,8 @@ main h3{
   color: white;
 }
 
+
+
 main p{
   font-size: 18px ;
   color: white;
@@ -134,6 +147,30 @@ main ul{
   position: relative  ;
   top:10px;
 }
+
+/*Aside*/
+
+aside {
+  grid-area: aside;
+  border-top: 5px solid white; 
+}
+
+.mapa{
+  display: grid;
+  place-items: center;
+}
+
+
+
+#local{
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Playfair Display", serif; 
+}
+
+
 
 
 /* ── FOOTER ── */
