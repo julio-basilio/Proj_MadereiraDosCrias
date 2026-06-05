@@ -19,10 +19,12 @@
     
         <!-- HEADER & NAVBAR -->
         <header id="header">
+            <h1><a href="">Madeiras Brutas</a></h1>
+
             <nav>
                 <div class="logo">
-                    <img src="Img/logosahurmadeireira.png" height="500vh" width="500vh" alt="">
-                    Madeireira Nobre <span class="logo-span">Prime</span>
+                    <img src="Img/logosahurmadeireira.png" height="150vh" width="150vh" alt="">
+                    Madeireira <span class="logo-span">Sahur</span>
                 </div>
                 
                 <ul class="nav-menu">
@@ -43,6 +45,7 @@
                     </button>
                 </div>
             </nav>
+
         </header>
 
         <main>
