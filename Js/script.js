@@ -1,5 +1,4 @@
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
 const tituloOriginal = document.title;
 
 document.addEventListener("visibilitychange", async () => {
@@ -15,10 +14,9 @@ document.addEventListener("visibilitychange", async () => {
   }
 });
 
+let historicoTeclas = ''; 
 
-let historicoTeclas = ''; // Faltava declarar esta variável no início
-
-document.addEventListener('keydown', (tecla) => { // O caractere '{' deve vir ANTES do ')'
+document.addEventListener('keydown', (tecla) => { 
     historicoTeclas += tecla.key.toLowerCase();
     
     if (historicoTeclas.length > 7) {
@@ -32,6 +30,45 @@ document.addEventListener('keydown', (tecla) => { // O caractere '{' deve vir AN
     }
 });
 
+function EnviarDados(){
+  const form = document.getElementById('formPedido');
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+
+    const nomeCliente = document.getElementById('nomeCliente').value;
+    const enderecoCliente = document.getElementById('enderecoCliente').value;
+    const tipoMadeira = document.getElementById('tipoMadeira').value;
+    const quantidadeMetro = document.getElementById('quantidadeMetro').value;
+
+    try {
+      const enviarDados = await fetch('Pages/API.php', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nome: nomeCliente,
+          endereco: enderecoCliente,
+          tipMadeira: tipoMadeira,
+          quantMadeira: quantidadeMetro
+        })
+      });
+
+      if(!enviarDados.ok) throw new Error('Erro na rede');
+
+      const dadosRecebidos = await enviarDados.json();
+
+      if (dadosRecebidos.status === 'sucesso') {
+          window.location.href = "pedido-sucesso.php"; 
+      } else {
+          alert("Houve um erro ao salvar seu pedido.");
+      }
+    }
+    catch(error){
+      console.error('Erro ao buscar dados: ', error);
+    }
+  });
+}
 
 
+EnviarDados();
 
