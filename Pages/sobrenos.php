@@ -19,7 +19,7 @@
 
             <div id="retangulo"></div>
             <div id="outraspaginas">
-                <p id="pg"> <a href="" class="textHeader">PÁGINA INICIAL</a></p>
+                <p id="pg"> <a href="../index.html" class="textHeader">PÁGINA INICIAL</a></p>
                 <p id="produtos"><a href="" class="textHeader">PRODUTOS</a> </p>
                 <p id="contatos"> <a href="" class="textHeader">CONTATO</a></p>
                 <p id="orcamento"><a href="" class="textHeader">ORÇAMENTOS</a> </p>
