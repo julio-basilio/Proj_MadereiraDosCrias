@@ -58,7 +58,7 @@ function EnviarDados(){
       const dadosRecebidos = await enviarDados.json();
 
       if (dadosRecebidos.status === 'sucesso') {
-          window.location.href = "pedido-sucesso.php"; 
+          alert("Tudo funcionando!");
       } else {
           alert("Houve um erro ao salvar seu pedido.");
       }
@@ -69,6 +69,4 @@ function EnviarDados(){
   });
 }
 
-
-EnviarDados();
 
