@@ -31,7 +31,7 @@ $novoPedido = [
 $textoBanco['usuarios'][] = $novoUsuario;
 $textoBanco['pedidos'][] = $novoPedido;
 
-$novoJsonTexto = json_encode($bancoArray, JSON_PRETTY_PRINT);
+$novoJsonTexto = json_encode($textoBanco, JSON_PRETTY_PRINT);
 file_put_contents($bancoDados, $novoJsonTexto);
 
 echo json_encode(["status" => "sucesso"]);
