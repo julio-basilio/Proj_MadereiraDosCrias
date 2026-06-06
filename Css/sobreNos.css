@@ -131,6 +131,8 @@ main p{
   font-size: 18px ;
   color: white;
   text-align: justify;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 main ul{
