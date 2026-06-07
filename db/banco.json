@@ -1,5 +1,12 @@
 {
-  "madeiras": [],
-  "usuarios": [],
-  "pedidos": []
+  "madeiras": [
+    {"id_madeira":1,"Nome":"MDF","Tipo":"Maciça","Preco_Metro":10,"Quantidade":50}
+  ],
+  "usuarios": [
+    {"id_usuario":1,"nome":"neymar","idade":50,"endereco":"Clovis Joli de Lima"}
+  ],
+  "pedidos": [
+    {"id_pedido":1,"id_usuario":1,"id_madeira":1,"quantidade_pedido":10,"data_compra":"11-05-2026"}
+  ]
 }
+
