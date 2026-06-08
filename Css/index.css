@@ -115,7 +115,6 @@
             color: var(--color-primary);
             letter-spacing: -0.5px;
 
-            cursor: pointer;
             transition: color 0.3s ease;
 
             margin-right: 30px;
@@ -179,6 +178,11 @@
             align-items: center;
 
             margin-left: 40px;
+        }
+
+        .nav-icons a {
+            text-decoration: none;
+            width: 100%;
         }
 
         .icon-btn {

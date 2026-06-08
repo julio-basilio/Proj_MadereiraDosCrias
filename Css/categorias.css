@@ -280,7 +280,6 @@
         
         .categorias{
             width:90%;
-            max-width:1200px;
             margin:60px auto;
         }
 
@@ -291,34 +290,67 @@
         }
 
         .card{
-            background:white;
+            height: 40vh;
+            
             text-decoration:none;
             color:inherit;
             border-radius:16px;
             padding:35px 25px;
             transition:0.3s;
             box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+            position: relative;
+            overflow: hidden;
+            color: white;
+            
         }
+        
 
         .card:hover{
             transform:translateY(-8px);
             box-shadow:0 15px 30px rgba(0,0,0,0.15);
         }
 
-        .icone{
-            font-size:3rem;
-            margin-bottom:20px;
-        }
-
         .card h2{
             margin-bottom:10px;
-            color:#2c3e50;
+            color:#ffffff;
         }
 
         .card p{
-            color:#666;
+            color:#ffffff;
             line-height:1.5;
         }
+
+        .brutas{
+            background-image: 
+            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.0)),
+            url(../Img/pexels-abrek-okur-622168308-32608643.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .finas{
+            background-image: url(../Img/pexels-huum-sauna-heaters-718199222-36077586.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .mdf{
+            background-image: url(../Img/pexels-mdf-4744800.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .portas{
+            background-image: url(../Img/pexels-kubrarkan-14547589.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+        
 
         /* ==================== FOOTER ==================== */
 
