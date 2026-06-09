@@ -82,10 +82,10 @@
         <input type="text" id="nome" name="nome" required><br><br>
 
         <label for="email">E-mail: </label>
-         <input type="email" id="email" name="email" required><br><br> 
+         <input type="email" id="email" name="email" required  id="tamanho"><br><br> 
 
         <label for="mensagem">Mensagem: </label><br>
-         <textarea id="mensagem" name="mensagem" rows="5" cols="30" required></textarea><br><br>
+         <textarea id="mensagem" name="mensagem" rows="5" cols="30" required  class="tamanhobox"></textarea><br><br>
 
          <button type="submit">Enviar</button>
     </form>
