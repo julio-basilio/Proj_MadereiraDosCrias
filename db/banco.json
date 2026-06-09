@@ -7,6 +7,8 @@
   ],
   "pedidos": [
     {"id_pedido":1,"id_usuario":1,"id_madeira":1,"quantidade_pedido":10,"data_compra":"11-05-2026"}
+  ],
+  "carrinho":[
+    {"id_carrinho":1,"id_madeira":1,"id_usuario":1,"quantidade":10}
   ]
 }
-
