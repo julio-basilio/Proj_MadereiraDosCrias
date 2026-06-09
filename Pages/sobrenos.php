@@ -24,6 +24,7 @@
                 <p id="contatos"> <a href="" class="textHeader">CONTATO</a></p>
                 <p id="orcamento"><a href="" class="textHeader">ORÇAMENTOS</a> </p>
             </div>
+            <div id="divName"></div>
             <img id="carrinho" src="../Img/Carrinho.png" alt="Carrinho">
         </header>
 
@@ -87,6 +88,8 @@
         </footer>
 
     </div>
+
+    <script src="../lerusuario.js"></script>
 
 
 </body>
