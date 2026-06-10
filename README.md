@@ -39,9 +39,9 @@ O projeto foi construído do zero utilizando tecnologias nativas da web:
 
 | Desenvolvedor | Especialidade | Perfil GitHub |
 | :--- | :--- | :--- |
-| **Julio Basilio** | Full-Stack | [@julio-basilio](https://github.com) |
+| **Julio Basilio** | Back-End | [@julio-basilio](https://github.com) |
 | **Davi Moreira** | Front-End | [@davimoreiraa-lab](https://github.com) |
-| **Lucas Almeida** | Back-End / Dev | [@almeidalucas2107-blip](https://github.com/almeidalucas2107-blip) |
+| **Lucas Almeida** | Front-End | [@almeidalucas2107-blip](https://github.com/almeidalucas2107-blip) |
 
 ---
 
