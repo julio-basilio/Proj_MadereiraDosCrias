@@ -265,15 +265,105 @@
             color: var(--color-accent);
         }   
 
-        /* ==================== SUA PARTE AQUI ==================== */
 
-       
-        main{
-            background-color: #eee0ce;
-            grid-area: main;
-            text-align: center;
-            height: 100vh;
-        }
+       /* ==================== Área do main ==================== */
+main {
+    background-color: #eee0ce;
+    grid-area: main;
+    text-align: center;
+    min-height: 100vh; /* Permite que o fundo cresça conforme o conteúdo */
+    height: auto;
+}
+
+/*  estilização Portas e Janelas */
+.h1-portas {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.h1-portas h1 {
+    font-size: 3rem;
+    color: #5a3a1b;
+}
+
+.hero-portas p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Categoria em Destaque   */
+.categoria-destaque {
+    padding: 20px;
+}
+
+
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.produto-card {
+    width: 300px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.produto-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.produto-card h3, p {
+    padding: 10px 15px;
+}
+
+/* --- Sobre os Produtos --- */
+.sobre-portas {
+    padding: 50px;
+    background: #f4f1ec;
+    text-align: center;
+}
+
+.sobre-portas ul {
+    list-style: none; /* Remove as bolinhas padrão da lista, já que usei o ✔ */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sobre-portas li {
+    margin-bottom: 10px;
+}
+
+/* --- orçamento --- */
+.orçamento {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.btn-orcamento {
+    display: inline-block;
+    background: #8b5a2b;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-orcamento:hover {
+    background-color: #6b441f; /* Escurece um pouco ao passar o mouse */
+}
+
+.img-porta{
+    height: 10px;
+}
 
         /* ==================== FOOTER ==================== */
 
@@ -390,6 +480,8 @@
 
             color: #bdbdbd;
         }
+
+        
 
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 768px) {
