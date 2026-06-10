@@ -267,102 +267,116 @@
 
 
        /* ==================== Área do main ==================== */
+/* ==========================================================================
+   SEÇÃO: MAIN - ESTRUTURA E CONTEÚDO
+   ========================================================================== */
+
 main {
-    background-color: #eee0ce;
+    background-color: var(--color-bg); /* Usei a cor variável que você já tem */
     grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 1. HERO SECTION */
+.hero-portas {
     text-align: center;
-    min-height: 100vh; /* Permite que o fundo cresça conforme o conteúdo */
-    height: auto;
+    padding: 60px 20px;
+    max-width: 900px;
 }
 
-/*  estilização Portas e Janelas */
-.h1-portas {
-    text-align: center;
-    padding: 80px 20px;
+.hero-portas h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
 }
 
-.h1-portas h1 {
-    font-size: 3rem;
-    color: #5a3a1b;
-}
-
-.hero-portas p {
-    max-width: 800px;
-    margin: auto;
-}
-
-/* Categoria em Destaque   */
+/* 2. CATEGORIA E PRODUTOS (VITRINE) */
 .categoria-destaque {
-    padding: 20px;
+    width: 100%;
+    padding: 40px 20px;
+    background: #fff; /* Fundo branco para destacar os produtos */
 }
-
 
 .produtos-container {
     display: flex;
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .produto-card {
-    width: 300px;
+    width: 350px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.produto-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+.produto-card:hover {
+    transform: translateY(-10px);
 }
 
-.produto-card h3, p {
-    padding: 10px 15px;
+.card-content {
+    padding: 20px;
+    text-align: left;
 }
 
-/* --- Sobre os Produtos --- */
+.btn-detalhes {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* 3. DIFERENCIAIS (GRID DE ÍCONES) */
 .sobre-portas {
-    padding: 50px;
-    background: #f4f1ec;
+    padding: 60px 20px;
     text-align: center;
 }
 
-.sobre-portas ul {
-    list-style: none; /* Remove as bolinhas padrão da lista, já que usei o ✔ */
-    padding: 0;
-    margin-top: 20px;
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto 0;
 }
 
-.sobre-portas li {
+.beneficio-item i {
+    font-size: 2rem;
+    color: var(--color-accent);
     margin-bottom: 10px;
 }
 
-/* --- orçamento --- */
+/* 4. ORÇAMENTO (CALL TO ACTION) */
 .orçamento {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: var(--color-primary);
     text-align: center;
-    padding: 60px 20px;
+    color: white;
 }
 
 .btn-orcamento {
     display: inline-block;
-    background: #8b5a2b;
-    color: white;
-    padding: 12px 25px;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 15px 40px;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 5px;
+    font-weight: 800;
     margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-orcamento:hover {
-    background-color: #6b441f; /* Escurece um pouco ao passar o mouse */
-}
-
-.img-porta{
-    height: 10px;
+    transition: background 0.3s;
 }
 
         /* ==================== FOOTER ==================== */
