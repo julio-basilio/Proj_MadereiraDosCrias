@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="pagADM.css">
+    <link rel="stylesheet" href="../Css/pagADM.css">
 </head>
 <body>
 
@@ -52,12 +52,26 @@
 
         <div class="content-card">
             <div class="content-card-header">
-                <span class="content-card-title">Usuários cadastrados</span>
+                <span class="content-card-title"><i class="fa-solid fa-users"></i> Usuários Cadastrados</span>
             </div>
-            <table id="tabelaUsuarios"></table>
+            <table id="tabelaUsuarios"></table> 
+        </div>
+
+        <div class="content-card" style="margin-top: 25px;">
+            <div class="content-card-header">
+                <span class="content-card-title"><i class="fa-solid fa-box"></i> Estoque de Madeiras</span>
+            </div>
+            <table id="tabelaProdutos"></table> 
+        </div>
+
+        <div class="content-card" style="margin-top: 25px;">
+            <div class="content-card-header">
+                <span class="content-card-title"><i class="fa-solid fa-envelope"></i> Caixa de Mensagens</span>
+            </div>
+            <table id="tabelaMensagens"></table> 
         </div>
     </main>
 
-    <script src="pagADM.js"></script>
+    <script src="../Js/pagADM.js"></script>
 </body>
 </html>

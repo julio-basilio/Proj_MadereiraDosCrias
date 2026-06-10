@@ -1,7 +1,7 @@
 <?php
 
 $nome = $_POST['nome'];
-$email = $_POST['email'];
+$email = $_POST['emailUsuario'];
 $mensagem = $_POST['mensagem'];
 
 

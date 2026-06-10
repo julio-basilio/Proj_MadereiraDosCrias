@@ -5,9 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
+
         
         const nomeUsuario = document.getElementById("nome").value.toLowerCase();
         const senhaUsuario = document.getElementById("senha").value.toLowerCase();
+        
 
         try {
             const enviarDados = await fetch('ADMController.php', {
@@ -21,9 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const dadosRecebidos = await enviarDados.json();
 
             if (dadosRecebidos.status === 'sucesso') {
-                localStorage.setItem('nomeADM', nomeUsuario);
                 window.location.href = dadosRecebidos.link;
-                
             } else {
                 alert("ADM não cadastrado");
             }

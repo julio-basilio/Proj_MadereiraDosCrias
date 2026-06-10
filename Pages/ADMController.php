@@ -7,7 +7,7 @@ $dadosRecebidos = json_decode(file_get_contents('php://input'), true);
 $nomeUsuario = $dadosRecebidos['nome'] ?? 'Anônimo';
 $senhaUsuario = $dadosRecebidos['senha'] ?? '';
 
-$bancoDados = 'db/banco.json';
+$bancoDados = '../db/banco.json';
 $conteudoBanco = file_get_contents($bancoDados);
 $bancoArray = json_decode($conteudoBanco, true);
 

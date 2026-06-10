@@ -12,10 +12,18 @@
         {
             "id_usuario": 1,
             "nome": "neymar",
-            "email":"neymarjr.@gmail.com",
-            "senha":"123",
+            "email": "neymarjr.@gmail.com",
+            "senha": "123",
             "idade": 50,
             "endereco": "Rua do Limoeiro"
+        },
+        {
+            "id_usuario": 2,
+            "nome": "Julio",
+            "email": "Julio.@gmail.com",
+            "senha": "1406",
+            "idade": 17,
+            "endereco": "Rua do Limoeiro de Pindamonhangaba"
         }
     ],
     "pedidos": [
@@ -40,6 +48,11 @@
             "nameUsuario": "bella",
             "email": "guifcaffer@gmail.com",
             "mensagem": "[ç´vcg,lpdfgk,ydtlokyio"
-        }   
+        },
+        {
+            "nameUsuario": null,
+            "email": null,
+            "mensagem": "julio"
+        }
     ]
 }
