@@ -77,10 +77,10 @@
         <main>
             <form action="envio.php" method="POST">
                 <label for="nome">Nome: </label>
-                <div id="nomeContato" ></div><br>
+                <input type="text" name ="nome"id="nome"><br>
 
                 <label for="email">E-mail: </label>
-                <div id="emailUsuario"></div><br>
+                <input type="email" name ="emailUsuario" id="emailUsuario"><br>
 
                 <label for="mensagem">Mensagem: </label><br>
                 <textarea id="mensagem" name="mensagem" rows="4" required class="tamanhobox"></textarea><br><br>
