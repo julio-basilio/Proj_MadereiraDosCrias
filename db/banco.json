@@ -12,8 +12,10 @@
         {
             "id_usuario": 1,
             "nome": "neymar",
+            "email":"neymarjr.@gmail.com",
+            "senha":"123",
             "idade": 50,
-            "endereco": "Clovis Joli de Lima"
+            "endereco": "Rua do Limoeiro"
         }
     ],
     "pedidos": [
@@ -38,11 +40,6 @@
             "nameUsuario": "bella",
             "email": "guifcaffer@gmail.com",
             "mensagem": "[ç´vcg,lpdfgk,ydtlokyio"
-        },
-        {
-            "nameUsuario": "Pedro",
-            "email": "asd@gmail.com",
-            "mensagem": "Mano, eu falei de Japones na frente da Rosinha, kkkk!"
-      }
+        }   
     ]
 }

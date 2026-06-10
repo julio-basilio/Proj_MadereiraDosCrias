@@ -9,7 +9,7 @@ $dadosRecebidos = json_decode(file_get_contents('php://input'), true);
 $nomeUsuario = $dadosRecebidos['nome'] ?? 'Anônimo';
 
 // Onde fica o nosso "banco de dados de pobre" (um belo arquivo JSON)
-$bancoDados = 'db/banco.json';
+$bancoDados = '../db/banco.json';
 
 // Puxa o textão bruto de dentro desse arquivo
 $conteudoBanco = file_get_contents($bancoDados);

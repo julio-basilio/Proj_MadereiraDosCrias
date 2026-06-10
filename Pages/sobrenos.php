@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Madereira Sahur</title>
     <link rel="stylesheet" href="..\Css\sobreNos.css">
-    <script src="Js/script.js"></script>
+    <script src="../Js/teste.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 <p id="contatos"> <a href="" class="textHeader">CONTATO</a></p>
                 <p id="orcamento"><a href="" class="textHeader">ORÇAMENTOS</a> </p>
             </div>
-            <div id="divName"></div>
+            <div id="nomeUsuario"></div>
             <img id="carrinho" src="../Img/Carrinho.png" alt="Carrinho">
         </header>
 

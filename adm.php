@@ -74,9 +74,18 @@
         </header>
 
         <main>
-            <h1>Venha já fazer o seu orçamento!</h1>
-            <p></p>
-        </main>
+    <form id="admLogin">
+        <label for="nome">Digite seu nome
+            <input type="text" id="nome" required>
+        </label><br><br>
+
+        <label for="senha">Digite sua senha
+            <input type="password" id="senha" required>
+        </label><br><br>
+        
+        <input type="submit" value="Entrar">
+    </form>
+</main>
 
         <footer class="footer">
 
@@ -143,6 +152,6 @@
     
  <!-- JAVASCRIPT -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="Js/index.js"></script>
+    <script src="Js/adm.js"></script>
 </body>
 </html>

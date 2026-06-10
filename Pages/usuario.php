@@ -17,6 +17,6 @@
     <div id="resultado"></div>
     
    
-    <script src="lerusuario.js"></script>
+    <script src="../Js/lerusuario.js"></script>
 </body>
 </html>
