@@ -266,7 +266,7 @@ main {
     text-align: center;
     min-height: calc(100vh - 205px - 300px);
     padding: 40px 20px;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }

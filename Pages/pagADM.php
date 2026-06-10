@@ -54,21 +54,24 @@
             <div class="content-card-header">
                 <span class="content-card-title"><i class="fa-solid fa-users"></i> Usuários Cadastrados</span>
             </div>
-            <table id="tabelaUsuarios"></table> 
+            <table id="tabelaUsuarios">
+                </table> 
         </div>
 
         <div class="content-card" style="margin-top: 25px;">
             <div class="content-card-header">
                 <span class="content-card-title"><i class="fa-solid fa-box"></i> Estoque de Madeiras</span>
             </div>
-            <table id="tabelaProdutos"></table> 
+            <table id="tabelaProdutos">
+                </table> 
         </div>
 
         <div class="content-card" style="margin-top: 25px;">
             <div class="content-card-header">
                 <span class="content-card-title"><i class="fa-solid fa-envelope"></i> Caixa de Mensagens</span>
             </div>
-            <table id="tabelaMensagens"></table> 
+            <table id="tabelaMensagens">
+                </table> 
         </div>
     </main>
 

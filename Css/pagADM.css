@@ -1,3 +1,72 @@
+/* ==========================================================================
+   DESIGN SYSTEM 5.0: CYBER SLATE & NEON INDIGO (AUTOMATIC ARCHITECTURE)
+   ========================================================================== */
+:root {
+    /* --- LIGHT ULTRA-MINIMALISM --- */
+    --bg-principal: #f6f6f9;
+    --bg-card: rgba(255, 255, 255, 0.7);
+    --bg-header: rgba(255, 255, 255, 0.65);
+    --borda-fina: rgba(0, 0, 0, 0.05);
+    --borda-fina-rgb: 0, 0, 0;
+    
+    /* Typography Matrix */
+    --texto-titulo: #09090b;
+    --texto-corpo: #27272a;
+    --texto-mutado: #71717a;
+    
+    /* Interactive & Accent Brand Core */
+    --primary: #4f46e5;
+    --primary-hover: #4338ca;
+    --primary-glow: rgba(79, 70, 229, 0.04);
+    --primary-rgb: 79, 70, 229;
+    
+    /* Natural Physical Shadows */
+    --sombra-card: 
+        0 0 0 1px rgba(0, 0, 0, 0.03),
+        0 2px 4px rgba(0, 0, 0, 0.01),
+        0 12px 24px -4px rgba(0, 0, 0, 0.02);
+        
+    --sombra-hover: 
+        0 0 0 1px rgba(79, 70, 229, 0.3),
+        0 8px 16px -4px rgba(79, 70, 229, 0.1),
+        0 32px 64px -12px rgba(79, 70, 229, 0.18);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* --- CYBERPUNK DE LUXO (DARK) --- */
+        --bg-principal: #030712;
+        --bg-card: rgba(11, 15, 25, 0.65);
+        --bg-header: rgba(3, 7, 18, 0.6);
+        --borda-fina: rgba(255, 255, 255, 0.04);
+        --borda-fina-rgb: 255, 255, 255;
+        
+        /* High-Emissivity Typography */
+        --texto-titulo: #f9fafb;
+        --texto-corpo: #e4e4e7;
+        --texto-mutado: #a1a1aa;
+        
+        /* Neon Accents */
+        --primary: #6366f1;
+        --primary-hover: #4f46e5;
+        --primary-glow: rgba(99, 102, 241, 0.06);
+        --primary-rgb: 99, 102, 241;
+        
+        /* Dark Space Depth Shadows */
+        --sombra-card: 
+            0 0 0 1px rgba(255, 255, 255, 0.03),
+            0 4px 24px rgba(0, 0, 0, 0.6);
+            
+        --sombra-hover: 
+            0 0 0 1px rgba(99, 102, 241, 0.6),
+            0 0 32px rgba(99, 102, 241, 0.1),
+            0 24px 64px -8px rgba(0, 0, 0, 0.7);
+    }
+}
+
+/* ==========================================================================
+   RESET CORE & HARDWARE RENDER OPTIMIZATION
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -5,39 +74,67 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #F5F1EA;
-    color: #2B2B2B;
-    min-height: 100vh;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto-corpo);
+    line-height: 1.4;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ==================== HEADER ==================== */
+/* ==========================================================================
+   AERO-SPACE MOTION ENGINE (ZERO REPAINT / 144Hz+)
+   ========================================================================== */
+@keyframes fluidEntrance {
+    from { 
+        opacity: 0; 
+        transform: translateY(8px) scale(0.995) translateZ(0); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0) scale(1) translateZ(0); 
+    }
+}
 
+/* ==========================================================================
+   TRANSLUCENT GLASSMORPHISM HEADER (APPLE STYLE)
+   ========================================================================== */
 .adm-header {
-    background-color: #3B2618;
-    height: 60px;
-    padding: 0 32px;
+    background-color: var(--bg-header);
+    backdrop-filter: blur(20px) saturate(190%) contrast(90%);
+    -webkit-backdrop-filter: blur(20px) saturate(190%) contrast(90%);
+    color: var(--texto-titulo);
+    padding: 10px 32px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
-    z-index: 100;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    z-index: 1000;
+    border-bottom: 1px solid var(--borda-fina);
+    animation: fluidEntrance 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .header-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #C8A96A;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    gap: 8px;
 }
 
 .header-logo i {
-    font-size: 18px;
+    color: var(--primary);
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.header-logo:hover i {
+    transform: rotate(180deg) scale(1.1);
 }
 
 .header-right {
@@ -47,183 +144,219 @@ body {
 }
 
 .header-nome {
-    font-size: 13px;
-    color: rgba(255,255,255,0.6);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--texto-mutado);
 }
 
 .header-nome strong {
-    color: #C8A96A;
-    font-weight: 500;
+    background: linear-gradient(135deg, var(--primary), #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
 }
 
 .header-avatar {
-    width: 32px;
-    height: 32px;
+    width: 26px;
+    height: 26px;
+    background-color: var(--primary-glow);
     border-radius: 50%;
-    background-color: #C8A96A;
-    color: #3B2618;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    color: var(--primary);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
 }
 
 .btn-sair {
-    font-size: 12px;
-    color: rgba(255,255,255,0.5);
-    background: none;
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 6px 14px;
-    border-radius: 8px;
-    cursor: pointer;
+    background-color: transparent;
+    color: var(--texto-mutado);
+    border: 1px solid var(--borda-fina);
     text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.15s ease;
     display: flex;
     align-items: center;
     gap: 6px;
-    transition: all 0.2s ease;
 }
 
 .btn-sair:hover {
-    color: white;
-    border-color: rgba(255,255,255,0.5);
+    background-color: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.25);
+    color: #ef4444;
 }
 
-/* ==================== MAIN ==================== */
-
+/* ==========================================================================
+   FLUID CONTAINMENT GRID
+   ========================================================================== */
 .adm-main {
-    padding: 32px;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 32px 24px;
 }
 
 .page-title {
-    font-size: 22px;
-    font-weight: 500;
-    color: #3B2618;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--texto-titulo);
+    letter-spacing: -0.04em;
+    animation: fluidEntrance 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .page-sub {
-    font-size: 13px;
-    color: #6B6B6B;
-    margin-top: 4px;
+    font-size: 0.85rem;
+    color: var(--texto-mutado);
+    margin-top: 1px;
+    animation: fluidEntrance 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* ==================== CARDS ==================== */
-
+/* ==========================================================================
+   KPI CARDS WITH ADVANCED KINETIC GLOW
+   ========================================================================== */
 .cards-row {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+    margin-bottom: 24px;
 }
 
 .stat-card {
-    background-color: #ffffff;
-    border: 1px solid #E0D8CF;
-    border-radius: 10px;
-    padding: 20px;
-    transition: box-shadow 0.2s ease;
+    background-color: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 20px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--borda-fina);
+    box-shadow: var(--sombra-card);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    opacity: 0;
+    isolation: isolate;
+    will-change: transform, box-shadow, border-color;
+    animation: fluidEntrance 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transition: 
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+        border-color 0.3s ease;
 }
 
+.stat-card:nth-child(1) { animation-delay: 0.01s; }
+.stat-card:nth-child(2) { animation-delay: 0.04s; }
+.stat-card:nth-child(3) { animation-delay: 0.07s; }
+.stat-card:nth-child(4) { animation-delay: 0.10s; }
+
 .stat-card:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transform: translateY(-4px) translateZ(0);
+    border-color: rgba(var(--primary-rgb), 0.4);
+    box-shadow: var(--sombra-hover);
 }
 
 .stat-label {
-    font-size: 12px;
-    color: #6B6B6B;
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: var(--texto-mutado);
     display: flex;
     align-items: center;
     gap: 6px;
-    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 .stat-label i {
-    font-size: 14px;
-    color: #C8A96A;
+    color: var(--texto-mutado);
+    font-size: 0.75rem;
+    transition: color 0.25s ease;
+}
+
+.stat-card:hover .stat-label i {
+    color: var(--primary);
 }
 
 .stat-val {
-    font-size: 28px;
-    font-weight: 500;
-    color: #3B2618;
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--texto-titulo);
+    letter-spacing: -0.05em;
 }
 
-/* ==================== CONTENT CARD ==================== */
-
+/* ==========================================================================
+   DATA-DENSE TABLES & CONTAINERS (COMPLETADO USANDO SUAS CLASSES)
+   ========================================================================== */
 .content-card {
-    background-color: #ffffff;
-    border: 1px solid #E0D8CF;
+    background-color: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--borda-fina);
     border-radius: 12px;
-    overflow: hidden;
+    box-shadow: var(--sombra-card);
+    padding: 24px;
+    opacity: 0;
+    animation: fluidEntrance 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.15s;
+    overflow-x: auto; /* Garante que tabelas fiquem responsivas em telas menores */
 }
 
 .content-card-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 24px;
-    border-bottom: 1px solid #E0D8CF;
+    margin-bottom: 20px;
 }
 
 .content-card-title {
-    font-size: 15px;
-    font-weight: 500;
-    color: #3B2618;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--texto-titulo);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: -0.02em;
 }
 
-/* ==================== TABELA ==================== */
+.content-card-title i {
+    color: var(--primary);
+}
 
-#tabelaUsuarios {
+/* Estilização Direta das Tabelas do Seu HTML */
+#tabelaUsuarios, 
+#tabelaProdutos, 
+#tabelaMensagens {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
-}
-
-#tabelaUsuarios th {
-    padding: 12px 24px;
     text-align: left;
-    font-size: 11px;
+    font-size: 0.88rem;
+}
+
+/* Elementos internos das tabelas gerados via JS */
+#tabelaUsuarios th, #tabelaProdutos th, #tabelaMensagens th {
+    color: var(--texto-titulo);
     font-weight: 600;
-    color: #6B6B6B;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    background-color: #faf8f5;
-    border-bottom: 1px solid #E0D8CF;
+    padding: 12px 16px;
+    border-bottom: 2px solid var(--borda-fina);
+    white-space: nowrap;
 }
 
-#tabelaUsuarios td {
-    padding: 14px 24px;
-    border-bottom: 1px solid #E0D8CF;
-    color: #2B2B2B;
+#tabelaUsuarios td, #tabelaProdutos td, #tabelaMensagens td {
+    padding: 16px;
+    border-bottom: 1px solid var(--borda-fina);
+    color: var(--texto-corpo);
+    white-space: nowrap;
 }
 
-#tabelaUsuarios tbody tr:last-child td {
+/* Efeito Hover nas linhas das Tabelas */
+#tabelaUsuarios tr:hover td, 
+#tabelaProdutos tr:hover td, 
+#tabelaMensagens tr:hover td {
+    background-color: rgba(var(--primary-rgb), 0.02);
+}
+
+#tabelaUsuarios tr:last-child td, 
+#tabelaProdutos tr:last-child td, 
+#tabelaMensagens tr:last-child td {
     border-bottom: none;
-}
-
-#tabelaUsuarios tbody tr:hover {
-    background-color: #faf8f5;
-}
-
-/* ==================== RESPONSIVE ==================== */
-
-@media (max-width: 600px) {
-    .adm-header {
-        padding: 0 16px;
-    }
-
-    .header-nome {
-        display: none;
-    }
-
-    .adm-main {
-        padding: 16px;
-    }
-
-    .cards-row {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
