@@ -24,7 +24,7 @@ $usuarioEncontrado = null;
 if (isset($bancoArray['usuarios'])) {
     // Começa o jogo do "onde está o Wally" na lista de usuários
     foreach ($bancoArray['usuarios'] as $usuarioAtual) {
-        // O usuário tem nome? E esse nome é exatamente quem a gente quer?
+        // O usuário tem nowwwme? E esse nome é exatamente quem a gente quer?
         if (isset($usuarioAtual['nome']) && $usuarioAtual['nome'] === $nomeUsuario) {
             // Achei o sumido! Guarda os dados dele aqui
             $usuarioEncontrado = $usuarioAtual;

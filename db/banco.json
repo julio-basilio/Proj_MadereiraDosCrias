@@ -5,25 +5,28 @@
             "Nome": "MDF",
             "Tipo": "Maciça",
             "Preco_Metro": 10,
-            "Quantidade": 50
+            "Quantidade": 50,
+            "UrlImage": "..\/Img\/pexels-mdf-4744800.jpg"
         }
     ],
     "usuarios": [
         {
-            "id_usuario": 1,
-            "nome": "neymar",
-            "email": "neymarjr.@gmail.com",
-            "senha": "123",
-            "idade": 50,
-            "endereco": "Rua do Limoeiro"
+            "id": 1,
+            "nome": "julio basilio",
+            "email": "juliobasilio780@gmail.com",
+            "senha": "123456789",
+            "idade": 17,
+            "endereco": "nova york",
+            "UrlImage": "https:\/\/i.redd.it\/what-is-your-favorite-invincible-design-so-far-tv-show-v0-vp9satx8oh4g1.jpg?width=736&format=pjpg&auto=webp&s=e47950d9de777a8d60afea51dd2ebd0592a1dcb5"
         },
         {
-            "id_usuario": 2,
-            "nome": "Julio",
-            "email": "Julio.@gmail.com",
-            "senha": "1406",
-            "idade": 17,
-            "endereco": "Rua do Limoeiro de Pindamonhangaba"
+            "id": 2,
+            "nome": "admteste",
+            "email": "adm@gmail.com",
+            "senha": "adm",
+            "idade": 67,
+            "endereco": "rua brasil",
+            "UrlImage": "https:\/\/i.redd.it\/n2zo2z0cozzg1.jpeg"
         }
     ],
     "pedidos": [
@@ -53,6 +56,11 @@
             "nameUsuario": "Teste",
             "email": "towaloy710@bncinema.com",
             "mensagem": "A preservação do meio ambiente é um dos maiores desafios da contemporaneidade. Se, historicamente, a Revolução Industrial inaugurou um modelo de produção predatório, hoje a sociedade colhe os frutos dessa degradação, evidenciada pelas mudanças climáticas e pela perda de biodiversidade. Nesse contexto, é imperativo analisar a mercantilização da natureza e a falha na conscientização ecológica como os principais motores desse impasse.Em primeiro lugar, cabe ressaltar que o sistema econômico vigente prioriza o lucro a curto prazo em detrimento da sustentabilidade. O sociólogo Zygmunt Bauman, em sua crítica à sociedade de consumo, aponta que a obsolescência acelerada e o descarte constante geram um acúmulo de resíduos que o planeta não consegue absorver. Dessa forma, os recursos naturais são tratados como mercadorias inesgotáveis, ignorando a finitude dos ecossistemas e a necessidade de preservação para as futuras gerações.Além disso, a ineficiência da educação ambiental contribui para a perpetuação de hábitos nocivos. Embora a sustentabilidade seja um tema previsto em diretrizes curriculares, na prática, muitas escolas ainda pecam por abordar a ecologia de forma teórica e distante da realidade dos estudantes. Como consequência, falta o desenvolvimento de uma verdadeira empatia ambiental, na qual o indivíduo se reconhece como parte do ecossistema e passa a adotar práticas de consumo consciente no seu cotidiano.Portanto, medidas urgentes são necessárias para mitigar esses impactos. Cabe ao Ministério do Meio Ambiente e Mudança do Clima, em parceria com o Ministério da Educação, reformular as diretrizes escolares, implementando projetos práticos de reciclagem e conservação nas comunidades locais. Ademais, o Governo Federal deve intensificar a fiscalização sobre grandes indústrias, aplicando multas severas aos poluidores e oferecendo incentivos fiscais para empresas que adotem matrizes energéticas limpas. Somente assim, será possível garantir um futuro viável para a humanidade e para o planeta."
+        },
+        {
+            "nameUsuario": "ADMTESTE",
+            "email": "adm@gmail.com",
+            "mensagem": "Oi, gostaria de deixar aqui a minha ingratidão pelo racismo presente na sociedade contemporânea. "
         }
     ]
 }

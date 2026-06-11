@@ -51,7 +51,10 @@
                         <span>Entrega</span>
                     </button>
 
-                    <div id="nomeUsuario"></div>
+                    <div id="usuario-container">
+                        <div id="fotoPerfil"></div>
+                        <div id="nomeUsuario"></div>
+                    </div>
 
                     <button class="icon-btn" id="btnCarrinho" title="Carrinho" style="position: relative;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">

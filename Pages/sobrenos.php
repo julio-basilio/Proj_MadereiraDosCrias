@@ -24,7 +24,10 @@
                 <p id="contatos"> <a href="" class="textHeader">CONTATO</a></p>
                 <p id="orcamento"><a href="" class="textHeader">ORÇAMENTOS</a> </p>
             </div>
-            <div id="nomeUsuario"></div>
+            <div id="usuario-container">
+                        <div id="fotoPerfil"></div>
+                        <div id="nomeUsuario"></div>
+                    </div>
             <img id="carrinho" src="../Img/Carrinho.png" alt="Carrinho">
         </header>
 

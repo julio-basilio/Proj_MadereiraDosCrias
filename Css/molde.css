@@ -204,6 +204,31 @@ nav {
     transform: scale(1.1);
 }
 
+
+#nomeUsuario.icon-btn {
+    width: auto;            
+    min-width: auto;        
+    height: auto;           
+    border-radius: 0;       
+    display: inline-flex;  
+    flex-direction: row;    
+    align-items: center;   
+    padding: 5px 10px;
+}
+
+
+#nomeUsuario strong {
+    font-size: 14px;
+    color: var(--color-white);
+    white-space: nowrap;       
+}
+
+#nomeUsuario img {
+    display: inline-block;
+    max-width: 40px;
+    max-height: 40px;
+}
+
 .cart-badge {
     position: absolute;
     top: -5px;
@@ -259,6 +284,47 @@ nav {
 }   
 
 /* ==================== SUA PARTE AQUI ==================== */
+        /* ==================== SUA PARTE AQUI ==================== */
+        /* Container principal do Usuário */
+#usuario-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    padding: 6px 16px;
+    background-color: #eee0ce; /* Cor idêntica ao fundo do seu footer/detalhes */
+    border-radius: 20px;
+    height: 45px; /* Altura controlada para alinhar com os outros ícones */
+    margin: 0 10px;
+}
+
+/* Força a foto de perfil a aparecer e ficar redonda */
+#fotoPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fotoPerfil img {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 2px solid #3B2618; /* Borda escura para dar contraste */
+}
+
+/* Ajuste do texto do nome do usuário */
+#nomeUsuario h3, #nomeUsuario span {
+    font-size: 13px !important;
+    color: #3B2618 !important; /* Cor escura para ler bem no fundo claro */
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+}
+
 
 main {
     background-color: #eee0ce;

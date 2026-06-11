@@ -25,7 +25,7 @@
 
             <nav>
                 <div class="logo">
-                    <img src="Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="">
+                    <img src="../Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="">
                     <h1 class="logo-text">
                         MADEIREIRA <br> <span class="logo-span">SAHUR</span>
                     </h1>
@@ -51,6 +51,11 @@
                         </svg>
                         <span>Entrega</span>
                     </button>
+
+                    <div id="usuario-container">
+                        <div id="fotoPerfil"></div>
+                        <div id="nomeUsuario"></div>
+                    </div>
 
                      <button class="icon-btn" id="cartBtn" title="Carrinho" style="position: relative;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -91,7 +96,7 @@
 
             <section class="footer-top">
 
-                <img src="Img/sahurFooter.png" alt="">
+                <img src="../Img/sahurFooter.png" alt="">
                 
                 <div class="social-area">
 

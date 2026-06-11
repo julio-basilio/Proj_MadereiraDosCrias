@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (dadosRecebidos.status === 'sucesso') {
                 window.location.href = dadosRecebidos.link;
+                localStorage.setItem('nomeADM', dadosRecebidos.nome);
             } else {
                 alert("ADM não cadastrado");
             }

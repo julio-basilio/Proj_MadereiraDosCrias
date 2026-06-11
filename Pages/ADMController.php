@@ -31,7 +31,11 @@ if ($usuarioEncontrado === null) {
 
 if ($senhaUsuario === $usuarioEncontrado['senha']) {
     $link = "pagADM.php";
-    echo json_encode(["status" => "sucesso", "link" => $link]);
+    echo json_encode([
+        "status" => "sucesso", 
+        "nome" => $nomeUsuario, 
+        "link" => $link
+    ]);
 } else {
     echo json_encode(["status" => "erro", "mensagem" => "Senha incorreta"]);
 }

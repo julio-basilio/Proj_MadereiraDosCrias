@@ -25,7 +25,8 @@ $nomes_usuarios = array_map(function($usuario) {
         'email'   => $usuario['email'],
         'senha' => $usuario['senha'],
         'idade' => $usuario['idade'],
-        'endereco' => $usuario['endereco']
+        'endereco' => $usuario['endereco'],
+        'UrlImage' => $usuario['UrlImage']
         
         ];
 }, $lista_usuarios_completa);
@@ -40,7 +41,8 @@ $nomes_produtos = array_map(function($produto) {
         'Nome'        => $produto['Nome'],
         'Tipo'        => $produto['Tipo'],
         'Preco_Metro' => $produto['Preco_Metro'],
-        'Quantidade'  => $produto['Quantidade']
+        'Quantidade'  => $produto['Quantidade'],
+        'UrlImage' => $produto['UrlImage']
     ];
 }, $lista_produtos_completa);
 
