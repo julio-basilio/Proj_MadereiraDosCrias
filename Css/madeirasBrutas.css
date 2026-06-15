@@ -1,5 +1,3 @@
-
-
   * {
             margin: 0;
             padding: 0;
@@ -316,219 +314,259 @@
         }
 
 
+
         /* ==================== MAIN ==================== */
 
+        
+main {
+    background-color: #eee0ce; /* Usei a cor variável que você já tem */
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+h1{
+    margin: 30px;
+}
+
+/* 1. HERO SECTION */
+.hero-portas {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 900px;
+}
+
+.hero-portas h1 {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+/* 2. CATEGORIA E PRODUTOS (VITRINE) */
+.categoria-destaque {
+    width: 100%;
+    padding: 40px 20px;
+    background: #eee0ce; /* Fundo branco para destacar os produtos */
+}
+
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produto-card {
+    width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.produto-card img{
+    width: 30vh;
+    height: 30vh;
+}
+
+.produto-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.btn-detalhes {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* 3. DIFERENCIAIS (GRID DE ÍCONES) */
+.sobre-portas {
+    padding: 60px 20px;
+    width: 1700px;
+    text-align: center;
+    background-color: #3F6B34;
+    color: white;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto 0;
+}
+
+.beneficio-item i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+}
+
+/* 4. ORÇAMENTO (CALL TO ACTION) */
+.orçamento {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: var(--color-primary);
+    text-align: center;
+    color: white;
+}
+
+.btn-orcamento {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 800;
+    margin-top: 20px;
+    transition: background 0.3s;
+}
+
+  
+
+
+
        
-        main{
-            background-color:  #eee0ce;
-            grid-area: main;
-            
-            height: auto;
-        }
-        
-        .categorias{
-            width: 1200px;
-            margin:40px auto;
-        }
 
-        .grid-categorias{
-            display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
-            gap:100px;
-        }
 
-        .card{
-            height: 40vh;
-            width: 40vh;
-            
-            text-decoration:none;
-            color:inherit;
-            border-radius:16px;
-            padding:35px 25px;
-            transition:0.3s;
-            box-shadow:0 5px 20px rgba(0,0,0,0.08);
 
-            position: relative;
-            overflow: hidden;
-            color: white;
-            
-        }
-        
 
-        .card:hover{
-            transform:translateY(-8px);
-            box-shadow:0 15px 30px rgba(0,0,0,0.15);
-        }
 
-        .card h2{
-            margin-bottom:10px;
-            color:#ffffff;
-        }
 
-        .card p{
-            color:#ffffff;
-            line-height:1.5;
-        }
 
-        .brutas{
-            background-image: 
-            linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.0)),
-            url(../Img/pexels-abrek-okur-622168308-32608643.jpg);
-            background-size: cover;
-            background-position: center;
-            
-        }
 
-        .finas{
-            background-image: url(../Img/pexels-huum-sauna-heaters-718199222-36077586.jpg);
-            background-size: cover;
-            background-position: center;
-            
-        }
-
-        .mdf{
-            background-image: url(../Img/pexels-mdf-4744800.jpg);
-            background-size: cover;
-            background-position: center;
-            
-        }
-
-        .portas{
-            background-image: url(../Img/pexels-kubrarkan-14547589.jpg);
-            background-size: cover;
-            background-position: center;
-            
-        }
-
-        .ferragens{
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.0)), url(../Img/pexels-ferragens-19673885.jpg);
-            background-size: cover;
-            background-position: center;
-            
-        }
-
-        .ferramentas{
-            background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.0)), url(../Img/pexels-tools-188978162-19582317.jpg);
-            background-size: cover;
-            background-position: center;
-        }
         
 
         /* ==================== FOOTER ==================== */
 
 
        .footer{
-            background: #2c1b12;
-            color: #ffffff;
-            border-top: #2B2B2B solid 1px
-        }
+    background: #2c1b12;
+    color: #ffffff;
+}
 
-        .footer-top{
-            padding: 2rem;
-            border-bottom: 1px solid rgba(255,255,255,.15);
-            background-color: #eee0ce;
+.footer-top{
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,.15);
+    background-color: #eee0ce;
 
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
 
-        .footer-top img{
-            width: 500px;
-            overflow: hidden;
-        }
+.footer-top img{
+    width: 500px;
+    overflow: hidden;
+}
 
-        .social-area h3{
-            font-size: 50px;
-            display: flex;
-            align-items: center;
-            height: 50%;
-            color: #dd9c3e;
-        }
+.social-area h3{
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    color: #dd9c3e;
+}
 
-        .social-links{
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-        }
+.social-links{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
 
-        .social-links a{
-            width: 70px;
-            height: 70px;
+.social-links a{
+    width: 70px;
+    height: 70px;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-            border-radius: 50%;
+    border-radius: 50%;
 
-            text-decoration: none;
+    text-decoration: none;
 
-            background: #4278d9;
-            color: white;
+    background: #4278d9;
+    color: white;
 
-            font-size: 1.3rem;
+    font-size: 1.3rem;
 
-            transition: .3s;
-        }
-        .social-links a:hover{
-            transform: translateY(-4px);
-        }
+    transition: .3s;
+}
+.social-links a:hover{
+    transform: translateY(-4px);
+}
 
 
-        .footer-content{
-            padding: 3rem 2rem;
+.footer-content{
+    padding: 3rem 2rem;
 
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 
-            gap: 2rem;
-        }
+    gap: 2rem;
+}
 
-        .footer-column{
-            display: flex;
-            flex-direction: column;
-            gap: .8rem;
-        }
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
 
-        .footer-column h4{
-            color: #dd9c3e;
-            margin-bottom: .5rem;
-        }
+.footer-column h4{
+    color: #dd9c3e;
+    margin-bottom: .5rem;
+}
 
-        .footer-column a{
-            color: #ddd;
-            text-decoration: none;
-        }
+.footer-column a{
+    color: #ddd;
+    text-decoration: none;
+}
 
-        .footer-column a:hover{
-            color: #dd9c3e;
-        }
+.footer-column a:hover{
+    color: #dd9c3e;
+}
 
-        .footer-column p{
-            color: #cfcfcf;
-            line-height: 1.6;
-        }
+.footer-column p{
+    color: #cfcfcf;
+    line-height: 1.6;
+}
 
-        .repo-link{
-            color: #4278d9 !important;
-            font-weight: bold;
-        }
+.repo-link{
+    color: #4278d9 !important;
+    font-weight: bold;
+}
 
-        .footer-bottom{
-            border-top: 1px solid rgba(255,255,255,.15);
+.footer-bottom{
+    border-top: 1px solid rgba(255,255,255,.15);
 
-            padding: 1.5rem;
+    padding: 1.5rem;
 
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
 
-            text-align: center;
+    text-align: center;
 
-            color: #bdbdbd;
-        }
+    color: #bdbdbd;
+}
 
         /* ==================== RESPONSIVE ==================== */
         @media (max-width: 768px) {
