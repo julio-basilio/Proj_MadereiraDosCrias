@@ -19,7 +19,7 @@
     
         <!-- HEADER & NAVBAR -->
         <header id="header">
-            <h1><a href="">Madeiras Brutas</a></h1>
+            <h1><a href="">Madeiras Brutas</a></h1> <!--TESTE-->
 
             <nav>
                 <div class="logo">
