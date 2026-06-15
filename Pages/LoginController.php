@@ -1,4 +1,5 @@
 <?php
+
 header('Content-Type: application/json');
 
 $dadosRecebidos = json_decode(file_get_contents('php://input'), true);
@@ -9,10 +10,13 @@ $email      = $dadosRecebidos['email'] ?? '';
 $senha      = $dadosRecebidos['senha'] ?? '';
 $idade      = $dadosRecebidos['idade'] ?? null;
 $endereco   = $dadosRecebidos['endereco'] ?? '';
-$urlImage   = $dadosRecebidos['UrlImage'] ?? '';
+$urlImage   = $dadosRecebidos['urlImagem'] ?? '';
+
 
 
 $bancoDados = '../db/banco.json';
+
+
 
 $conteudoBanco = file_get_contents($bancoDados);
 $textoBanco = json_decode($conteudoBanco, true);
@@ -37,5 +41,5 @@ echo json_encode([
     "Image" => $urlImage,
     "nomeUsuarioLocal" => $nome,
     "status" => "sucesso",
-    "url" => "pagEntrada.html"
+    "url" => "index.html"
 ]);

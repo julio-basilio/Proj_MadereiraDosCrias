@@ -24,7 +24,7 @@ document.addEventListener('keydown', (tecla) => {
   }
   if (historicoTeclas === 'admphp') {
     alert('Você não quer isso...');
-    window.location.href = "adm.php";
+    window.location.href = "./Pages/adm.php";
     historicoTeclas = '';
   }
 });
@@ -66,57 +66,83 @@ function EnviarDados() {
 }
 
 // Controle de Login
-function Login() {
-  const form = document.getElementById('login'); 
-  if (!form) return;
+function login() {
+    const form = document.getElementById('login');
+    if (!form) return;
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const urlImagemInput = document.getElementById('imageUser').value;
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault(); 
 
-    const dadosUsuario = {
-      id_usuario: parseInt(document.getElementById('id_usuario').value), 
-      nome: document.getElementById('nome').value.toLowerCase(),
-      email: document.getElementById('email').value.toLowerCase(),
-      senha: document.getElementById('senha').value.toLowerCase(),
-      idade: parseInt(document.getElementById('idade').value),           
-      endereco: document.getElementById('endereco').value.toLowerCase(),
-      UrlImage: urlImagemInput
-    };
+        const urlImagemInput = document.getElementById('imageUser') ? document.getElementById('imageUser').value : '';
+        
+       
+        const idUsuarioEl = document.getElementById('id_usuario');
+        const nomeEl = document.getElementById('nome');
+        const emailEl = document.getElementById('email'); 
+        const senhaEl = document.getElementById('senha');
+        const idadeEl = document.getElementById('idade');
+        const enderecoEl = document.getElementById('endereco');
 
-    try {
-      const resposta = await fetch('../LoginController.php', { 
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(dadosUsuario) 
-      });
+        const dadosUsuario = {
+            id_usuario: idUsuarioEl ? parseInt(idUsuarioEl.value) : 0,
+            nome: nomeEl ? nomeEl.value : '',
+            email: emailEl ? emailEl.value : '',
+            senha: senhaEl ? senhaEl.value : '',
+            idade: idadeEl ? parseInt(idadeEl.value) : 0,
+            endereco: enderecoEl ? enderecoEl.value.toLowerCase() : '',
+            urlImagem: urlImagemInput
+        };
 
-      if (resposta.ok) {
-        const resultado = await resposta.json();
-        localStorage.setItem('nomeUsuario', resultado.nomeUsuarioLocal);
-        localStorage.setItem('urlImage', urlImagemInput);
-        window.location.href = resultado.url;
-      } else {
-        console.error('Erro no servidor:', resposta.status);
-        alert('Falha ao tentar logar.');
-      }
-    } catch (erro) {
-      console.error('Erro na requisição:', erro);
-      alert('Não foi possível conectar ao servidor.');
+        try {
+            const resposta = await fetch('Pages/LoginController.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dadosUsuario)
+            });
+
+            if (resposta.ok) {
+                const resultado = await resposta.json();
+                
+                try {
+                    localStorage.setItem('nomeUsuario', resultado.nomeUsuarioLocal || dadosUsuario.nome);
+                    localStorage.setItem('urlImagem', urlImagemInput);
+                } catch (storageError) {
+                    console.warn("LocalStorage indisponível no navegador:", storageError);
+                }
+
+                window.location.href = resultado.url;
+            } else {
+                console.error('Erro no servidor:', resposta.status);
+                alert('Falha ao tentar logar.');
+            }
+
+        } catch (erro) {
+            console.error('Erro na requisição:', erro);
+            alert('Não foi possível conectar ao servidor. Verifique o console para detalhes.');
+        }
+    });
+}
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  EnviarDados();
+    login();
+
+
+
+    const nomeTela = localStorage.getItem('nomeUsuario');
+    const fotoperfil = localStorage.getItem('urlImagem'); 
+
+    const divNome = document.getElementById('nomeUsuario');
+    const divPerfil = document.getElementById('fotoPerfil');
+
+    if (divNome && nomeTela) {
+        divNome.innerHTML = `<span>${nomeTela.toUpperCase()}</span>`;
     }
-  });
-}
 
-const nomeTela = localStorage.getItem('nomeUsuario');
-const fotoperfil = localStorage.getItem('urlImage');
-
-const divNome = document.getElementById('nomeUsuario');
-const divPerfil = document.getElementById('fotoPerfil');
-
-if (divNome && nomeTela) {
-    divNome.innerHTML = `<span>${nomeTela.toUpperCase()}</span>`;
-}
-
-if (divPerfil && fotoperfil) {
-    divPerfil.innerHTML = `<img src="${fotoperfil}" alt="Foto" />`;
-}
+    if (divPerfil && fotoperfil) {
+        divPerfil.innerHTML = `<img src="${fotoperfil}" alt="Foto de Perfil" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" />`;
+    }
+});

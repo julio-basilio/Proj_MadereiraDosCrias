@@ -50,7 +50,7 @@
             </div>
 
 
-            <button type="submit" onclick="Login()">Entrar no Sistema</button>
+            <button type="submit">Entrar no Sistema</button>
         </form>
     </main>
 
@@ -61,4 +61,4 @@
     <script src="Js/script.js"></script>
 
 </body>
-</html>
+</html> 

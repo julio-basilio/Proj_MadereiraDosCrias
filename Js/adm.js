@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         
-        const nomeUsuario = document.getElementById("nome").value.toLowerCase();
-        const senhaUsuario = document.getElementById("senha").value.toLowerCase();
+        const nomeUsuario = document.getElementById("nome").value;
+        const senhaUsuario = document.getElementById("senha").value;
         
 
         try {
@@ -32,4 +32,22 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Erro ao buscar dados: ', error);
         }
     });
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+
+
+    const nomeTela = localStorage.getItem('nomeUsuario');
+    const fotoperfil = localStorage.getItem('urlImagem'); 
+
+    const divNome = document.getElementById('nomeUsuario');
+    const divPerfil = document.getElementById('fotoPerfil');
+
+    if (divNome && nomeTela) {
+        divNome.innerHTML = `<span>${nomeTela.toUpperCase()}</span>`;
+    }
+
+    if (divPerfil && fotoperfil) {
+        divPerfil.innerHTML = `<img src="${fotoperfil}" alt="Foto de Perfil" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" />`;
+    }
 });
