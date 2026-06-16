@@ -1,5 +1,6 @@
-
 const logado = localStorage.getItem('Logado');
+
+logado === 'false'
 
 console.log(logado);
 if (logado === 'false' || logado === null) {

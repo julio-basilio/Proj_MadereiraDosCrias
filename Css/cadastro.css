@@ -271,19 +271,130 @@
             color: var(--color-accent);
         }
 
+
+
+              /* ==================== BOTAO USUARIO  ==================== */
+     
+                /* Container principal do Usuário */
     
 
-        /* ==================== MAIN ==================== */
+  
+        #fotoPerfil {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-       
-        main{
-            background-color:  #eee0ce;
+        #fotoPerfil img {
+            width: 32px ;
+            height: 32px ;
+            min-width: 32px ;
+            min-height: 32px ;
+            object-fit: cover ;
+            border-radius: 50% ;
+            border: 2px solid #3B2618; 
+        }
+
+
+        #nomeUsuario h3, #nomeUsuario span {
+            font-size: 13px ;
+            color: #3B2618 ; 
+            font-family: 'Archivo Black', sans-serif;
+            margin: 0 ;
+            padding: 0 ;
+            white-space: nowrap;
+        }
+
+        form {
+            background-color: #ffffff;
+            border-radius: 23px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 32px;
+            max-width: 450px;
+            margin: 20px auto;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        form:hover {
+            box-shadow: 0 15px 40px rgba(147, 204, 14, 0.08);
+            border-color: #0066cc;
+        }
+
+
+              /* ==================== MAIN ==================== */
+
+        main {
+            background-color: #eee0ce;
             grid-area: main;
             
-            height: auto;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            min-height: calc(100vh - 205px); 
+            padding: 40px 20px;     
         }
         
+
+      form {
+            background-color: var(--color-light); 
+            border-radius: 23px;
+            border: 1px solid rgba(59, 38, 24, 0.1);
+            box-shadow: 0 15px 45px rgba(59, 38, 24, 0.08);
+            
+
+            padding: 6%;            
+            width: 100%;           
+            max-width: 600px; 
+            font-size: 25px;
+            
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            
+            transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+        }
+
+    form:hover {
+        box-shadow: 0 20px 50px #6B3834;
+        border-color: var(--color-accent); 
+        transform: translateY(-2px);
+    }
+
+    form input {
+        background-color: var(--color-accent);
+        border: none;
+        color: #e6e3ff;
+        border-radius: 23px;
+        width: 100%;
+        padding: 16px 20px; 
+        font-size: 18px; 
+        outline: none;
+        transition: opacity 0.2s ease;
+    }
+
+    form input:focus {
+        opacity: 0.9;
+    }
+
+    #input2 {
+        padding: 16px 20px; 
+        font-size: 18px;
+        background-color: #7669C7;
+        cursor: pointer;
+        font-weight: bold;
+        color: white;
+    }
+
+    input[type="text"] {
+    font-size: 25px;
+    padding: 10px;  
+}
+
+
         .categorias{
+
             width: 1200px;
             margin:40px auto;
         }
@@ -468,7 +579,7 @@
         }
 
         .repo-link{
-            color: #4278d9 !important;
+            color: #4278d9 ;
             font-weight: bold;
         }
 

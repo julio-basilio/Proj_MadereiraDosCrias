@@ -88,7 +88,7 @@
             <input type="password" id="senha" required>
         </label><br><br>
         
-        <input type="submit" value="Entrar">
+        <input id="input2" type="submit" value="Entrar">
     </form>
 </main>
 
