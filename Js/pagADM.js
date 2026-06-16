@@ -53,34 +53,82 @@
 
                 //TABELA DE PRODUTOS 
                 const tabelaProd = document.getElementById('tabelaProdutos');
-                if (tabelaProd) {
-                    tabelaProd.innerHTML = "";
-                    if (!data.produtos.lista || data.produtos.lista.length === 0) {
-                        tabelaProd.innerHTML = "<tbody><tr><td colspan='5' style='text-align: center; padding: 20px;'>Nenhum produto em estoque.</td></tr></tbody>";
-                    } else {
-                        let thead = `<thead><tr><th>Imagem</th><th>Madeira</th><th>Tipo</th><th>Preço/Metro</th><th>Quantidade</th></tr></thead>`;
-                        let linhas = "";
-                        data.produtos.lista.forEach(p => {
-                            let preco = typeof p.Preco_Metro === 'number' || !isNaN(p.Preco_Metro)
-                                ? parseFloat(p.Preco_Metro).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })
-                                : p.Preco_Metro;
 
-                            
-                            let imagemTag = p.UrlImage 
-                                ? `<img src="${p.UrlImage}" alt="${p.Nome}" style="width: 40px; height: 40px; object-fit: cover; border-radius: 4px; vertical-align: middle;">`
-                                : `<span style="color: #999; font-size: 12px;">Sem foto</span>`;
+if (tabelaProd) {
 
-                            linhas += `<tr>
-                                <td style="text-align: center; vertical-align: middle;">${imagemTag}</td>
-                                <td style="vertical-align: middle;">${p.Nome}</td>
-                                <td style="vertical-align: middle;">${p.Tipo}</td>
-                                <td style="vertical-align: middle;">R$ ${preco}</td>
-                                <td style="vertical-align: middle;">${p.Quantidade} un.</td>
-                            </tr>`;
-                        });
-                        tabelaProd.innerHTML = thead + "<tbody>" + linhas + "</tbody>";
-                    }
+    tabelaProd.innerHTML = "";
+
+    if (!data.produtos.lista || data.produtos.lista.length === 0) {
+
+        tabelaProd.innerHTML = `
+            <tbody>
+                <tr>
+                    <td colspan="8">
+                        Nenhum produto encontrado
+                    </td>
+                </tr>
+            </tbody>
+        `;
+
+    } else {
+
+        let thead = `
+        <thead>
+            <tr>
+                <th>Imagem</th>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Tipo</th>
+                <th>Categoria</th>
+                <th>Largura</th>
+                <th>Comprimento</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        `;
+
+        let linhas = "";
+
+        data.produtos.lista.forEach(p => {
+
+            let preco = Number(p.Preco_Metro).toLocaleString(
+                'pt-BR',
+                {
+                    style: 'currency',
+                    currency: 'BRL'
                 }
+            );
+
+            let imagemTag = p.UrlImage
+                ? `<img
+                    src="${p.UrlImage}"
+                    alt="${p.Nome}"
+                    style="
+                        width:50px;
+                        height:50px;
+                        object-fit:cover;
+                        border-radius:8px;
+                    "
+                >`
+                : "Sem imagem";
+
+            linhas += `
+            <tr>
+                <td>${imagemTag}</td>
+                <td>${p.Nome}</td>
+                <td>${p.Descricao}</td>
+                <td>${p.Tipo}</td>
+                <td>${p.Categoria}</td>
+                <td>${p.Largura}</td>
+                <td>${p.Comprimento}</td>
+                <td>${preco}</td>
+            </tr>
+            `;
+        });
+
+        tabelaProd.innerHTML = thead + `<tbody>${linhas}</tbody>`;
+    }
+}
 
                 // ABELA DE MENSAGENS 
                 const tabelaMsg = document.getElementById('tabelaMensagens');

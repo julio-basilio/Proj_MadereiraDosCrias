@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         try {
-            const enviarDados = await fetch('ADMController.php', {
+            const enviarDados = await fetch('./Pages/EntrarPGController.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome: nomeUsuario, senha: senhaUsuario })
@@ -24,32 +24,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (dadosRecebidos.status === 'sucesso') {
                 window.location.href = dadosRecebidos.link;
-                localStorage.setItem('nomeADM', dadosRecebidos.nome);
+                localStorage.setItem('nomeUsuario', dadosRecebidos.nome);
+                localStorage.setItem('urlImagem', dadosRecebidos.imagem);
+                localStorage.setItem('Logado', 'true');
             } else {
-                alert("ADM não cadastrado");
+                alert("Conta não cadastrada");
             }
         } catch (error) {
             console.error('Erro ao buscar dados: ', error);
         }
     });
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-
-
-    const nomeTela = localStorage.getItem('nomeUsuario');
-    const fotoperfil = localStorage.getItem('urlImagem'); 
-
-    const divNome = document.getElementById('nomeUsuario');
-    const divPerfil = document.getElementById('fotoPerfil');
-
-    if (divNome && nomeTela) {
-        divNome.innerHTML = `<span>${nomeTela.toUpperCase()}</span>`;
-    }
-
-    if (divPerfil && fotoperfil) {
-        divPerfil.innerHTML = `<img src="${fotoperfil}" alt="Foto de Perfil" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" />`;
-    }
 });
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));

@@ -108,6 +108,9 @@ function login() {
                 try {
                     localStorage.setItem('nomeUsuario', resultado.nomeUsuarioLocal || dadosUsuario.nome);
                     localStorage.setItem('urlImagem', urlImagemInput);
+                    localStorage.setItem('Logado', 'true');
+
+
                 } catch (storageError) {
                     console.warn("LocalStorage indisponível no navegador:", storageError);
                 }

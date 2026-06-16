@@ -36,3 +36,34 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+const tituloOriginal = document.title;
+
+// Efeito de alteração do título da aba
+document.addEventListener("visibilitychange", async () => {
+  if (document.hidden) {
+    while (document.hidden) {
+      await sleep(500);
+      document.title = "Ei manin...";
+      await sleep(1000);
+      document.title = "Volte pra cá";
+      await sleep(1000);
+    }
+    document.title = tituloOriginal;
+  }
+});
+
+// Easter Egg de Administrador
+let historicoTeclas = '';
+document.addEventListener('keydown', (tecla) => {
+  historicoTeclas += tecla.key.toLowerCase();
+  if (historicoTeclas.length > 6) { 
+    historicoTeclas = historicoTeclas.slice(-6);
+  }
+  if (historicoTeclas === 'admphp') {
+    alert('Você não quer isso...');
+    window.location.href = "./Pages/adm.php";
+    historicoTeclas = '';
+  }
+});
