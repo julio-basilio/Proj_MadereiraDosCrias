@@ -42,6 +42,7 @@ O projeto foi construído do zero utilizando tecnologias nativas da web:
 | **Julio Basilio** | Back-End | [@julio-basilio](https://github.com) |
 | **Davi Moreira** | Front-End | [@davimoreiraa-lab](https://github.com) |
 | **Lucas Almeida** | Front-End | [@almeidalucas2107-blip](https://github.com/almeidalucas2107-blip) |
+| **Pedro Henrique** | Front-End | [@pedrohenrique28mds-sketch](https://github.com/pedrohenrique28mds-sketch) |
 
 ---
 
