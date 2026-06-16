@@ -163,3 +163,56 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(200, 169, 106, 0.3);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php
+
+$json = file_get_contents("../db/banco.json");
+
+$dados = json_decode($json, true);
+
+$produtos = $dados["produtos"];
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JSON</title>
+</head>
+
+    <body>
+
+        <h1>Produtos</h1>
+
+        <?php foreach($produtos as $produto): ?>
+
+        <?php if($produto["Categoria"] == "Madeiras Brutas"): ?>
+
+            <div class="card">
+
+                <img src="<?=$produto["UrlImage"]?>" width= "250px" >
+
+                <h3><?=$produto["nome"]?></h3>
+
+                <p>R$ <?=$produto["preco"]?></p>
+
+            </div>
+
+        <?php endif; ?>
+
+        <?php endforeach; ?>
+
+    </body>
+</html>
