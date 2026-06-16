@@ -86,7 +86,18 @@
 
         </header>
 
-        <main>
+        <main>                   
+                <!-- main -->
+
+         <?php
+
+        $json = file_get_contents("../db/banco.json");
+
+        $dados = json_decode($json, true);
+
+        $produtos = $dados["produtos"];
+
+        ?>
 
                 <h1>Madeiras Brutas</h1>
 

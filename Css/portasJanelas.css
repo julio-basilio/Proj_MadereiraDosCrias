@@ -267,19 +267,21 @@
 
 
        /* ==================== Área do main ==================== */
-/* ==========================================================================
-   SEÇÃO: MAIN - ESTRUTURA E CONTEÚDO
-   ========================================================================== */
+
 
 main {
-    background-color: var(--color-bg); /* Usei a cor variável que você já tem */
+    background-color: var(--color-bg);
     grid-area: main;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* 1. HERO SECTION */
+h2{
+    padding: 5%;
+}
+
+/* 1. Sessôes Hero! */
 .hero-portas {
     text-align: center;
     padding: 60px 20px;
@@ -338,7 +340,7 @@ main {
     transition: 0.3s;
 }
 
-/* 3. DIFERENCIAIS (GRID DE ÍCONES) */
+/* 3.(GRID DE ÍCONES) */
 .sobre-portas {
     padding: 60px 20px;
     text-align: center;
@@ -358,7 +360,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* 4. ORÇAMENTO (CALL TO ACTION) */
+/* 4. ORÇAMENTO*/
 .orçamento {
     width: 100%;
     padding: 80px 20px;
@@ -497,7 +499,7 @@ main {
 
         
 
-        /* ==================== RESPONSIVE ==================== */
+        /* ==================== RESPONSIVO!! ==================== */
         @media (max-width: 768px) {
             nav {
                 padding: 1rem;
@@ -565,7 +567,7 @@ main {
 
 
 
-        /* ==================== UTILITY ==================== */
+        /* ==================== UTILIDADE ==================== */
       
 
         /* SVG Icons Styling */
