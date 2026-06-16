@@ -11,11 +11,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<<<<<<< HEAD
+
     <link rel="stylesheet" href="../Css/madeirasBrutas.css">
-=======
     <link rel="stylesheet" href="Css/madeirasBrutas.css">
->>>>>>> 9f32d862c7be512c99f49033cb9ad4e21cb7ca86
 </head>
 <body>
 
@@ -28,13 +26,9 @@
             <nav>
 
                 <div class="logo">
-<<<<<<< HEAD
+
                     <a href="index.php">
                         <img src="../Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
-=======
-                    <a href="index.html">
-                        <img src="Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
->>>>>>> 9f32d862c7be512c99f49033cb9ad4e21cb7ca86
                     </a>
                     <h1 class="logo-text">
                         MADEIREIRA <br> <span class="logo-span">SAHUR</span>
@@ -110,14 +104,12 @@
 
                 <h1>Madeiras Brutas</h1>
 
-        <section class="categoria-destaque">
 
             <h2>Nossos Produtos em Destaque</h2>
 
             <div class="produtos-container">
                 
 
-<<<<<<< HEAD
                 <?php foreach($produtos as $produto): ?>
 
                 <?php if($produto["Categoria"] == "Madeiras Brutas"): ?>
@@ -139,67 +131,7 @@
 
             </div>
 
-=======
-                <!-- Produto 1: Carrossel -->
-                 <div class="produto-card">
-                    <img src="Img/pexels-mdf-4744800.jpg" alt="Janela de Madeira">
-                    <div class="card-content">
-                        <h3>Janelas de Madeira</h3>
-                        <p>Janelas tradicionais e modernas, ideais para proporcionar ventilação e elegância aos ambientes.</p>
-                        <a href="#" class="btn-detalhes">Comprar</a>
-                    </div>
-                </div>
-
-                <!-- Produto 2 -->
-                <div class="produto-card">
-                    <img src="Img/Logo Triple T.png" alt="Janela de Madeira">
-                    <div class="card-content">
-                        <h3>Janelas de Madeira</h3>
-                        <p>Janelas tradicionais e modernas, ideais para proporcionar ventilação e elegância aos ambientes.</p>
-                        <a href="#" class="btn-detalhes">Comprar</a>
-                    </div>
-                </div>
-
-                <!-- Produto 3 -->
-                <div class="produto-card">
-                    <img src="Img/pexels-kubrarkan-14547589.jpg" alt="Porta Balcão">
-                    <div class="card-content">
-                        <h3>Portas-Balcão</h3>
-                        <p>Perfeitas para áreas externas, varandas e espaços integrados com a natureza.</p>
-                        <a href="#" class="btn-detalhes">Comprar</a>
-                    </div>
-                </div>
-
-                  <div class="produto-card">
-                    <img src="Img/pexels-kubrarkan-14547589.jpg" alt="Porta Balcão">
-                    <div class="card-content">
-                        <h3>Portas-Balcão</h3>
-                        <p>Perfeitas para áreas externas, varandas e espaços integrados com a natureza.</p>
-                        <a href="#" class="btn-detalhes">Comprar</a>
-                    </div>
-                </div>
-
-                  <div class="produto-card">
-                    <img src="Img/pexels-kubrarkan-14547589.jpg" alt="Porta Balcão">
-                    <div class="card-content">
-                        <h3>Portas-Balcão</h3>
-                        <p>Perfeitas para áreas externas, varandas e espaços integrados com a natureza.</p>
-                        <a href="#" class="btn-detalhes">Comprar</a>
-                    </div>
-                </div>
-
-                  <div class="produto-card">
-                    <img src="Img/pexels-kubrarkan-14547589.jpg" alt="Porta Balcão">
-                    <div class="card-content">
-                        <h3>Portas-Balcão</h3>
-                        <p>Perfeitas para áreas externas, varandas e espaços integrados com a natureza.</p>
-                        <a href="#" class="btn-detalhes">Comprar</a>
-                    </div>
-                </div>
-
-            </div>
->>>>>>> 9f32d862c7be512c99f49033cb9ad4e21cb7ca86
-        </section>
+           
 
         <!-- Diferenciais -->
         <section class="sobre-portas">
@@ -232,11 +164,8 @@
 
         <footer class="footer">
             <section class="footer-top">
-<<<<<<< HEAD
                 <img src="../Img/sahurFooter.png"  alt="Footer Logo">
-=======
                 <img src="Img/sahurFooter.png"  alt="Footer Logo">
->>>>>>> 9f32d862c7be512c99f49033cb9ad4e21cb7ca86
                 <div class="social-area">
                     <h3>Acompanhe a Madeireira Sahur</h3>
                     <div class="social-links">
