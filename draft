@@ -208,6 +208,7 @@ $produtos = $dados["produtos"];
 
                 <p>R$ <?=$produto["preco"]?></p>
 
+<<<<<<< HEAD
                 
                 <a href="produto.php?id=<?=$produto['id']?>">
 
@@ -215,6 +216,8 @@ $produtos = $dados["produtos"];
 
                 </a>
 
+=======
+>>>>>>> 9f32d862c7be512c99f49033cb9ad4e21cb7ca86
             </div>
 
         <?php endif; ?>
@@ -222,6 +225,7 @@ $produtos = $dados["produtos"];
         <?php endforeach; ?>
 
     </body>
+<<<<<<< HEAD
 </html>
 
 
@@ -473,4 +477,7 @@ $produtos = $dados["produtos"];
     display:flex;
     align-items:center;
     justify-content:center;
-}
+}}
+=======
+</html>
+>>>>>>> 9f32d862c7be512c99f49033cb9ad4e21cb7ca86

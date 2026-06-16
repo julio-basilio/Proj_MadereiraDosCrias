@@ -5,11 +5,11 @@ header('Content-Type: application/json');
 $dadosRecebidos = json_decode(file_get_contents('php://input'), true);
 
 $id_usuario = $dadosRecebidos['id_usuario'] ?? null;
-$nome       = $dadosRecebidos['nome'] ?? 'Anônimo';
-$email      = $dadosRecebidos['email'] ?? '';
+$nome       = mb_strtolower($dadosRecebidos['nome'] ?? 'Anônimo', 'UTF-8');
+$email      = mb_strtolower($dadosRecebidos['email'] ?? '', 'UTF-8');
 $senha      = $dadosRecebidos['senha'] ?? '';
 $idade      = $dadosRecebidos['idade'] ?? null;
-$endereco   = $dadosRecebidos['endereco'] ?? '';
+$endereco   = mb_strtolower($dadosRecebidos['endereco'] ?? '','UTF-8');
 $urlImage   = $dadosRecebidos['urlImagem'] ?? '';
 
 
