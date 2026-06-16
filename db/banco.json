@@ -1,13 +1,342 @@
 {
-    "madeiras": [
+    "produtos": [
+
         {
-            "id_madeira": 1,
-            "Nome": "MDF",
-            "Tipo": "Maciça",
-            "Preco_Metro": 10,
-            "Quantidade": 50,
-            "UrlImage": "..\/Img\/pexels-mdf-4744800.jpg"
+        "id": 1,
+        "nome": "Viga de Pinus",
+        "Descricao": "Madeira resistente para estruturas e telhados.",
+        "preco": 29.90,
+        "tipo": "Bruta",
+        "Largura": "10cm",
+        "Comprimento": "3m",
+        "Categoria": "Madeiras Brutas",
+        "UrlImage": "../Img/pexels-abrek-okur-622168308-32608643.jpg"
+        },
+        {
+        "id": 2,
+        "nome": "Caibro de Eucalipto",
+        "Descricao": "Ideal para construções e coberturas.",
+        "preco": 34.90,
+        "tipo": "Bruta",
+        "Largura": "8cm",
+        "Comprimento": "3m",
+        "Categoria": "Madeiras Brutas",
+        "UrlImage": "../Img/eucalipto.jpg"
+        },
+        {
+        "id": 3,
+        "nome": "Prancha de Cedrinho",
+        "Descricao": "Madeira versátil para diversas aplicações.",
+        "preco": 42.90,
+        "tipo": "Bruta",
+        "Largura": "20cm",
+        "Comprimento": "2,5m",
+        "Categoria": "Madeiras Brutas",
+        "UrlImage": "../Img/cedrinho.jpg"
+        },
+        {
+        "id": 4,
+        "nome": "Tábua de Garapeira",
+        "Descricao": "Excelente resistência mecânica.",
+        "preco": 58.90,
+        "tipo": "Bruta",
+        "Largura": "25cm",
+        "Comprimento": "3m",
+        "Categoria": "Madeiras Brutas",
+        "UrlImage": "../Img/garapeira.jpg"
+        },
+        {
+        "id": 5,
+        "nome": "Viga de Cambará",
+        "Descricao": "Ideal para estruturas robustas.",
+        "preco": 64.90,
+        "tipo": "Bruta",
+        "Largura": "15cm",
+        "Comprimento": "4m",
+        "Categoria": "Madeiras Brutas",
+        "UrlImage": "../Img/cambara.jpg"
+        },
+
+        {
+        "id": 6,
+        "nome": "Ipê Premium",
+        "Descricao": "Madeira nobre para acabamentos refinados.",
+        "preco": 129.90,
+        "tipo": "Fina",
+        "Largura": "12cm",
+        "Comprimento": "2m",
+        "Categoria": "Madeiras Finas",
+        "UrlImage": "../Img/ipe.jpg"
+        },
+        {
+        "id": 7,
+        "nome": "Mogno Selecionado",
+        "Descricao": "Ideal para móveis de alto padrão.",
+        "preco": 149.90,
+        "tipo": "Fina",
+        "Largura": "15cm",
+        "Comprimento": "2m",
+        "Categoria": "Madeiras Finas",
+        "UrlImage": "../Img/mogno.jpg"
+        },
+        {
+        "id": 8,
+        "nome": "Freijó Natural",
+        "Descricao": "Excelente para marcenaria fina.",
+        "preco": 119.90,
+        "tipo": "Fina",
+        "Largura": "18cm",
+        "Comprimento": "2,5m",
+        "Categoria": "Madeiras Finas",
+        "UrlImage": "../Img/freijo.jpg"
+        },
+        {
+        "id": 9,
+        "nome": "Cumaru",
+        "Descricao": "Alta durabilidade e acabamento sofisticado.",
+        "preco": 139.90,
+        "tipo": "Fina",
+        "Largura": "20cm",
+        "Comprimento": "2,5m",
+        "Categoria": "Madeiras Finas",
+        "UrlImage": "../Img/cumaru.jpg"
+        },
+        {
+        "id": 10,
+        "nome": "Peroba Rosa",
+        "Descricao": "Madeira tradicional para móveis e pisos.",
+        "preco": 134.90,
+        "tipo": "Fina",
+        "Largura": "15cm",
+        "Comprimento": "3m",
+        "Categoria": "Madeiras Finas",
+        "UrlImage": "../Img/peroba.jpg"
+        },
+
+        {
+        "id": 11,
+        "nome": "MDF Branco",
+        "Descricao": "Ideal para móveis planejados.",
+        "preco": 89.90,
+        "tipo": "MDF",
+        "Largura": "1,85m",
+        "Comprimento": "2,75m",
+        "Categoria": "MDF",
+        "UrlImage": "../Img/mdf-branco.jpg"
+        },
+        {
+        "id": 12,
+        "nome": "MDF Carvalho",
+        "Descricao": "Acabamento elegante e moderno.",
+        "preco": 99.90,
+        "tipo": "MDF",
+        "Largura": "1,85m",
+        "Comprimento": "2,75m",
+        "Categoria": "MDF",
+        "UrlImage": "../Img/mdf-carvalho.jpg"
+        },
+        {
+        "id": 13,
+        "nome": "MDF Preto",
+        "Descricao": "Visual sofisticado para interiores.",
+        "preco": 104.90,
+        "tipo": "MDF",
+        "Largura": "1,85m",
+        "Comprimento": "2,75m",
+        "Categoria": "MDF",
+        "UrlImage": "../Img/mdf-preto.jpg"
+        },
+        {
+        "id": 14,
+        "nome": "MDF Amadeirado",
+        "Descricao": "Aparência natural de madeira.",
+        "preco": 109.90,
+        "tipo": "MDF",
+        "Largura": "1,85m",
+        "Comprimento": "2,75m",
+        "Categoria": "MDF",
+        "UrlImage": "../Img/mdf-amadeirado.jpg"
+        },
+        {
+        "id": 15,
+        "nome": "MDF Cinza",
+        "Descricao": "Combina com projetos modernos.",
+        "preco": 102.90,
+        "tipo": "MDF",
+        "Largura": "1,85m",
+        "Comprimento": "2,75m",
+        "Categoria": "MDF",
+        "UrlImage": "../Img/mdf-cinza.jpg"
+        },
+
+        {
+        "id": 16,
+        "nome": "Porta Lisa Branca",
+        "Descricao": "Porta interna moderna e resistente.",
+        "preco": 249.90,
+        "tipo": "Porta",
+        "Largura": "80cm",
+        "Comprimento": "210cm",
+        "Categoria": "Portas e Janelas",
+        "UrlImage": "../Img/porta-branca.jpg"
+        },
+        {
+        "id": 17,
+        "nome": "Porta de Madeira Maciça",
+        "Descricao": "Alta resistência e durabilidade.",
+        "preco": 499.90,
+        "tipo": "Porta",
+        "Largura": "90cm",
+        "Comprimento": "210cm",
+        "Categoria": "Portas e Janelas",
+        "UrlImage": "../Img/porta-macica.jpg"
+        },
+        {
+        "id": 18,
+        "nome": "Janela Veneziana",
+        "Descricao": "Ventilação eficiente e elegante.",
+        "preco": 349.90,
+        "tipo": "Janela",
+        "Largura": "120cm",
+        "Comprimento": "100cm",
+        "Categoria": "Portas e Janelas",
+        "UrlImage": "../Img/janela-veneziana.jpg"
+        },
+        {
+        "id": 19,
+        "nome": "Janela de Correr",
+        "Descricao": "Ideal para ambientes modernos.",
+        "preco": 399.90,
+        "tipo": "Janela",
+        "Largura": "150cm",
+        "Comprimento": "120cm",
+        "Categoria": "Portas e Janelas",
+        "UrlImage": "../Img/janela-correr.jpg"
+        },
+        {
+        "id": 20,
+        "nome": "Porta Pivotante",
+        "Descricao": "Design sofisticado para entradas.",
+        "preco": 899.90,
+        "tipo": "Porta",
+        "Largura": "120cm",
+        "Comprimento": "230cm",
+        "Categoria": "Portas e Janelas",
+        "UrlImage": "../Img/porta-pivotante.jpg"
+        },
+
+        {
+        "id": 21,
+        "nome": "Dobradiça Reforçada",
+        "Descricao": "Alta resistência para portas pesadas.",
+        "preco": 19.90,
+        "tipo": "Ferragem",
+        "Largura": "-",
+        "Comprimento": "-",
+        "Categoria": "Ferragens",
+        "UrlImage": "../Img/dobradica.jpg"
+        },
+        {
+        "id": 22,
+        "nome": "Fechadura Premium",
+        "Descricao": "Segurança e acabamento elegante.",
+        "preco": 89.90,
+        "tipo": "Ferragem",
+        "Largura": "-",
+        "Comprimento": "-",
+        "Categoria": "Ferragens",
+        "UrlImage": "../Img/fechadura.jpg"
+        },
+        {
+        "id": 23,
+        "nome": "Parafuso Sextavado",
+        "Descricao": "Fixação segura para estruturas.",
+        "preco": 0.90,
+        "tipo": "Ferragem",
+        "Largura": "-",
+        "Comprimento": "8cm",
+        "Categoria": "Ferragens",
+        "UrlImage": "../Img/parafuso.jpg"
+        },
+        {
+        "id": 24,
+        "nome": "Cantoneira Metálica",
+        "Descricao": "Reforço estrutural para móveis.",
+        "preco": 8.90,
+        "tipo": "Ferragem",
+        "Largura": "5cm",
+        "Comprimento": "5cm",
+        "Categoria": "Ferragens",
+        "UrlImage": "../Img/cantoneira.jpg"
+        },
+        {
+        "id": 25,
+        "nome": "Trilho para Gaveta",
+        "Descricao": "Deslizamento suave e silencioso.",
+        "preco": 24.90,
+        "tipo": "Ferragem",
+        "Largura": "-",
+        "Comprimento": "45cm",
+        "Categoria": "Ferragens",
+        "UrlImage": "../Img/trilho.jpg"
+        },
+
+        {
+        "id": 26,
+        "nome": "Martelo Profissional",
+        "Descricao": "Ideal para uso profissional e doméstico.",
+        "preco": 49.90,
+        "tipo": "Ferramenta",
+        "Largura": "-",
+        "Comprimento": "35cm",
+        "Categoria": "Ferramentas",
+        "UrlImage": "../Img/martelo.jpg"
+        },
+        {
+        "id": 27,
+        "nome": "Furadeira Impacto",
+        "Descricao": "Potência para diversos trabalhos.",
+        "preco": 299.90,
+        "tipo": "Ferramenta",
+        "Largura": "-",
+        "Comprimento": "-",
+        "Categoria": "Ferramentas",
+        "UrlImage": "../Img/furadeira.jpg"
+        },
+        {
+        "id": 28,
+        "nome": "Parafusadeira Elétrica",
+        "Descricao": "Agilidade na montagem de móveis.",
+        "preco": 249.90,
+        "tipo": "Ferramenta",
+        "Largura": "-",
+        "Comprimento": "-",
+        "Categoria": "Ferramentas",
+        "UrlImage": "../Img/parafusadeira.jpg"
+        },
+        {
+        "id": 29,
+        "nome": "Serra Circular",
+        "Descricao": "Cortes precisos em madeira.",
+        "preco": 549.90,
+        "tipo": "Ferramenta",
+        "Largura": "-",
+        "Comprimento": "-",
+        "Categoria": "Ferramentas",
+        "UrlImage": "../Img/serra-circular.jpg"
+        },
+        {
+        "id": 30,
+        "nome": "Trena 5 Metros",
+        "Descricao": "Medições rápidas e precisas.",
+        "preco": 19.90,
+        "tipo": "Ferramenta",
+        "Largura": "-",
+        "Comprimento": "5m",
+        "Categoria": "Ferramentas",
+        "UrlImage": "../Img/trena.jpg"
         }
+
     ],
     "usuarios": [
         {

@@ -319,7 +319,7 @@
 
         
 main {
-    background-color: #eee0ce; /* Usei a cor variável que você já tem */
+    background-color: #eee0ce;
     grid-area: main;
     display: flex;
     flex-direction: column;
@@ -331,7 +331,7 @@ h1{
     margin: 30px;
 }
 
-/* 1. HERO SECTION */
+
 .hero-portas {
     text-align: center;
     padding: 60px 20px;
@@ -344,11 +344,10 @@ h1{
     margin-bottom: 20px;
 }
 
-/* 2. CATEGORIA E PRODUTOS (VITRINE) */
 .categoria-destaque {
     width: 100%;
     padding: 40px 20px;
-    background: #eee0ce; /* Fundo branco para destacar os produtos */
+    background: #eee0ce; 
 }
 
 .produtos-container {
@@ -356,12 +355,13 @@ h1{
     justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .produto-card {
-    width: 350px;
+    margin: 40px;
+    width: 250px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -369,8 +369,8 @@ h1{
     transition: transform 0.3s ease;
 }
 .produto-card img{
-    width: 30vh;
-    height: 30vh;
+    width: 25vh;
+    height: 25vh;
 }
 
 .produto-card:hover {

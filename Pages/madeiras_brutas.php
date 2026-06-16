@@ -11,7 +11,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="Css/produto.css">
+    <link rel="stylesheet" href="../Css/madeirasBrutas.css">
 </head>
 <body>
 
@@ -24,8 +24,8 @@
             <nav>
 
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
+                    <a href="index.php">
+                        <img src="../Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
                     </a>
                     <h1 class="logo-text">
                         MADEIREIRA <br> <span class="logo-span">SAHUR</span>
@@ -86,128 +86,83 @@
 
         </header>
 
-        
+        <main>                   
+                <!-- main -->
 
-        <main class="product-page">
+         <?php
 
-            <section class="product-container">
+        $json = file_get_contents("../db/banco.json");
 
-                <div class="product-image">
-                    <img src="https://placehold.co/700x700" alt="Produto">
-                </div>
+        $dados = json_decode($json, true);
 
-                <div class="product-info">
+        $produtos = $dados["produtos"];
 
-                    <span class="category">MADEIRAS BRUTAS</span>
+        ?>
 
-                    <h1>Viga de Pinus Tratado</h1>
+                <h1>Madeiras Brutas</h1>
 
-                    <p class="price">R$ 149,90</p>
+        <section class="categoria-destaque">
 
-                    <p class="short-description">
-                        Madeira tratada de alta resistência,
-                        ideal para estruturas, telhados,
-                        pergolados e construção civil.
-                    </p>
+            <h2>Nossos Produtos em Destaque</h2>
 
-                    <div class="quantity">
+            <div class="produtos-container">
+                
 
-                        <label>Quantidade</label>
+                <?php foreach($produtos as $produto): ?>
 
-                        <div class="quantity-box">
+                <?php if($produto["Categoria"] == "Madeiras Brutas"): ?>
 
-                            <button>-</button>
-
-                            <input type="number" value="1" min="1">
-
-                            <button>+</button>
-
+                    <div class="produto-card">
+                        <img src="<?=$produto["UrlImage"]?>" width= "250px">
+                        <div class="card-content">
+                            <h3><?=$produto["nome"]?></h3>
+                            <p><?=$produto["Descricao"]?></p>      
+                            <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
                         </div>
                     </div>
 
-                    <div class="actions">
-                        <button class="buy-btn">Comprar Agora</button>
 
-                        <button class="cart-btn">Adicionar ao Carrinho</button>
-                    </div>
+                <?php endif; ?>
+
+                <?php endforeach; ?>
+
+
+            </div>
+
+        </section>
+
+        <!-- Diferenciais -->
+        <section class="sobre-portas">
+            <h2>Por que escolher nossos produtos?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-tree"></i>
+                    <h4>Madeiras Nobres</h4>
+                    <p>Matéria-prima certificada</p>
                 </div>
-
-            </section>
-
-            <section class="description">
-
-                <h2>Descrição</h2>
-
-                <p>
-                    Produto selecionado e tratado para
-                    garantir durabilidade e resistência
-                    contra umidade e pragas.
-                </p>
-
-            </section>
-
-            <section class="specs">
-
-                <h2>Especificações Técnicas</h2>
-
-                <table>
-
-                    <tr>
-                        <td>Material</td>
-                        <td>Pinus Tratado</td>
-                    </tr>
-
-                    <tr>
-                        <td>Comprimento</td>
-                        <td>3 metros</td>
-                    </tr>
-
-                    <tr>
-                        <td>Largura</td>
-                        <td>10 cm</td>
-                    </tr>
-
-                    <tr>
-                        <td>Espessura</td>
-                        <td>5 cm</td>
-                    </tr>
-
-                </table>
-
-            </section>
-
-
-            <section class="related-products">
-
-                <h2>Produtos Relacionados</h2>
-
-                <div class="related-grid">
-
-                    <div class="related-card">
-                        Produto 1
-                    </div>
-
-                    <div class="related-card">
-                        Produto 2
-                    </div>
-
-                    <div class="related-card">
-                        Produto 3
-                    </div>
-
-                    <div class="related-card">
-                        Produto 4
-                    </div>
-
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Alta Resistência</h4>
+                    <p>Proteção contra o tempo</p>
                 </div>
-
-            </section>
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <h4>Sob Medida</h4>
+                    <p>Diversos modelos e tamanhos</p>
+                </div>
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-truck"></i>
+                    <h4>Frete Nacional</h4>
+                    <p>Entregamos em todo o Brasil</p>
+                </div>
+            </div>
+        </section>
 
         </main>
 
         <footer class="footer">
             <section class="footer-top">
-                <img src="Img/sahurFooter.png"  alt="Footer Logo">
+                <img src="../Img/sahurFooter.png"  alt="Footer Logo">
                 <div class="social-area">
                     <h3>Acompanhe a Madeireira Sahur</h3>
                     <div class="social-links">

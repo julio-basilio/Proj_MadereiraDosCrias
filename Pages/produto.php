@@ -11,7 +11,7 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="Css/produto.css">
+    <link rel="stylesheet" href="../Css/produto.css">
 </head>
 <body>
 
@@ -24,8 +24,8 @@
             <nav>
 
                 <div class="logo">
-                    <a href="index.html">
-                        <img src="Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
+                    <a href="index.php">
+                        <img src="../Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
                     </a>
                     <h1 class="logo-text">
                         MADEIREIRA <br> <span class="logo-span">SAHUR</span>
@@ -39,7 +39,7 @@
                
                 <div class="nav-icons">
 
-                    <a href="categorias.html">
+                    <a href="categorias.php">
                         <button class="icon-btn" id="catBtn" title="Categorias" style="position: relative;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
@@ -86,62 +86,88 @@
 
         </header>
 
-        
+
+        <?php
+
+        $id = (int) $_GET["id"];
+
+        $json = file_get_contents("../db/banco.json");
+
+        $dados = json_decode($json, true);
+
+        $produtos = $dados["produtos"];
+
+        $produtoEncontrado = null;
+
+        foreach($produtos as $produto){
+
+            if($produto["id"] == $id){
+
+                $produtoEncontrado = $produto;
+
+                break;
+            }
+        }
+
+        ?>
+                
 
         <main class="product-page">
 
-            <section class="product-container">
+                
+         
 
-                <div class="product-image">
-                    <img src="https://placehold.co/700x700" alt="Produto">
-                </div>
+                <section class="product-container">
 
-                <div class="product-info">
+                    <div class="product-image">
+                        <img src="<?=$produtoEncontrado['UrlImage']?>" width="400">
+                    </div>
 
-                    <span class="category">MADEIRAS BRUTAS</span>
+                    <div class="product-info">
 
-                    <h1>Viga de Pinus Tratado</h1>
+                        <span class="category">MADEIRAS BRUTAS</span>
 
-                    <p class="price">R$ 149,90</p>
+                        <h1><?=$produtoEncontrado['nome']?></h1>
 
-                    <p class="short-description">
-                        Madeira tratada de alta resistência,
-                        ideal para estruturas, telhados,
-                        pergolados e construção civil.
-                    </p>
+                        <p class="price">R$ <?=$produto["preco"]?></p>
 
-                    <div class="quantity">
+                        <p class="short-description"><?=$produto["Descricao"]?></p>
 
-                        <label>Quantidade</label>
+                        <div class="quantity">
 
-                        <div class="quantity-box">
+                            <label>Quantidade</label>
 
-                            <button>-</button>
+                            <div class="quantity-box">
 
-                            <input type="number" value="1" min="1">
+                                <button>-</button>
 
-                            <button>+</button>
+                                <input type="number" value="1" min="1">
 
+                                <button>+</button>
+
+                            </div>
+                        </div>
+
+                        <div class="actions">
+                            <button class="buy-btn">Comprar Agora</button>
+
+                            <button class="cart-btn">Adicionar ao Carrinho</button>
                         </div>
                     </div>
 
-                    <div class="actions">
-                        <button class="buy-btn">Comprar Agora</button>
+                </section>
 
-                        <button class="cart-btn">Adicionar ao Carrinho</button>
-                    </div>
-                </div>
-
-            </section>
+   
 
             <section class="description">
 
                 <h2>Descrição</h2>
 
                 <p>
-                    Produto selecionado e tratado para
-                    garantir durabilidade e resistência
-                    contra umidade e pragas.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni no
+                    bis nihil voluptatem harum itaque deleniti reiciendis tenetur eos imped
+                    it minus, ea, tempora reprehenderit esse! Dolorem ex non numquam reiciend
+                    is officia.
                 </p>
 
             </section>
@@ -207,7 +233,7 @@
 
         <footer class="footer">
             <section class="footer-top">
-                <img src="Img/sahurFooter.png"  alt="Footer Logo">
+                <img src="../Img/sahurFooter.png"  alt="Footer Logo">
                 <div class="social-area">
                     <h3>Acompanhe a Madeireira Sahur</h3>
                     <div class="social-links">

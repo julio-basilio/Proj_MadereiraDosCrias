@@ -14,7 +14,7 @@
             align-items: center;
             justify-content: center;
         }
-
+ 
         .hero::before {
             content: '';
             position: absolute;
@@ -163,3 +163,314 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(200, 169, 106, 0.3);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        <?php
+
+$json = file_get_contents("../db/banco.json");
+
+$dados = json_decode($json, true);
+
+$produtos = $dados["produtos"];
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Teste JSON</title>
+</head>
+
+    <body>
+
+        <h1>Produtos</h1>
+
+        <?php foreach($produtos as $produto): ?>
+
+        <?php if($produto["Categoria"] == "Madeiras Brutas"): ?>
+
+            <div class="card">
+
+                <img src="<?=$produto["UrlImage"]?>" width= "250px" >
+
+                <h3><?=$produto["nome"]?></h3>
+
+                <p>R$ <?=$produto["preco"]?></p>
+
+                
+                <a href="produto.php?id=<?=$produto['id']?>">
+
+                    Ver Produto
+
+                </a>
+
+            </div>
+
+        <?php endif; ?>
+
+        <?php endforeach; ?>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<main class="product-page">
+
+        <section class="product-container">
+
+            <div class="product-image">
+                <img src="https://placehold.co/700x700" alt="Produto">
+            </div>
+
+            <div class="product-info">
+
+                <span class="category">MADEIRAS BRUTAS</span>
+
+                <h1>Viga de Pinus Tratado</h1>
+
+                <p class="price">R$ 149,90</p>
+
+                <p class="short-description">
+                    Madeira tratada de alta resistência,
+                    ideal para estruturas, telhados,
+                    pergolados e construção civil.
+                </p>
+
+                <div class="quantity">
+
+                    <label>Quantidade</label>
+
+                    <div class="quantity-box">
+
+                        <button>-</button>
+
+                        <input type="number" value="1" min="1">
+
+                        <button>+</button>
+
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <button class="buy-btn">Comprar Agora</button>
+
+                    <button class="cart-btn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="description">
+
+            <h2>Descrição</h2>
+
+            <p>
+                Produto selecionado e tratado para
+                garantir durabilidade e resistência
+                contra umidade e pragas.
+            </p>
+
+        </section>
+
+        <section class="specs">
+
+            <h2>Especificações Técnicas</h2>
+
+            <table>
+
+                <tr>
+                    <td>Material</td>
+                    <td>Pinus Tratado</td>
+                </tr>
+
+                <tr>
+                    <td>Comprimento</td>
+                    <td>3 metros</td>
+                </tr>
+
+                <tr>
+                    <td>Largura</td>
+                    <td>10 cm</td>
+                </tr>
+
+                <tr>
+                    <td>Espessura</td>
+                    <td>5 cm</td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+        <section class="related-products">
+
+            <h2>Produtos Relacionados</h2>
+
+            <div class="related-grid">
+
+                <div class="related-card">
+                    Produto 1
+                </div>
+
+                <div class="related-card">
+                    Produto 2
+                </div>
+
+                <div class="related-card">
+                    Produto 3
+                </div>
+
+                <div class="related-card">
+                    Produto 4
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+
+
+
+    .product-page{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+.product-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+    margin-bottom:60px;
+}
+
+.product-image img{
+    width:100%;
+    border-radius:15px;
+}
+
+.category{
+    color:#d76d44;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+.product-info h1{
+    margin:10px 0;
+}
+
+.price{
+    font-size:2rem;
+    font-weight:bold;
+    color:#dd9c3e;
+    margin:20px 0;
+}
+
+.short-description{
+    line-height:1.7;
+    color:#555;
+}
+
+.quantity{
+    margin:30px 0;
+}
+
+.quantity-box{
+    display:flex;
+    width:140px;
+    margin-top:10px;
+}
+
+.quantity-box button{
+    width:40px;
+}
+
+.quantity-box input{
+    width:60px;
+    text-align:center;
+}
+
+.actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.buy-btn{
+    background:#dd9c3e;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.cart-btn{
+    background:#4278d9;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.description,
+.specs,
+.related-products{
+    margin-top:60px;
+}
+
+.description h2,
+.specs h2,
+.related-products h2{
+    margin-bottom:20px;
+}
+
+.specs table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.specs td{
+    border:1px solid #ddd;
+    padding:15px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.related-card{
+    height:250px;
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
