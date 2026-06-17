@@ -13,7 +13,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <link rel="stylesheet" href="../Css/madeirasBrutas.css">
-    <link rel="stylesheet" href="Css/madeirasBrutas.css">
 </head>
 <body>
 
@@ -42,7 +41,7 @@
                
                 <div class="nav-icons">
 
-                    <a href="categorias.html">
+                    <a href="categorias.php">
                         <button class="icon-btn" id="catBtn" title="Categorias" style="position: relative;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-list-ul" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2m0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
@@ -79,12 +78,12 @@
             </nav>
 
             <ul class="nav-categorias">
-                <li><a href="">Madeiras Brutas</a></li>
-                <li><a href="">Madeiras Finas</a></li>
-                <li><a href="">MDF</a></li>
-                <li><a href="">Portas e Janelas</a></li>
-                <li><a href="">Ferragens</a></li>
-                <li><a href="">Ferramentas</a></li>
+                <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                <li><a href="mdf.php">MDF</a></li>
+                <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                <li><a href="ferragens.php">Ferragens</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
             </ul>
 
         </header>
@@ -102,7 +101,7 @@
 
         ?>
 
-                <h1>Madeiras Brutas</h1>
+                <h1 class="titulo-categoria">Madeiras Brutas <br> Tábuas, vigas, caibros e peças estruturais.</h1>
 
 
             <h2>Nossos Produtos em Destaque</h2>
@@ -118,7 +117,8 @@
                         <img src="<?=$produto["UrlImage"]?>" width= "250px">
                         <div class="card-content">
                             <h3><?=$produto["nome"]?></h3>
-                            <p><?=$produto["Descricao"]?></p>      
+                            <p><?=$produto["Descricao"]?></p>   
+                            <p class="price" >R$ <?=$produto["preco"]?></p>   
                             <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
                         </div>
                     </div>
@@ -165,7 +165,6 @@
         <footer class="footer">
             <section class="footer-top">
                 <img src="../Img/sahurFooter.png"  alt="Footer Logo">
-                <img src="Img/sahurFooter.png"  alt="Footer Logo">
                 <div class="social-area">
                     <h3>Acompanhe a Madeireira Sahur</h3>
                     <div class="social-links">

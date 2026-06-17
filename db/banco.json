@@ -9,7 +9,7 @@
             "Largura": "10cm",
             "Comprimento": "3m",
             "Categoria": "Madeiras Brutas",
-            "UrlImage": "..\/Img\/pexels-abrek-okur-622168308-32608643.jpg"
+            "UrlImage": "..\/Img/viga de pinus.jpg"
         },
         {
             "id": 2,
@@ -20,7 +20,7 @@
             "Largura": "8cm",
             "Comprimento": "3m",
             "Categoria": "Madeiras Brutas",
-            "UrlImage": "..\/Img\/eucalipto.jpg"
+            "UrlImage": "..\/Img/Caibro de Eucalipto.jpg"
         },
         {
             "id": 3,
@@ -31,7 +31,7 @@
             "Largura": "20cm",
             "Comprimento": "2,5m",
             "Categoria": "Madeiras Brutas",
-            "UrlImage": "..\/Img\/cedrinho.jpg"
+            "UrlImage": "..\/Img/Prancha de Cedrinho.jpg"
         },
         {
             "id": 4,
@@ -42,7 +42,7 @@
             "Largura": "25cm",
             "Comprimento": "3m",
             "Categoria": "Madeiras Brutas",
-            "UrlImage": "..\/Img\/garapeira.jpg"
+            "UrlImage": "..\/Img/Tábua de Garapeira.jpg"
         },
         {
             "id": 5,
@@ -53,7 +53,7 @@
             "Largura": "15cm",
             "Comprimento": "4m",
             "Categoria": "Madeiras Brutas",
-            "UrlImage": "..\/Img\/cambara.jpg"
+            "UrlImage": "..\/Img/Viga de Cambará.jpg"
         },
         {
             "id": 6,

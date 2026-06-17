@@ -11,7 +11,9 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Css/produto.css">
+
+    <link rel="stylesheet" href="../Css/madeirasBrutas.css">
+    <link rel="stylesheet" href="Css/madeirasBrutas.css">
 </head>
 <body>
 
@@ -24,6 +26,7 @@
             <nav>
 
                 <div class="logo">
+
                     <a href="index.php">
                         <img src="../Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
                     </a>
@@ -76,20 +79,20 @@
             </nav>
 
             <ul class="nav-categorias">
-                <li><a href="">Madeiras Brutas</a></li>
-                <li><a href="">Madeiras Finas</a></li>
-                <li><a href="">MDF</a></li>
-                <li><a href="">Portas e Janelas</a></li>
-                <li><a href="">Ferragens</a></li>
-                <li><a href="">Ferramentas</a></li>
+                <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                <li><a href="mdf.php">MDF</a></li>
+                <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                <li><a href="ferragens.php">Ferragens</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
             </ul>
 
         </header>
 
+        <main>                   
+                <!-- main -->
 
-        <?php
-
-        $id = (int) $_GET["id"];
+         <?php
 
         $json = file_get_contents("../db/banco.json");
 
@@ -97,137 +100,66 @@
 
         $produtos = $dados["produtos"];
 
-        $produtoEncontrado = null;
-
-        foreach($produtos as $produto){
-
-            if($produto["id"] == $id){
-
-                $produtoEncontrado = $produto;
-
-                break;
-            }
-        }
-
         ?>
+
+                <h1 class="titulo-categoria">Madeiras Brutas <br> Tábuas, vigas, caibros e peças estruturais.</h1>
+
+
+            <h2>Nossos Produtos em Destaque</h2>
+
+            <div class="produtos-container">
                 
 
-        <main class="product-page">
+                <?php foreach($produtos as $produto): ?>
 
-                
-         
+                <?php if($produto["Categoria"] == "MDF"): ?>
 
-                <section class="product-container">
-
-                    <div class="product-image">
-                        <img src="<?=$produtoEncontrado['UrlImage']?>" >
-                    </div>
-
-                    <div class="product-info">
-
-                        <span class="category">MADEIRAS BRUTAS</span>
-
-                        <h1><?=$produtoEncontrado['nome']?></h1>
-
-                        <p class="price">R$ <?=$produto["preco"]?></p>
-
-                        <p class="short-description"><?=$produto["Descricao"]?></p>
-
-                        <div class="quantity">
-
-                            <label>Quantidade</label>
-
-                            <div class="quantity-box">
-
-                                <button>-</button>
-
-                                <input type="number" value="1" min="1">
-
-                                <button>+</button>
-
-                            </div>
-                        </div>
-
-                        <div class="actions">
-                            <button class="buy-btn">Comprar Agora</button>
-
-                            <button class="cart-btn">Adicionar ao Carrinho</button>
+                    <div class="produto-card">
+                        <img src="<?=$produto["UrlImage"]?>" width= "250px">
+                        <div class="card-content">
+                            <h3><?=$produto["nome"]?></h3>
+                            <p><?=$produto["Descricao"]?></p>   
+                            <p class="price" >R$ <?=$produto["preco"]?></p>   
+                            <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
                         </div>
                     </div>
 
-                </section>
 
-   
+                <?php endif; ?>
 
-            <section class="description">
-
-                <h2>Descrição</h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni no
-                    bis nihil voluptatem harum itaque deleniti reiciendis tenetur eos imped
-                    it minus, ea, tempora reprehenderit esse! Dolorem ex non numquam reiciend
-                    is officia.
-                </p>
-
-            </section>
-
-            <section class="specs">
-
-                <h2>Especificações Técnicas</h2>
-
-                <table>
-
-                    <tr>
-                        <td>Material</td>
-                        <td>Pinus Tratado</td>
-                    </tr>
-
-                    <tr>
-                        <td>Comprimento</td>
-                        <td>3 metros</td>
-                    </tr>
-
-                    <tr>
-                        <td>Largura</td>
-                        <td>10 cm</td>
-                    </tr>
-
-                    <tr>
-                        <td>Espessura</td>
-                        <td>5 cm</td>
-                    </tr>
-
-                </table>
-
-            </section>
+                <?php endforeach; ?>
 
 
-            <section class="related-products">
+            </div>
 
-                <h2>Produtos Relacionados</h2>
+           
 
-                <div class="related-grid">
-
-                    <div class="related-card">
-                        Produto 1
-                    </div>
-
-                    <div class="related-card">
-                        Produto 2
-                    </div>
-
-                    <div class="related-card">
-                        Produto 3
-                    </div>
-
-                    <div class="related-card">
-                        Produto 4
-                    </div>
-
+        <!-- Diferenciais -->
+        <section class="sobre-portas">
+            <h2>Por que escolher nossos produtos?</h2>
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-tree"></i>
+                    <h4>Madeiras Nobres</h4>
+                    <p>Matéria-prima certificada</p>
                 </div>
-
-            </section>
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Alta Resistência</h4>
+                    <p>Proteção contra o tempo</p>
+                </div>
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <h4>Sob Medida</h4>
+                    <p>Diversos modelos e tamanhos</p>
+                </div>
+                <div class="beneficio-item">
+                    <i class="fa-solid fa-truck"></i>
+                    <h4>Frete Nacional</h4>
+                    <p>Entregamos em todo o Brasil</p>
+                </div>
+            </div>
+        </section>
 
         </main>
 

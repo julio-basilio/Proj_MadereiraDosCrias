@@ -326,18 +326,23 @@
         }
         
         .product-page{
-        margin:auto;
+        margin: 30px auto;
         padding:40px 20px;
         }
         .product-container{
             display:grid;
             grid-template-columns:1fr 1fr;
             gap:50px;
-            margin-bottom:60px;
+            margin:60px;
+        }
+
+        .product-image {
+            display: flex;
+            justify-content: center;
         }
 
         .product-image img{
-            width:100%;
+            width:500px;
             border-radius:15px;
         }
 
