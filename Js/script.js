@@ -107,7 +107,7 @@ function login() {
                 
                 try {
                     localStorage.setItem('nomeUsuario', resultado.nomeUsuarioLocal || dadosUsuario.nome);
-                    localStorage.setItem('urlImagem', urlImagemInput);
+                    localStorage.setItem('urlImagem67', urlImagemInput);
                     localStorage.setItem('Logado', 'true');
 
 

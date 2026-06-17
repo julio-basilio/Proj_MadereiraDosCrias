@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (dadosRecebidos.status === 'sucesso') {
                 window.location.href = dadosRecebidos.link;
                 localStorage.setItem('nomeUsuario', dadosRecebidos.nome);
-                localStorage.setItem('urlImagem', dadosRecebidos.imagem);
+                localStorage.setItem('urlImagem67', dadosRecebidos.urlImagem);
                 localStorage.setItem('Logado', 'true');
             } else {
                 alert("Conta não cadastrada");
