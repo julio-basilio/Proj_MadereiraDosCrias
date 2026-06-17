@@ -336,7 +336,7 @@
             gap: 10px;
             padding: 6px 16px;
             background-color: #eee0ce; /* Cor idêntica ao fundo do seu footer/detalhes */
-            border-radius: 50%;
+            border-radius: 20px;
             height: 45px; /* Altura controlada para alinhar com os outros ícones */
             margin: 0 10px;
         }
@@ -355,7 +355,7 @@
             min-height: 32px !important;
             object-fit: cover !important;
             border-radius: 50% !important;
-            border: 2px solid #3B2618; /* Borda escura para dar contraste */
+            
         }
 
         /* Ajuste do texto do nome do usuário */

@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 
 $dadosRecebidos = json_decode(file_get_contents('php://input'), true);
 
-$nomeUsuario = $dadosRecebidos['nome'] ?? 'Anônimo';
+$nomeUsuario = mb_strtolower($dadosRecebidos['nome'] ?? 'Anônimo', 'UTF-8');
 $senhaUsuario = $dadosRecebidos['senha'] ?? '';
 
 $bancoDados = '../db/banco.json';
