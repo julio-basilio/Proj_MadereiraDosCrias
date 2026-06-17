@@ -174,7 +174,7 @@
             "Largura": "80cm",
             "Comprimento": "210cm",
             "Categoria": "Portas e Janelas",
-            "UrlImage": "..\/Img\/porta-branca.jpg"
+            "UrlImage": "..\/Img\/Porta2.jpg"
         },
         {
             "id": 17,
@@ -185,7 +185,7 @@
             "Largura": "90cm",
             "Comprimento": "210cm",
             "Categoria": "Portas e Janelas",
-            "UrlImage": "..\/Img\/porta-macica.jpg"
+            "UrlImage": "..\/Img\/Porta1.jpg"
         },
         {
             "id": 18,
@@ -196,7 +196,7 @@
             "Largura": "120cm",
             "Comprimento": "100cm",
             "Categoria": "Portas e Janelas",
-            "UrlImage": "..\/Img\/janela-veneziana.jpg"
+            "UrlImage": "..\/Img\/Janela2.jpg"
         },
         {
             "id": 19,
@@ -207,7 +207,7 @@
             "Largura": "150cm",
             "Comprimento": "120cm",
             "Categoria": "Portas e Janelas",
-            "UrlImage": "..\/Img\/janela-correr.jpg"
+            "UrlImage": "..\/Img\/Janela1.jpg"
         },
         {
             "id": 20,
@@ -218,7 +218,7 @@
             "Largura": "120cm",
             "Comprimento": "230cm",
             "Categoria": "Portas e Janelas",
-            "UrlImage": "..\/Img\/porta-pivotante.jpg"
+            "UrlImage": "..\/Img\/Porta3.jpg"
         },
         {
             "id": 21,
@@ -329,6 +329,17 @@
             "Comprimento": "5m",
             "Categoria": "Ferramentas",
             "UrlImage": "..\/Img\/trena.jpg"
+        },
+        {
+            "id": 31,
+            "nome": "Janela Angelim",
+            "Descricao": "Janela moderna, rústica e resistente.",
+            "preco": 249.9,
+            "tipo": "Janela",
+            "Largura": "130cm",
+            "Comprimento": "110cm",
+            "Categoria": "Portas e Janelas",
+            "UrlImage": "..\/Img\/Janela3.jpg"
         }
     ],
     "usuarios": [

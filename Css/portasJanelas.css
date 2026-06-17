@@ -299,6 +299,7 @@ h2{
     width: 100%;
     padding: 40px 20px;
     background: #fff; /* Fundo branco para destacar os produtos */
+    text-align: center;
 }
 
 .produtos-container {
