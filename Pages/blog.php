@@ -80,9 +80,101 @@
 
         <main>
     
-            <h1>Blog da Madereira Sahur</h1><br>
-            <h4>Tudo o que você precisa saber para escolher a madeira certa</h4>
+            <h1>Blog da Madereira Sahur</h1>
+            <h3>Tudo o que você precisa saber para escolher a madeira certa</h3>
 
+            <h6>A madeira é um dos materiais mais utilizados na construção civil e na fabricação de móveis. 
+                Sua versatilidade, resistência e beleza fazem dela uma excelente opção para diversos projetos. 
+                No entanto, escolher o tipo correto de madeira e realizar sua manutenção adequadamente é fundamental para garantir durabilidade e segurança. 
+                Neste artigo, vamos abordar os principais aspectos que você deve conhecer antes de comprar madeira para sua obra. </h6>
+
+            <h1>Como escolher a madeira ideal para sua obra</h1>
+
+            <h6>A escolha da madeira depende diretamente da finalidade do projeto. 
+                Antes de realizar a compra, é importante considerar fatores como resistência, durabilidade, custo e exposição às condições climáticas. 
+                Para estruturas que suportam peso, como telhados e vigas, recomenda-se o uso de madeiras mais resistentes. 
+                Já para acabamentos e móveis, podem ser utilizadas opções mais leves e fáceis de trabalhar. 
+                Outro fator importante é o ambiente onde a madeira será utilizada. Em áreas externas, é necessário escolher espécies com maior resistência à umidade e às variações climáticas. 
+                Já em ambientes internos, a estética e o acabamento costumam ser os critérios mais relevantes. Além disso, é importante verificar a procedência do material, garantindo que a madeira seja proveniente de fontes legais e sustentáveis.</h6>
+
+            <h1>Principais critérios de escolha:</h1>
+            <h6>
+            <ul>
+                <li>Resistência mecânica;</li>
+                <li>Durabilidade;</li>
+                <li>Facilidade de manutenção;</li>
+                <li>Custo-benefício;</li>
+                <li>Aparência e acabamento;</li>
+                <li>Local de utilização.</li>
+            </ul>
+            </h6>
+
+            <h1>Principais tipos de madeira utilizados na construção civil</h1>
+
+            <h6>Existem diversas espécies de madeira utilizadas no setor da construção. Cada uma possui características específicas que influenciam sua aplicação.</h6>
+            
+            <h1>Pinus</h1>
+
+            <h6>O Pinus é uma madeira de reflorestamento bastante utilizada devido ao seu baixo custo e facilidade de manuseio. É comum em móveis, forros e estruturas leves.</h6>
+
+            <h1>Eucalipto</h1>
+
+            <h6>O Eucalipto apresenta boa resistência e é amplamente utilizado em construções, cercas, telhados e estruturas rurais. Também é uma madeira proveniente de reflorestamento.</h6>
+
+            <h1>Cedro</h1>
+
+            <h6>Conhecido pela sua beleza e boa trabalhabilidade, o Cedro é muito utilizado na fabricação de portas, janelas e móveis.</h6>
+
+            <h1>Ipê</h1>
+
+            <h6>Considerado uma das madeiras mais resistentes do Brasil, o Ipê é ideal para aplicações externas, decks e estruturas que exigem alta durabilidade.</h6>
+
+            <h1>Peroba</h1>
+
+            <h6>Muito utilizada em construções e acabamentos, a Peroba possui boa resistência e longa vida útil.</h6>
+
+            <h1>Vantagens da madeira na construção:</h1>
+
+             <h6>
+            <ul>
+                <li>Material renovável;</li>
+                <li>Excelente isolamento térmico;</li>
+                <li>Boa resistência estrutural;</li>
+                <li>Fácil manutenção;</li>
+                <li>Visual elegante e natural.</li>
+            </ul>
+            </h6>
+
+            <h1>Como proteger a madeira contra cupins</h1>
+
+            <h6>Os cupins são uma das principais ameaças às estruturas de madeira. Esses insetos alimentam-se da celulose presente no material e podem causar sérios danos quando não combatidos adequadamente. A melhor forma de prevenção é utilizar madeira tratada e realizar inspeções periódicas para identificar sinais de infestação. Além disso, alguns cuidados ajudam a aumentar a proteção:</h6>
+
+            <h1>Dicas de prevenção:</h1>
+
+             <h6>
+            <ul>
+                <li>Evite o contato direto da madeira com o solo;</li>
+                <li>Mantenha ambientes secos e ventilados;</li>
+                <li>Aplique produtos imunizantes específicos;</li>
+                <li>Utilize vernizes e seladores de qualidade;</li>
+                <li>Realize inspeções periódicas em móveis e estruturas.</li>
+            </ul>
+            </h6>
+
+            <h1>Sinais de infestação:</h1>
+
+             <h6>
+            <ul>
+                <li>Pequenos furos na superfície;</li>
+                <li>Presença de pó semelhante à serragem</li>
+                <li>Estruturas ocas ou enfraquecidas;</li>
+                <li>Asas de insetos próximas às peças de madeira.</li>
+            </ul>
+            </h6>
+
+            <h6>Ao identificar qualquer um desses sinais, é recomendável buscar tratamento especializado para evitar maiores prejuízos.</h6>
+
+            
         </main>
 
           <footer class="footer">
