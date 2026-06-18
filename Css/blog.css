@@ -1,0 +1,27 @@
+.container{
+
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 4fr;
+}
+
+ul{
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+}
+
+li{
+    margin: 8px;
+}
+
+main{
+    background-color: #eee0ce;
+    grid-area: main;
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
