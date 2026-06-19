@@ -149,3 +149,11 @@ window.addEventListener('DOMContentLoaded', () => {
         divPerfil.innerHTML = `<img src="${fotoperfil}" alt="Foto de Perfil" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" />`;
     }
 });
+
+
+function sair(){
+    localStorage.setItem('Logado', 'false');
+    localStorage.removeItem('nomeUsuario');
+    localStorage.removeItem('urlImagem67');
+    window.location.href = "./index.html";
+}

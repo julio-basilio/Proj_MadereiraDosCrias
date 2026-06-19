@@ -50,7 +50,7 @@
                         <span>Entrega</span>
                     </button>
 
-                    <div id="usuario-container">
+                     <div onclick="sair()" id="usuario-container">
                         <div id="fotoPerfil"></div>
                         <div id="nomeUsuario"></div>
                     </div>
