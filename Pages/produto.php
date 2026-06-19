@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -14,6 +18,19 @@
     <link rel="stylesheet" href="../Css/produto.css">
 </head>
 <body>
+
+    <?php if(isset($_SESSION['mensagem'])): ?>
+
+    <script>
+
+    alert("<?= $_SESSION['mensagem'] ?>");
+        
+    </script>
+
+    <?php
+    unset($_SESSION['mensagem']);
+    endif;
+    ?>
 
     <div class="container">
     
@@ -151,7 +168,16 @@
                         <div class="actions">
                             <button class="buy-btn">Comprar Agora</button>
 
-                            <button class="cart-btn">Adicionar ao Carrinho</button>
+                            <form action="adicionarCarrinho.php" method="POST">
+
+                                <input type="hidden" name="id" value="<?=$produto['id']?>">
+
+                                <button type="submit" class="cart-btn" >
+                                    Adicionar ao Carrinho
+                                </button>
+
+                            </form>
+                            
                         </div>
                     </div>
 

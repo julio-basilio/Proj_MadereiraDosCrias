@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="../Css/madeirasBrutas.css">
-    <link rel="stylesheet" href="Css/madeirasBrutas.css">
+    <link rel="stylesheet" href="../Css/portasJanelas.css">
 </head>
 <body>
 
@@ -89,8 +88,10 @@
 
         </header>
 
-        <main>                   
-                <!-- main -->
+              <!-- ================= (MAIN) ================= -->
+<main>
+
+
 
          <?php
 
@@ -102,66 +103,101 @@
 
         ?>
 
-                <h1 class="titulo-categoria">Madeiras Brutas <br> Tábuas, vigas, caibros e peças estruturais.</h1>
 
 
-            <h2>Nossos Produtos em Destaque</h2>
+    <!-- Título e Introdução -->
+    <section class="hero-portas">
+        <h1>Portas e Janelas de Madeira</h1>
+        <p>
+            Beleza, resistência e acabamento impecável para sua casa ou empresa.
+            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
+            garantindo qualidade e durabilidade para o seu projeto.
+        </p>
+    </section>
 
-            <div class="produtos-container">
-                
+    <!-- Categoria e Produtos -->
+    <section class="categoria-destaque">
+        <h2>Nossos Produtos em Destaque:</h2>
 
-                <?php foreach($produtos as $produto): ?>
+    <div class="produtos-container">
+
+
+                 <?php foreach($produtos as $produto): ?>
 
                 <?php if($produto["Categoria"] == "Ferragens"): ?>
 
-                    <div class="produto-card">
-                        <img src="<?=$produto["UrlImage"]?>" width= "250px">
-                        <div class="card-content">
+
+                <div class="produto-card">
+                    <img src="<?=$produto["UrlImage"]?>" alt="Porta Cedro">
+
+                    <div class="card-content">
+
                             <h3><?=$produto["nome"]?></h3>
-                            <p><?=$produto["Descricao"]?></p>   
-                            <p class="price" >R$ <?=$produto["preco"]?></p>   
-                            <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
+                            <p><?=$produto["Descricao"]?></p>
+                            <span class="preco">R$ <?=$produto["preco"]?></span>
+                            
+                        <div class="dimensoes">
+                            <span class="tag-medida"><?=$produto["Largura"]?></span>
+                            <span class="tag-medida"><?=$produto["Comprimento"]?></span>
                         </div>
+
+                            <button class="btn-carrinho">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                Adicionar ao Carrinho
+                            </button>
+
+                            <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
                     </div>
+                </div>
 
 
                 <?php endif; ?>
 
                 <?php endforeach; ?>
 
+    </div>
 
+    </section>
+
+    <!-- Diferenciais -->
+    <section class="sobre-portas">
+        <h2>Por que escolher nossos produtos?</h2>
+        <div class="beneficios-grid">
+            <div class="beneficio-item">
+                <i class="fa-solid fa-tree"></i>
+                <h4>Madeiras Nobres</h4>
+                <p>Matéria-prima certificada</p>
             </div>
-
-           
-
-        <!-- Diferenciais -->
-        <section class="sobre-portas">
-            <h2>Por que escolher nossos produtos?</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-item">
-                    <i class="fa-solid fa-tree"></i>
-                    <h4>Madeiras Nobres</h4>
-                    <p>Matéria-prima certificada</p>
-                </div>
-                <div class="beneficio-item">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <h4>Alta Resistência</h4>
-                    <p>Proteção contra o tempo</p>
-                </div>
-                <div class="beneficio-item">
-                    <i class="fa-solid fa-ruler-combined"></i>
-                    <h4>Sob Medida</h4>
-                    <p>Diversos modelos e tamanhos</p>
-                </div>
-                <div class="beneficio-item">
-                    <i class="fa-solid fa-truck"></i>
-                    <h4>Frete Nacional</h4>
-                    <p>Entregamos em todo o Brasil</p>
-                </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h4>Alta Resistência</h4>
+                <p>Proteção contra o tempo</p>
             </div>
-        </section>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-ruler-combined"></i>
+                <h4>Sob Medida</h4>
+                <p>Diversos modelos e tamanhos</p>
+            </div>
+            <div class="beneficio-item">
+                <i class="fa-solid fa-truck"></i>
+                <h4>Frete Nacional</h4>
+                <p>Entregamos em todo o Brasil</p>
+            </div>
+        </div>
+    </section>
 
-        </main>
+    <!-- Orçamento -->
+    <section class="orçamento">
+        <div class="orcamento-box">
+            <h2>Solicite um Orçamento</h2>
+            <p>Nossa equipe está pronta para ajudar você a escolher a porta ou janela ideal para seu projeto.</p>
+            <a href="contato.php" class="btn-orcamento">
+                <i class="fa-brands fa-whatsapp"></i> Falar com Consultor
+            </a>
+        </div>
+    </section>
+
+</main>
 
         <footer class="footer">
             <section class="footer-top">

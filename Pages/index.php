@@ -24,6 +24,7 @@
             <nav>
 
                 <div class="logo">
+
                     <a href="index.php">
                         <img src="../Img/logosahurmadeireira.png" height="120vh" width="120vh" alt="Logo">
                     </a>
@@ -57,7 +58,7 @@
                         </button>
                     </a>
 
-                    <a href="#">
+                    <a href="carrinho.php">
                         <button class="icon-btn" id="cartBtn" title="Carrinho" style="position: relative;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
@@ -76,12 +77,12 @@
             </nav>
 
             <ul class="nav-categorias">
-                <li><a href="">Madeiras Brutas</a></li>
-                <li><a href="">Madeiras Finas</a></li>
-                <li><a href="">MDF</a></li>
-                <li><a href="">Portas e Janelas</a></li>
-                <li><a href="">Ferragens</a></li>
-                <li><a href="">Ferramentas</a></li>
+                <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                <li><a href="mdf.php">MDF</a></li>
+                <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                <li><a href="ferragens.php">Ferragens</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
             </ul>
 
         </header>
@@ -97,8 +98,13 @@
                             Madeiras nobres, acabamento impecável e atendimento especializado para quem busca qualidade sem compromissos.
                         </p>
                         <div class="hero-buttons">
-                            <button class="btn btn-primary">Ver Catálogo</button>
-                            <button class="btn btn-secondary">Solicitar Orçamento</button>
+                            <a href="Categorias.php">
+                                <button class="btn btn-primary">Ver Catálogo</button>
+                            </a>
+                            <a href="">
+                                 <button class="btn btn-secondary">Solicitar Orçamento</button>
+                            </a>
+                           
                         </div>
                     </div>
                 </div>
