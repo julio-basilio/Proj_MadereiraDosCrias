@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const nomeUsuario = document.getElementById("nome").value.toLowerCase();
         
         try {
-            const enviarDados = await fetch('../Pages/LerBancoDeDados.php', {
+            const enviarDados = await fetch('../backend/LerBancoDeDados.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome: nomeUsuario })
@@ -63,7 +63,7 @@ document.addEventListener('keydown', (tecla) => {
   }
   if (historicoTeclas === 'admphp') {
     alert('Você não quer isso...');
-    window.location.href = "./Pages/adm.php";
+    window.location.href = "./backend/adm.php";
     historicoTeclas = '';
   }
 });

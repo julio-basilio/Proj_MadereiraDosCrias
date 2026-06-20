@@ -67,7 +67,7 @@ document.addEventListener('keydown', (tecla) => {
   }
   if (historicoTeclas === 'admphp') {
     alert('Você não quer isso...');
-    window.location.href = "./Pages/adm.php";
+    window.location.href = "./backend/adm.php";
     historicoTeclas = '';
   }
 });
