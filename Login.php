@@ -51,6 +51,11 @@
 
 
             <button type="submit">Entrar no Sistema</button>
+
+            <div class="entrarDiv">
+                <label  id="pgEntrar" for="entrar">Já Possui Conta?</label>
+                <a id="entrar" href="cadastro.php">Entrar</a>
+            </div>
         </form>
     </main>
 
