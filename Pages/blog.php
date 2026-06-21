@@ -109,24 +109,24 @@
         <main>
     <div class="fonteTexto">
             <h1>Blog da Madereira Sahur</h1>
-            <h3>Tudo o que você precisa saber para escolher a madeira certa</h3>
+            <h2>Tudo o que você precisa saber para escolher a madeira certa</h2><br><br>        
 
-            <h6>A madeira é um dos materiais mais utilizados na construção civil e na fabricação de móveis. 
+            <h3>A madeira é um dos materiais mais utilizados na construção civil e na fabricação de móveis. 
                 Sua versatilidade, resistência e beleza fazem dela uma excelente opção para diversos projetos. 
                 No entanto, escolher o tipo correto de madeira e realizar sua manutenção adequadamente é fundamental para garantir durabilidade e segurança. 
-                Neste artigo, vamos abordar os principais aspectos que você deve conhecer antes de comprar madeira para sua obra. </h6>
+                Neste artigo, vamos abordar os principais aspectos que você deve conhecer antes de comprar madeira para sua obra. </h3><br><br><br>
 
-            <h1>Como escolher a madeira ideal para sua obra</h1>
+            <h1>Como escolher a madeira ideal para sua obra</h1><br>
 
-            <h6>A escolha da madeira depende diretamente da finalidade do projeto. 
+            <h3>A escolha da madeira depende diretamente da finalidade do projeto. 
                 Antes de realizar a compra, é importante considerar fatores como resistência, durabilidade, custo e exposição às condições climáticas. 
                 Para estruturas que suportam peso, como telhados e vigas, recomenda-se o uso de madeiras mais resistentes. 
                 Já para acabamentos e móveis, podem ser utilizadas opções mais leves e fáceis de trabalhar. 
                 Outro fator importante é o ambiente onde a madeira será utilizada. Em áreas externas, é necessário escolher espécies com maior resistência à umidade e às variações climáticas. 
-                Já em ambientes internos, a estética e o acabamento costumam ser os critérios mais relevantes. Além disso, é importante verificar a procedência do material, garantindo que a madeira seja proveniente de fontes legais e sustentáveis.</h6>
+                Já em ambientes internos, a estética e o acabamento costumam ser os critérios mais relevantes. Além disso, é importante verificar a procedência do material, garantindo que a madeira seja proveniente de fontes legais e sustentáveis.</h3><br><br> 
 
             <h1>Principais critérios de escolha:</h1>
-            <h6>
+            <h3>
             <ul>
                 <li>Resistência mecânica;</li>
                 <li>Durabilidade;</li>
@@ -135,35 +135,35 @@
                 <li>Aparência e acabamento;</li>
                 <li>Local de utilização.</li>
             </ul>
-            </h6>
+            </h3><br><br>
 
-            <h1>Principais tipos de madeira utilizados na construção civil</h1>
+            <h1>Principais tipos de madeira utilizados na construção civil</h1><br>
 
-            <h6>Existem diversas espécies de madeira utilizadas no setor da construção. Cada uma possui características específicas que influenciam sua aplicação.</h6>
-            
+          <h2>Existem diversas espécies de madeira utilizadas no setor da construção. Cada uma possui características específicas que influenciam sua aplicação.</h2><br><br>
+           
             <h1>Pinus</h1>
 
-            <h6>O Pinus é uma madeira de reflorestamento bastante utilizada devido ao seu baixo custo e facilidade de manuseio. É comum em móveis, forros e estruturas leves.</h6>
+            <h3>O Pinus é uma madeira de reflorestamento bastante utilizada devido ao seu baixo custo e facilidade de manuseio. É comum em móveis, forros e estruturas leves.</h3><br><br>
 
             <h1>Eucalipto</h1>
 
-            <h6>O Eucalipto apresenta boa resistência e é amplamente utilizado em construções, cercas, telhados e estruturas rurais. Também é uma madeira proveniente de reflorestamento.</h6>
+            <h3>O Eucalipto apresenta boa resistência e é amplamente utilizado em construções, cercas, telhados e estruturas rurais. Também é uma madeira proveniente de reflorestamento.</h3><br><br>
 
             <h1>Cedro</h1>
 
-            <h6>Conhecido pela sua beleza e boa trabalhabilidade, o Cedro é muito utilizado na fabricação de portas, janelas e móveis.</h6>
+            <h3>Conhecido pela sua beleza e boa trabalhabilidade, o Cedro é muito utilizado na fabricação de portas, janelas e móveis.</h3><br><br>
 
             <h1>Ipê</h1>
 
-            <h6>Considerado uma das madeiras mais resistentes do Brasil, o Ipê é ideal para aplicações externas, decks e estruturas que exigem alta durabilidade.</h6>
+            <h3>Considerado uma das madeiras mais resistentes do Brasil, o Ipê é ideal para aplicações externas, decks e estruturas que exigem alta durabilidade.</h3><br><br>
 
             <h1>Peroba</h1>
 
-            <h6>Muito utilizada em construções e acabamentos, a Peroba possui boa resistência e longa vida útil.</h6>
+            <h3>Muito utilizada em construções e acabamentos, a Peroba possui boa resistência e longa vida útil.</h3><br><br><br>
 
-            <h1>Vantagens da madeira na construção:</h1>
+            <h1>Vantagens da madeira na construção</h1><br>
 
-             <h6>
+            <h3>
             <ul>
                 <li>Material renovável;</li>
                 <li>Excelente isolamento térmico;</li>
@@ -171,15 +171,15 @@
                 <li>Fácil manutenção;</li>
                 <li>Visual elegante e natural.</li>
             </ul>
-            </h6>
+            </h3><br><br>
 
             <h1>Como proteger a madeira contra cupins</h1>
 
-            <h6>Os cupins são uma das principais ameaças às estruturas de madeira. Esses insetos alimentam-se da celulose presente no material e podem causar sérios danos quando não combatidos adequadamente. A melhor forma de prevenção é utilizar madeira tratada e realizar inspeções periódicas para identificar sinais de infestação. Além disso, alguns cuidados ajudam a aumentar a proteção:</h6>
+            <h2>Os cupins são uma das principais ameaças às estruturas de madeira. Esses insetos alimentam-se da celulose presente no material e podem causar sérios danos quando não combatidos adequadamente. A melhor forma de prevenção é utilizar madeira tratada e realizar inspeções periódicas para identificar sinais de infestação. Além disso, alguns cuidados ajudam a aumentar a proteção</h2><br><br>
 
-            <h1>Dicas de prevenção:</h1>
+            <h1>Dicas de prevenção</h1><br>
 
-             <h6>
+            <h3>
             <ul>
                 <li>Evite o contato direto da madeira com o solo;</li>
                 <li>Mantenha ambientes secos e ventilados;</li>
@@ -187,20 +187,115 @@
                 <li>Utilize vernizes e seladores de qualidade;</li>
                 <li>Realize inspeções periódicas em móveis e estruturas.</li>
             </ul>
-            </h6>
+            </h3><br><br>
 
-            <h1>Sinais de infestação:</h1>
+            <h1>Sinais de infestação</h1><br>
 
-             <h6>
+            <h3>
             <ul>
                 <li>Pequenos furos na superfície;</li>
                 <li>Presença de pó semelhante à serragem</li>
                 <li>Estruturas ocas ou enfraquecidas;</li>
                 <li>Asas de insetos próximas às peças de madeira.</li>
             </ul>
-            </h6>
+            </h3><br><br>
 
-            <h6>Ao identificar qualquer um desses sinais, é recomendável buscar tratamento especializado para evitar maiores prejuízos.</h6>
+            <h2>Ao identificar qualquer um desses sinais, é recomendável buscar tratamento especializado para evitar maiores prejuízos.</h2><br><br><br>
+
+            <h1>Madeira maciça, MDF e MDP: qual escolher?</h1>
+
+            <h2>Na hora de fabricar móveis ou realizar acabamentos internos, muitas pessoas têm dúvidas sobre qual material utilizar. As opções mais comuns são a madeira maciça, o MDF e o MDP.</h2><br><br>
+
+            <h1>Madeira Maciça</h1>
+
+            <h2>É produzida diretamente a partir da madeira natural.</h2><br>
+
+            <h2>Vantagens</h2>
+
+            <h3>
+                <ul>
+                    <li>Alta resistência;</li>
+                    <li>Grande durabilidade;</li>
+                    <li>Acabamento sofisticado;</li>
+                    <li>Possibilidade de restauração.</li>
+                </ul>
+            </h3><br>
+
+            <h2>Desvantagens</h2>
+
+            <h3>
+                <ul>
+                    <li>Custo mais elevado;</li>
+                    <li>Pode sofrer variações devido à umidade.</li>
+                </ul>
+            </h3><br><br>
+
+            <h1>MDF (Medium Density Fiberboard)</h1>
+
+            <h2>É fabricado a partir de fibras de madeira prensadas com resinas.</h2>
+
+            <h2>Vantagens</h2><br>
+
+            <h3>
+                <ul>
+                    <li>Superfície lisa;</li>
+                    <li>Excelente para pintura;</li>
+                    <li>Fácil usinagem;</li>
+                    <li>Ótimo acabamento.</li>
+                </ul>
+            </h3>
+
+            <h2>Desvantagens</h2><br>
+
+            <h3>
+                <ul>
+                    <li>Menor resistência à umidade;</li>
+                    <li>Menor resistência estrutural em comparação à madeira maciça.</li>
+                </ul>
+            </h3><br><br>
+
+            <h1>MDP (Medium Density Particleboard)</h1>
+
+            <h2>Produzido com partículas de madeira prensadas.</h2>
+
+            <h2>Vantagens</h2><br>
+
+            <h3>
+                <ul>
+                    <li>Menor custo;</li>
+                    <li>Boa resistência para móveis retos;</li>   
+                    <li>Leve e funcional.</li>
+                </ul>
+            </h3>
+
+            <h2>Desvantagens</h2><br>
+
+            <h3>
+                <ul>
+                    <li>Menor capacidade para detalhes decorativos;</li>
+                    <li>Menor resistência à umidade.</li>
+                </ul>
+            </h3><br><br>
+
+            <h1>Comparação rápida</h1><br><br>
+
+            <h2>Madeira Maciça</h2>
+            
+            <h3>é a opção mais resistente e durável entre as três. Por ser produzida diretamente da madeira natural, apresenta excelente qualidade e um visual mais sofisticado. Em compensação, costuma ter um custo mais elevado e pode sofrer pequenas variações devido à umidade e às mudanças climáticas. </h3><br>
+
+            <h2>MDF (Medium Density Fiberboard):</h2>
+
+            <h3>é fabricado a partir de fibras de madeira prensadas. Possui superfície lisa e uniforme, sendo muito utilizado em móveis planejados e peças com acabamentos detalhados. Seu custo é intermediário, mas sua resistência à umidade é menor quando comparada à madeira maciça. </h3><br>
+
+            <h2>MDP (Medium Density Particleboard):</h2>
+
+            <h3>é produzido com partículas de madeira prensadas e geralmente apresenta o menor custo entre os três materiais. É bastante utilizado em móveis residenciais e corporativos, oferecendo um bom custo-benefício. Entretanto, possui limitações em acabamentos mais elaborados e também não é recomendado para ambientes com muita umidade. </h3><br><br>
+
+            <h2>De forma geral, a durabilidade, o madeira maciça MDF é indicada para quem busca máxima resistência e é ideal para móveis com acabamento refinado e detalhes decorativos, enquanto o MDP é uma alternativa econômica para projetos que priorizam praticidade e custo-benefício.</h2><br><br><br>
+
+            <h1>Conclusão</h1><br>
+
+            <h3>A escolha correta da madeira é essencial para garantir qualidade, segurança e durabilidade em qualquer projeto. Conhecer os diferentes tipos de madeira, entender suas aplicações e realizar a manutenção adequada ajuda a evitar problemas futuros e aumenta a vida útil das estruturas e móveis. Seja para uma construção, reforma ou fabricação de móveis, investir em materiais de qualidade e seguir boas práticas de conservação é a melhor forma de obter excelentes resultados. </h3>
             </div>
             
         </main>

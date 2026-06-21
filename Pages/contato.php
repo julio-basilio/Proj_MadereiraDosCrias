@@ -115,7 +115,7 @@
                 <input type="text" name ="nome"id="nome"><br>
 
                 <label for="email">E-mail: </label>
-                <input type="email" name ="emailUsuario" id="emailUsuario"><br>
+                <input type="email" name ="email" id="email"><br>
 
                 <label for="mensagem">Mensagem: </label><br>
                 <textarea id="mensagem" name="mensagem" rows="4" required class="tamanhobox"></textarea><br><br>

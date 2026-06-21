@@ -7,7 +7,18 @@ grid-template-rows: 4fr;
 }
 .fonteTexto{
     font-family: impact;
-    font-size: 70px;
+}
+
+h1{
+    color: #3B2618;
+}
+
+h2{
+    color: #5A3E2B;
+}
+
+h3{
+    color: #7A6354;
 }
 
 ul{
@@ -17,6 +28,7 @@ ul{
 }
 
 li{
+    color: #402F24;
     margin: 8px;
 }
 
@@ -37,4 +49,17 @@ main{
     width: 100% !important;
     padding: 15px !important;
 }
-    
+
+#img1{
+  transform: translateX(-400px);
+  border-radius: 10px;
+  border: 10px solid white;
+   
+}
+
+#img2{
+  transform: translateX(400px);
+  border-radius: 10px;
+  border: 10px solid white;
+   
+}

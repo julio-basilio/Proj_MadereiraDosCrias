@@ -81,21 +81,21 @@
 
                     <ul class="dropdown">
 
-                        <li><a href="../Login.php">Faça login</a></li>
-                        <li><a href="../Cadastro.php">Faça seu cadastro</a></li>
+                        <li><a href="Login.php">Faça login</a></li>
+                        <li><a href="Cadastro.php">Faça seu cadastro</a></li>
                         <li><a href="Pages/index.php">Página inicial</a></li>
-                        <li><a href="Categorias.php">Nossos produtos</a></li>
-                        <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
-                        <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
-                        <li><a href="mdf.php">MDF</a></li>
-                        <li><a href="ferramentas.php">Ferramentas</a></li>
-                        <li><a href="ferragens.php">Ferragens</a></li>
-                        <li><a href="portas-janelas.php">Portas e Janelas</a></li>
-                        <li><a href="carrinho.php">verifique seu carrinho</a></li>
-                        <li><a href="calculofrete.php">Consulte o frete da sua região</a></li>
-                        <li><a href="sobrenos.php">Sobre Nós</a></li>
-                        <li><a href="contato.php">Entre em contato</a></li>
-                        <li><a href="blog.php">Nosso Blog</a></li>
+                        <li><a href="Pages/Categorias.php">Nossos produtos</a></li>
+                        <li><a href="Pages/madeiras_brutas.php">Madeiras Brutas</a></li>
+                        <li><a href="Pages/madeiras-finas.php">Madeiras Finas</a></li>
+                        <li><a href="Pages/mdf.php">MDF</a></li>
+                        <li><a href="Pages/ferramentas.php">Ferramentas</a></li>
+                        <li><a href="Pages/ferragens.php">Ferragens</a></li>
+                        <li><a href="Pages/portas-janelas.php">Portas e Janelas</a></li>
+                        <li><a href="Pages/carrinho.php">verifique seu carrinho</a></li>
+                        <li><a href="Pages/calculofrete.php">Consulte o frete da sua região</a></li>
+                        <li><a href="Pages/sobrenos.php">Sobre Nós</a></li>
+                        <li><a href="Pages/contato.php">Entre em contato</a></li>
+                        <li><a href="Pages/blog.php">Nosso Blog</a></li>
 
                     </ul>
 
