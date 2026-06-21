@@ -104,6 +104,28 @@
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
+        .header-top{
+        background-color: #222;
+        color: white;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 10px 30px;
+        }
+
+        .header-top a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .frete{
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+            
+
         .search-box{
             position: relative;
             width: 400px;
@@ -529,6 +551,119 @@
             width: 600px;
         }
 
+        /* ==================== Localização ==================== */
+
+    
+        .maps {
+            color: #ffc375;
+            background-color: #2c1b12;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;    
+            text-align: center;    
+
+            padding: 30px;
+        }
+        .maps h1{
+            margin: 30px;
+        }
+
+        .maps iframe {
+            /* Opcional: adiciona uma margem acima do mapa para desgrudar do título */
+            margin-top: 20px; 
+        }
+                
+
+
+
+
+ /* ==================== card produtos==================== */
+
+        .produtos-destaque-title{
+            text-align: center;
+            height: 10vh;
+            margin: 30px;
+        }               
+
+        .produtos-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 0 auto;
+        }
+
+        .produto-card {
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .produto-card:hover {
+            transform: translateY(-15px);
+        }
+
+        .card-content {
+            padding: 20px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .btn-detalhes {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .preco{
+            display: block;
+
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            font-size: 1.5rem;
+            font-weight: bold;
+
+            color: #3F6B34;
+        }
+
+        .produto-card img{
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+        .dimensoes{
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+
+            margin: 15px 0;
+        }
+
+        .tag-medida{
+            background: #f1ede7;
+            color: var(--color-primary);
+
+            padding: 5px 12px;
+
+            border-radius: 20px;
+
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
 
         /* ==================== Qualidades ==================== */
 

@@ -13,7 +13,7 @@ $total = 0;
 
 foreach($produtos as $produto)
 {
-    if(in_array($produto["id"], $_SESSION["carrinho"]))
+    if(in_array($produto["id"], $pedido["produtos"]))
     {
         $total += $produto["preco"];
     }
@@ -138,7 +138,7 @@ body{
 
             foreach($produtos as $produto)
             {
-                if(in_array($produto["id"], $_SESSION["carrinho"]))
+                if(in_array($produto["id"], $pedido["produtos"]))
                 {
             ?>
 

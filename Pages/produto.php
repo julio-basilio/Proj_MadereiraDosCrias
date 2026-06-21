@@ -74,13 +74,26 @@ session_start();
                         </button>
                     </a>
 
-                    <a href="#">
+                    <a href="carrinho.php">
                         <button class="icon-btn" id="cartBtn" title="Carrinho" style="position: relative;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                             </svg>
                             <span>Carrinho</span>
-                            <span class="cart-badge">0</span>
+                           <span class="cart-badge">
+
+                              <?php
+
+                                if(isset($_SESSION['carrinho']))
+                                {
+                                    echo count($_SESSION['carrinho']);
+                                }
+                                else
+                                {
+                                    echo 0;
+                                }
+                                ?>
+                            </span>
                         </button>
                     </a>
 
@@ -93,12 +106,12 @@ session_start();
             </nav>
 
             <ul class="nav-categorias">
-                <li><a href="">Madeiras Brutas</a></li>
-                <li><a href="">Madeiras Finas</a></li>
-                <li><a href="">MDF</a></li>
-                <li><a href="">Portas e Janelas</a></li>
-                <li><a href="">Ferragens</a></li>
-                <li><a href="">Ferramentas</a></li>
+                <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                <li><a href="mdf.php">MDF</a></li>
+                <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                <li><a href="ferragens.php">Ferragens</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
             </ul>
 
         </header>
@@ -146,9 +159,9 @@ session_start();
 
                         <h1><?=$produtoEncontrado['nome']?></h1>
 
-                        <p class="price">R$ <?=$produto["preco"]?></p>
+                        <p class="price">R$ <?=$produtoEncontrado["preco"]?></p>
 
-                        <p class="short-description"><?=$produto["Descricao"]?></p>
+                        <p class="short-description"><?=$produtoEncontrado["Descricao"]?></p>
 
                         <div class="quantity">
 
@@ -166,11 +179,20 @@ session_start();
                         </div>
 
                         <div class="actions">
-                            <button class="buy-btn">Comprar Agora</button>
 
-                            <form action="adicionarCarrinho.php" method="POST">
+                            <form action="pagamento.php" method="GET">
 
-                                <input type="hidden" name="id" value="<?=$produto['id']?>">
+                                <input type="hidden" name="id" value="<?=$produtoEncontrado['id']?>">
+
+                                <button type="submit" class="buy-btn">
+                                    Comprar Agora
+                                </button>
+                                
+                            </form>
+
+                            <form action="../backend/adicionarCarrinho.php" method="POST">
+
+                                <input type="hidden" name="id" value="<?=$produtoEncontrado['id']?>">
 
                                 <button type="submit" class="cart-btn" >
                                     Adicionar ao Carrinho

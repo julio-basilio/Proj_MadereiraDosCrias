@@ -2,12 +2,6 @@
 
 session_start();
 
-if($_SERVER["REQUEST_METHOD"] != "POST")
-{
-    header("Location: ../Pages/Pagamento.php");
-    exit;
-}
-
 $_SESSION["pedido"] = [
 
     "nome" => $_POST["nome"],
@@ -26,5 +20,17 @@ $_SESSION["pedido"] = [
 
 ];
 
+if(isset($_POST["idProduto"]))
+{
+    $_SESSION["pedido"]["produtos"] = [
+        (int) $_POST["idProduto"]
+    ];
+}
+else
+{
+    $_SESSION["pedido"]["produtos"] = $_SESSION["carrinho"];
+}
+
 header("Location: ../Pages/PagAgradecimento.php");
+exit;
 exit;
