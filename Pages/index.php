@@ -26,8 +26,8 @@
             <div class="popup-box">
                 <h2>Faça seu Login</h2>
                 <p>Para continuar navegando, você precisa estar logado.</p>
-                <a href="login.php"><button >Criar conta</button></a>
-                <a href="cadastro.php"><button>Entrar</button></a>
+                <a href="../login.php"><button >Criar conta</button></a>
+                <a href="../cadastro.php"><button>Entrar</button></a>
                 <button id="fecharPopup">Agora não</button>
             </div>
         </dialog>

@@ -31,7 +31,7 @@ if ($usuarioEncontrado === null) {
 }
 
 if ($senhaUsuario === $usuarioEncontrado['senha']) {
-    $link = "./index.html";
+    $link = "./Pages/index.php";
    echo json_encode([
     "status" => "sucesso", 
     "nome" => $nomeUsuario,
