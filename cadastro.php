@@ -83,7 +83,7 @@
 
                         <li><a href="../Login.php">Faça login</a></li>
                         <li><a href="../Cadastro.php">Faça seu cadastro</a></li>
-                        <li><a href="index.php">Página inicial</a></li>
+                        <li><a href="Pages/index.php">Página inicial</a></li>
                         <li><a href="Categorias.php">Nossos produtos</a></li>
                         <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
                         <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
@@ -96,8 +96,6 @@
                         <li><a href="sobrenos.php">Sobre Nós</a></li>
                         <li><a href="contato.php">Entre em contato</a></li>
                         <li><a href="blog.php">Nosso Blog</a></li>
-                        <li><a href="adm.php">Login de ADM</a></li>
-                        <li><a href="pagADM.php">Página de ADM</a></li>
 
                     </ul>
 

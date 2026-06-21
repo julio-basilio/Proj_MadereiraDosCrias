@@ -100,8 +100,6 @@
                         <li><a href="sobrenos.php">Sobre Nós</a></li>
                         <li><a href="contato.php">Entre em contato</a></li>
                         <li><a href="blog.php">Nosso Blog</a></li>
-                        <li><a href="adm.php">Login de ADM</a></li>
-                        <li><a href="pagADM.php">Página de ADM</a></li>
 
                     </ul>
 
