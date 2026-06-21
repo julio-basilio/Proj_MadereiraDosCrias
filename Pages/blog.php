@@ -68,12 +68,12 @@
             </nav>
 
             <ul class="nav-categorias">
-                <li><a href="">Madeiras Brutas</a></li>
-                <li><a href="">Madeiras Finas</a></li>
-                <li><a href="">MDF</a></li>
-                <li><a href="">Portas e Janelas</a></li>
-                <li><a href="">Ferragens</a></li>
-                <li><a href="">Ferramentas</a></li>
+                <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                <li><a href="mdf.php">MDF</a></li>
+                <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                <li><a href="ferragens.php">Ferragens</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
             </ul>
 
         </header>
