@@ -13,6 +13,7 @@ $total = 0;
 <head>
 <meta charset="UTF-8">
 <title>Pagamento</title>
+<link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
 
 <style>
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Madeireira Nobre Prime - Excelência em Madeiras Nobres</title>
     
+    <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

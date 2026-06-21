@@ -24,7 +24,7 @@ foreach($produtos as $produto)
 <!DOCTYPE html>
 <html>
 <head>
-
+<link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
 <meta charset="UTF-8">
 
 <title>Compra Finalizada</title>

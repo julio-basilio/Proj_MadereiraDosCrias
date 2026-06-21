@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Madereira Sahur</title>
     <link rel="stylesheet" href="..\Css\sobreNos.css">
+    <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <script src="../Js/teste.js"></script>
 </head>
 
