@@ -89,7 +89,7 @@
 
                     <ul class="dropdown">
 
-                        <li><a href="Login.php">Faça login</a></li>
+                        <li><a href="../Login.php">Faça login</a></li>
                         <li><a href="index.php">Página inicial</a></li>
                         <li><a href="Categorias.php">Nossos produtos</a></li>
                         <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
