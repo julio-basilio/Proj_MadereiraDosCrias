@@ -136,11 +136,10 @@ session_start();
 
     <!-- Título e Introdução -->
     <section class="hero-portas">
-        <h1>Portas e Janelas de Madeira</h1>
+        <h1>Ferragens</h1>
         <p>
-            Beleza, resistência e acabamento impecável para sua casa ou empresa.
-            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
-            garantindo qualidade e durabilidade para o seu projeto.
+            Encontre a linha completa de ferragens e acessórios indispensáveis para dar vida, movimento e segurança aos seus projetos em madeira.
+            Selecionamos produtos que unem alta resistência mecânica, durabilidade contra corrosão e designs modernos.
         </p>
     </section>
 

@@ -136,11 +136,10 @@ session_start();
 
     <!-- Título e Introdução -->
     <section class="hero-portas">
-        <h1>Portas e Janelas de Madeira</h1>
+        <h1>Madeiras Finas</h1>
         <p>
-            Beleza, resistência e acabamento impecável para sua casa ou empresa.
-            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
-            garantindo qualidade e durabilidade para o seu projeto.
+            Nossa seleção de madeiras finas representa o ápice da sofisticação, durabilidade e exclusividade para a arquitetura e o design de interiores. 
+            Trabalhamos exclusivamente com espécies nobres, caracterizadas por veios únicos, texturas inconfundíveis e uma estabilidade estrutural superior.
         </p>
     </section>
 

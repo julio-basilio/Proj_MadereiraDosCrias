@@ -136,11 +136,11 @@ session_start();
 
     <!-- Título e Introdução -->
     <section class="hero-portas">
-        <h1>Portas e Janelas de Madeira</h1>
+        <h1>MDF</h1>
         <p>
-            Beleza, resistência e acabamento impecável para sua casa ou empresa.
-            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
-            garantindo qualidade e durabilidade para o seu projeto.
+            O MDF (Medium Density Fiberboard) é um painel de fibra de madeira de média densidade.
+            Graças à sua superfície lisa, uniforme e sem nós, é o material preferido para móveis planejados. 
+            Ele garante um acabamento impecável, permitindo cortes precisos, designs arredondados e encaixes perfeitos.
         </p>
     </section>
 

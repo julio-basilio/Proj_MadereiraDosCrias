@@ -136,11 +136,10 @@ session_start();
 
     <!-- Título e Introdução -->
     <section class="hero-portas">
-        <h1>Portas e Janelas de Madeira</h1>
+        <h1>Madeiras Brutas</h1>
         <p>
-            Beleza, resistência e acabamento impecável para sua casa ou empresa.
-            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
-            garantindo qualidade e durabilidade para o seu projeto.
+            Nossa linha de madeira bruta oferece a máxima solidez e versatilidade que a sua obra ou projeto exige. 
+            Comercializada em seu estado natural de serragem, esta matéria-prima destaca-se pela alta densidade, resistência estrutural mecânica e excelente custo-benefício.
         </p>
     </section>
 

@@ -136,11 +136,10 @@ session_start();
 
     <!-- Título e Introdução -->
     <section class="hero-portas">
-        <h1>Portas e Janelas de Madeira</h1>
+        <h1>Ferramentas</h1>
         <p>
-            Beleza, resistência e acabamento impecável para sua casa ou empresa.
-            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
-            garantindo qualidade e durabilidade para o seu projeto.
+            Encontre a linha completa de ferramentas de alta qualidade para profissionais e amadores.
+            Selecionamos produtos que unem performance, durabilidade e design ergonômico.
         </p>
     </section>
 
