@@ -82,3 +82,10 @@ document.addEventListener('keydown', (tecla) => {
     historicoTeclas = '';
   }
 });
+
+function sair(){
+    localStorage.setItem('Logado', 'false');
+    localStorage.removeItem('nomeUsuario');
+    localStorage.removeItem('urlImagem67');
+    window.location.href = "/index.html";
+}

@@ -41,5 +41,5 @@ echo json_encode([
     "Image" => $urlImage,
     "nomeUsuarioLocal" => $nome,
     "status" => "sucesso",
-    "url" => "index.html"
+    "url" => "./Pages/index.php"
 ]);
