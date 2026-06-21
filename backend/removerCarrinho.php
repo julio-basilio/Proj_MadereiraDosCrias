@@ -20,6 +20,6 @@ if(isset($_SESSION["carrinho"]))
     }
 }
 
-header("Location: carrinho.php");
+header("Location: ../pages/carrinho.php");
 
 exit;

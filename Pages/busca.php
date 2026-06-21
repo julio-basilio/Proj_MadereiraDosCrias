@@ -1,6 +1,33 @@
 <?php
+
 session_start();
+
+$json = file_get_contents("../db/banco.json");
+
+$dados = json_decode($json, true);
+
+$produtos = $dados["produtos"];
+
+$busca = $_GET["q"] ?? "";
+
+$resultados = [];
+
+foreach($produtos as $produto)
+{
+    if(
+    stripos($produto["nome"], $busca) !== false
+    ||
+    stripos($produto["Descricao"], $busca) !== false
+    ||
+    stripos($produto["Categoria"], $busca) !== false
+)
+    {
+        $resultados[] = $produto;
+    }
+}
+
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,7 +42,7 @@ session_start();
     <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Css/portasJanelas.css">
+    <link rel="stylesheet" href="../Css/busca.css">
     <link rel="stylesheet" href="../Css/dropdown.css">
 </head>
 <body>
@@ -42,6 +69,15 @@ session_start();
            
 
             <nav>
+                <dialog id="meuPopup">
+            <div class="popup-box">
+                <h2>Faça seu Login</h2>
+                <p>Para continuar navegando, você precisa estar logado.</p>
+                <a href="../login.php"><button >Criar conta</button></a>
+                <a href="../cadastro.php"><button>Entrar</button></a>
+                <button id="fecharPopup">Agora não</button>
+            </div>
+        </dialog>
 
                 <div class="logo">
 
@@ -53,6 +89,7 @@ session_start();
                     </h1>
                 </div>
                 
+
                <form action="busca.php" method="GET" class="search-box">
                    <input type="text" name="q" placeholder="O que você procura?" required>
 
@@ -60,6 +97,7 @@ session_start();
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                 </form>
+
                
                 <div class="nav-icons">
 
@@ -119,7 +157,7 @@ session_start();
                 <li><a href="ferragens.php">Ferragens</a></li>
                 <li><a href="ferramentas.php">Ferramentas</a></li>
 
-                <li class="opcao">
+                 <li class="opcao">
                     <a href="">Páginas</a>
 
                     <ul class="dropdown">
@@ -148,113 +186,59 @@ session_start();
 
         </header>
 
-        <!-- ================= (MAIN) ================= -->
-<main>
 
+        <main>
+                    
+            <h1 class="title-resultados">
+                Resultados para:
+                "<?=htmlspecialchars($busca)?>"
+            </h1>
 
-         <?php
+            <div class="produtos-container">
 
-        $json = file_get_contents("../db/banco.json");
+                <?php foreach($resultados as $produto): ?>
 
-        $dados = json_decode($json, true);
+                    <div class="produto-card">
 
-        $produtos = $dados["produtos"];
+                        <img src="<?=$produto["UrlImage"]?>">
 
-        ?>
-
-
-
-    <!-- Título e Introdução -->
-    <section class="hero-portas">
-        <h1>Madeiras Brutas</h1>
-        <p>
-            Nossa linha de madeira bruta oferece a máxima solidez e versatilidade que a sua obra ou projeto exige. 
-            Comercializada em seu estado natural de serragem, esta matéria-prima destaca-se pela alta densidade, resistência estrutural mecânica e excelente custo-benefício.
-        </p>
-    </section>
-
-    <!-- Categoria e Produtos -->
-    <section class="categoria-destaque">
-        <h2>Nossos Produtos em Destaque:</h2>
-
-    <div class="produtos-container">
-
-
-                <?php foreach($produtos as $produto): ?>
-
-                <?php if($produto["Categoria"] == "Madeiras Brutas"): ?>
-
-
-                <div class="produto-card">
-                    <img src="<?=$produto["UrlImage"]?>" alt="Porta Cedro">
-
-                    <div class="card-content">
+                        <div class="card-content">
 
                             <h3><?=$produto["nome"]?></h3>
+
                             <p><?=$produto["Descricao"]?></p>
-                            <span class="preco">R$ <?=$produto["preco"]?></span>
-                            
-                        <div class="dimensoes">
-                            <span class="tag-medida"><?=$produto["Largura"]?></span>
-                            <span class="tag-medida"><?=$produto["Comprimento"]?></span>
+
+                            <span class="preco">
+                                R$ <?=$produto["preco"]?>
+                            </span>
+
+                            <a
+                                href="produto.php?id=<?=$produto["id"]?>"
+                                class="btn-detalhes"
+                            >
+                                Ver Produto
+                            </a>
+
                         </div>
 
-
-                            <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
                     </div>
-                </div>
-
-
-                <?php endif; ?>
 
                 <?php endforeach; ?>
 
-    </div>
-
-    </section>
-
-    <!-- Diferenciais -->
-    <section class="sobre-portas">
-        <h2>Por que escolher nossos produtos?</h2>
-        <div class="beneficios-grid">
-            <div class="beneficio-item">
-                <i class="fa-solid fa-tree"></i>
-                <h4>Madeiras Nobres</h4>
-                <p>Matéria-prima certificada</p>
             </div>
-            <div class="beneficio-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h4>Alta Resistência</h4>
-                <p>Proteção contra o tempo</p>
-            </div>
-            <div class="beneficio-item">
-                <i class="fa-solid fa-ruler-combined"></i>
-                <h4>Sob Medida</h4>
-                <p>Diversos modelos e tamanhos</p>
-            </div>
-            <div class="beneficio-item">
-                <i class="fa-solid fa-truck"></i>
-                <h4>Frete Nacional</h4>
-                <p>Entregamos em todo o Brasil</p>
-            </div>
-        </div>
-    </section>
 
-    <!-- Orçamento -->
-    <section class="orçamento">
-        <div class="orcamento-box">
-            <h2>Solicite um Orçamento</h2>
-            <p>Nossa equipe está pronta para ajudar você a escolher a porta ou janela ideal para seu projeto.</p>
-            <a href="contato.php" class="btn-orcamento">
-                <i class="fa-brands fa-whatsapp"></i> Falar com Consultor
-            </a>
-        </div>
-    </section>
+            <?php if(count($resultados) == 0): ?>
 
-</main>
+                <h2>
+                    Nenhum produto encontrado.
+                </h2>
 
-        <!-- ================= FOOTER ================= -->
-                  <footer class="footer">
+            <?php endif; ?>
+
+
+        </main>
+
+                 <footer class="footer">
 
             <section class="footer-top">
                 <img src="../Img/sahurFooter.png" alt="">
@@ -305,12 +289,9 @@ session_start();
 
     </div>
     
-    <!-- ================= JAVASCRIPT ================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <script src="../Js/script.js"></script>
-
-    <script src="Js/index.js"></script>
-
+    <script src="../Js/index.js"></script>
 </body>
 </html>
+
+

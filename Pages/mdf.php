@@ -53,10 +53,14 @@ session_start();
                     </h1>
                 </div>
                 
-                <div class="search-box">
-                    <input type="text" placeholder=" O que você procura?">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
+
+                <form action="busca.php" method="GET" class="search-box">
+                   <input type="text" name="q" placeholder="O que você procura?" required>
+
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
                
                 <div class="nav-icons">
 
