@@ -22,6 +22,15 @@
             <h2>FRETE GRATIS PARA TODO BRASIL!</h2>
 
             <nav>
+                <dialog id="meuPopup">
+            <div class="popup-box">
+                <h2>Faça seu Login</h2>
+                <p>Para continuar navegando, você precisa estar logado.</p>
+                <a href="login.php"><button >Criar conta</button></a>
+                <a href="cadastro.php"><button>Entrar</button></a>
+                <button id="fecharPopup">Agora não</button>
+            </div>
+        </dialog>
 
                 <div class="logo">
 
@@ -229,6 +238,6 @@
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="Js/script.js"></script>
+    <script src="Js/index.js"></script>
 </body>
 </html>
