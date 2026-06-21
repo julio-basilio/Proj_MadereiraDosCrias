@@ -83,6 +83,29 @@
             padding: 10px;
         }
 
+
+          .header-top{
+        background-color: #222;
+        color: white;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding: 10px 30px;
+        }
+
+        .header-top a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .frete{
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+            
+
         .links-categorias{
             font-size: 20px;
             background-color: #3F6B34;

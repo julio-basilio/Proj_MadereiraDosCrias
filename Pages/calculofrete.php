@@ -12,10 +12,9 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
     
-    <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Css/portasJanelas.css">
+    <link rel="stylesheet" href="../Css/entrega.css">
 </head>
 <body>
 
@@ -118,118 +117,107 @@ session_start();
 
         </header>
 
-        <!-- ================= (MAIN) ================= -->
-<main>
+        <main>
 
+        <h1 class="title-frete" >Entrega rápida, preço justo, só na Madeireira Sahur</h1>
+              
+            <div class="container-entrega"> 
 
-         <?php
+                <div class="img-sahur" >
+                     <img src="../Img/entrega sahur caminhao.png" alt=""> <br> <br>
+                </div> 
+    
+                <div class="card">
 
-        $json = file_get_contents("../db/banco.json");
+                    <div class="hero">
 
-        $dados = json_decode($json, true);
+                        <h1>Consultar Frete</h1>
 
-        $produtos = $dados["produtos"];
+                        <p>Verifique a disponibilidade de entrega para sua região.</p>
 
-        ?>
+                    </div>
 
+                    <div class="consulta">
 
+                        <label>Digite seu CEP</label>
 
-    <!-- Título e Introdução -->
-    <section class="hero-portas">
-        <h1>Portas e Janelas de Madeira</h1>
-        <p>
-            Beleza, resistência e acabamento impecável para sua casa ou empresa.
-            Trabalhamos com portas e janelas fabricadas com madeiras selecionadas,
-            garantindo qualidade e durabilidade para o seu projeto.
-        </p>
-    </section>
+                        <div class="busca">
 
-    <!-- Categoria e Produtos -->
-    <section class="categoria-destaque">
-        <h2>Nossos Produtos em Destaque:</h2>
+                            <input
+                                type="text"
+                                id="cep"
+                                placeholder="00000-000"
+                                maxlength="9"
+                            >
 
-    <div class="produtos-container">
+                            <button id="btnBuscar">
+                                Consultar
+                            </button>
 
-
-                 <?php foreach($produtos as $produto): ?>
-
-                <?php if($produto["Categoria"] == "MDF"): ?>
-
-
-                <div class="produto-card">
-                    <img src="<?=$produto["UrlImage"]?>" alt="Porta Cedro">
-
-                    <div class="card-content">
-
-                            <h3><?=$produto["nome"]?></h3>
-                            <p><?=$produto["Descricao"]?></p>
-                            <span class="preco">R$ <?=$produto["preco"]?></span>
-                            
-                        <div class="dimensoes">
-                            <span class="tag-medida"><?=$produto["Largura"]?></span>
-                            <span class="tag-medida"><?=$produto["Comprimento"]?></span>
                         </div>
 
+                        <span id="erro"></span>
 
-                            <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
                     </div>
+
+                    <div id="resultado" class="resultado">
+
+                        <h2>Endereço Encontrado</h2>
+
+                        <div class="campo">
+                            <label>Rua</label>
+                            <input type="text" id="logradouro" readonly>
+                        </div>
+
+                        <div class="campo">
+                            <label>Bairro</label>
+                            <input type="text" id="bairro" readonly>
+                        </div>
+
+                        <div class="linha">
+
+                            <div class="campo">
+                                <label>Cidade</label>
+                                <input type="text" id="cidade" readonly>
+                            </div>
+
+                            <div class="campo uf">
+                                <label>UF</label>
+                                <input type="text" id="uf" readonly>
+                            </div>
+
+                        </div>
+
+                        <div class="info-box sucesso">
+
+                            <h3>🚚 Frete</h3>
+
+                            <p>
+                                Frete Grátis para todo o Brasil.
+                            </p>
+
+                        </div>
+
+                        <div class="info-box prazo">
+
+                            <h3>📦 Prazo Estimado</h3>
+
+                            <p>
+                                Entre 5 e 12 dias úteis.
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-
-                <?php endif; ?>
-
-                <?php endforeach; ?>
-
-    </div>
-
-    </section>
-
-    <!-- Diferenciais -->
-    <section class="sobre-portas">
-        <h2>Por que escolher nossos produtos?</h2>
-        <div class="beneficios-grid">
-            <div class="beneficio-item">
-                <i class="fa-solid fa-tree"></i>
-                <h4>Madeiras Nobres</h4>
-                <p>Matéria-prima certificada</p>
             </div>
-            <div class="beneficio-item">
-                <i class="fa-solid fa-shield-halved"></i>
-                <h4>Alta Resistência</h4>
-                <p>Proteção contra o tempo</p>
-            </div>
-            <div class="beneficio-item">
-                <i class="fa-solid fa-ruler-combined"></i>
-                <h4>Sob Medida</h4>
-                <p>Diversos modelos e tamanhos</p>
-            </div>
-            <div class="beneficio-item">
-                <i class="fa-solid fa-truck"></i>
-                <h4>Frete Nacional</h4>
-                <p>Entregamos em todo o Brasil</p>
-            </div>
-        </div>
-    </section>
+        </main>
 
-    <!-- Orçamento -->
-    <section class="orçamento">
-        <div class="orcamento-box">
-            <h2>Solicite um Orçamento</h2>
-            <p>Nossa equipe está pronta para ajudar você a escolher a porta ou janela ideal para seu projeto.</p>
-            <a href="contato.php" class="btn-orcamento">
-                <i class="fa-brands fa-whatsapp"></i> Falar com Consultor
-            </a>
-        </div>
-    </section>
-
-</main>
-
-        <!-- ================= FOOTER ================= -->
         <footer class="footer">
-
             <section class="footer-top">
-                <img src="../Img/sahurFooter.png" alt="Footer Logo">
-                
+                <img src="../Img/sahurFooter.png"  alt="Footer Logo">
                 <div class="social-area">
                     <h3>Acompanhe a Madeireira Sahur</h3>
                     <div class="social-links">
@@ -241,23 +229,25 @@ session_start();
                 </div>
             </section>
 
-           <section class="footer-content">
+            <section class="footer-content">
                 <div class="footer-column">
                     <h4>Navegação</h4>
-                    <a href="index.php">Início</a>
-                    <a href="categorias.php">Categorias</a>
-                    <a href="contato.php">Contato</a>
+                    <a href="#">Início</a>
+                    <a href="#">Produtos</a>
+                    <a href="#">Categorias</a>
+                    <a href="#">Contato</a>
                 </div>
                 <div class="footer-column">
                     <h4>Categorias</h4>
-                    <a href="madeiras_brutas.php">Madeiras Brutas</a>
-                    <a href="madeiras-finas.php">Madeiras Finas</a>
-                    <a href="mdf.php">MDF</a>
+                    <a href="#">Madeiras Brutas</a>
+                    <a href="#">Madeiras Finas</a>
+                    <a href="#">MDF</a>
+                    <a href="#">Compensados</a>
                 </div>
                 <div class="footer-column">
                     <h4>Projeto Acadêmico</h4>
                     <p>Este site é fictício e foi desenvolvido apenas para fins de estudo e portfólio.</p>
-                    <a href="https://github.com/julio-basilio/Proj_MadereiraDosCrias" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
+                    <a href="https://github.com/seuusuario/seurepositorio" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
                 </div>
             </section>
 
@@ -265,17 +255,11 @@ session_start();
                 <p>© 2026 Madeireira Sahur • Loja fictícia</p>
                 <p>Desenvolvido por David, Julio, Lucas, Pedro</p>
             </section>
-
         </footer>
 
     </div>
     
-    <!-- ================= JAVASCRIPT ================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-    <script src="../Js/script.js"></script>
-=======
-    <script src="Js/index.js"></script>
->>>>>>> 198cca96a4072735e8f01fa8ee5fcb17a094e3c2
+    <script src="../Js/entrega.js"></script>
 </body>
 </html>

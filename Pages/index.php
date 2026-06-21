@@ -1,9 +1,19 @@
+<?php
+session_start();
+
+$json = file_get_contents("../db/banco.json");
+
+$dados = json_decode($json, true);
+
+$produtos = $dados["produtos"];
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madeireira Nobre Prime - Excelência em Madeiras Nobres</title>
+    <title>Madeireira Sahur</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +30,22 @@
     
         <header id="header">
 
-            <h2>FRETE GRATIS PARA TODO BRASIL!</h2>
+            <div class="header-top">
+
+                <a href="contato.php" class="left-link">
+                    WhatsApp: (99) 9 9999-9999
+                </a>
+
+                <span class="frete">
+                    FRETE GRÁTIS PARA TODO BRASIL!
+                </span>
+
+                <a href="contato.php" class="right-link">
+                    Entrar em contato
+                </a>
+
+            </div>
+           
 
             <nav>
                 <dialog id="meuPopup">
@@ -59,7 +84,7 @@
                         </button>
                     </a>
 
-                    <a href="#">
+                    <a href="calculofrete.php">
                         <button class="icon-btn" id="deliveryBtn" title="Entrega" style="position: relative;">
                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
                                 <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"/>
@@ -74,7 +99,19 @@
                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
                             </svg>
                             <span>Carrinho</span>
-                            <span class="cart-badge">0</span>
+                            <span class="cart-badge">
+                              <?php
+
+                                if(isset($_SESSION['carrinho']))
+                                {
+                                    echo count($_SESSION['carrinho']);
+                                }
+                                else
+                                {
+                                    echo 0;
+                                }
+                                ?>
+                            </span>
                         </button>
                     </a>
 
@@ -111,8 +148,8 @@
                             <a href="Categorias.php">
                                 <button class="btn btn-primary">Ver Catálogo</button>
                             </a>
-                            <a href="">
-                                 <button class="btn btn-secondary">Solicitar Orçamento</button>
+                            <a href="contato.php">
+                                 <button class="btn btn-secondary">Entrar em contato</button>
                             </a>
                            
                         </div>
@@ -175,6 +212,60 @@
 
             </section>
 
+            <section>
+
+                <div class="maps">
+                    <h1>Nossa localização</h1>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.44772304389!2d-46.54967112378442!3d-23.695700466543133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4230e86e2165%3A0xa945f637af54fea3!2sEscola%20T%C3%A9cnica%20Estadual%20Lauro%20Gomes!5e0!3m2!1spt-BR!2sbr!4v1781987661906!5m2!1spt-BR!2sbr" width="700" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </section>
+
+            <section class="produtos">
+
+                <h1 class="produtos-destaque-title">Produtos em destaque</h1>
+
+                <div class="produtos-container">
+
+
+                    <?php 
+                    $produtosDestaque = [1, 6, 12, 29];
+                    
+                    foreach($produtos as $produto):
+
+                    if(in_array($produto["id"], $produtosDestaque)): ?>
+
+
+                    <div class="produto-card">
+                        <img src="<?=$produto["UrlImage"]?>" alt="Porta Cedro">
+
+                        <div class="card-content">
+
+                                <h3><?=$produto["nome"]?></h3>
+                                <p><?=$produto["Descricao"]?></p>
+                                <span class="preco">R$ <?=$produto["preco"]?></span>
+                                
+                            <div class="dimensoes">
+                                <span class="tag-medida"><?=$produto["Largura"]?></span>
+                                <span class="tag-medida"><?=$produto["Comprimento"]?></span>
+                            </div>
+
+                                <a href="produto.php?id=<?=$produto['id']?>" class="btn-detalhes" >Ver Produto</a>
+                        </div>
+                    </div>
+
+
+                    <?php endif; ?>
+
+                    <?php endforeach; ?>
+
+                </div>
+                
+
+            </section>
+
+
             <section class="sobre">
 
                 <div class="img-sobre">
@@ -211,22 +302,20 @@
             <section class="footer-content">
                 <div class="footer-column">
                     <h4>Navegação</h4>
-                    <a href="#">Início</a>
-                    <a href="#">Produtos</a>
-                    <a href="#">Categorias</a>
-                    <a href="#">Contato</a>
+                    <a href="index.php">Início</a>
+                    <a href="categorias.php">Categorias</a>
+                    <a href="contato.php">Contato</a>
                 </div>
                 <div class="footer-column">
                     <h4>Categorias</h4>
-                    <a href="#">Madeiras Brutas</a>
-                    <a href="#">Madeiras Finas</a>
-                    <a href="#">MDF</a>
-                    <a href="#">Compensados</a>
+                    <a href="madeiras_brutas.php">Madeiras Brutas</a>
+                    <a href="madeiras-finas.php">Madeiras Finas</a>
+                    <a href="mdf.php">MDF</a>
                 </div>
                 <div class="footer-column">
                     <h4>Projeto Acadêmico</h4>
                     <p>Este site é fictício e foi desenvolvido apenas para fins de estudo e portfólio.</p>
-                    <a href="https://github.com/seuusuario/seurepositorio" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
+                    <a href="https://github.com/julio-basilio/Proj_MadereiraDosCrias" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
                 </div>
             </section>
 
