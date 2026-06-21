@@ -92,7 +92,7 @@
 
     </div>
 
-    <script src="../lerusuario.js"></script>
+    <script src="../Js/script.js"></script>
 
 
 </body>
