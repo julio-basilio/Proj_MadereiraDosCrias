@@ -356,12 +356,13 @@ textarea {
     border-radius: 8px;
 }
 
-input[type="text"],
-input[type="email"] {
+
+input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    color: #4278d9;
 }
 
 
