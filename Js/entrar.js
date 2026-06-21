@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         try {
-            const enviarDados = await fetch('./Pages/EntrarPGController.php', {
+            const enviarDados = await fetch('./backend/EntrarPGController.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome: nomeUsuario, senha: senhaUsuario })
@@ -62,7 +62,14 @@ document.addEventListener('keydown', (tecla) => {
   }
   if (historicoTeclas === 'admphp') {
     alert('Você não quer isso...');
-    window.location.href = "./Pages/adm.php";
+    window.location.href = "./backend/adm.php";
     historicoTeclas = '';
   }
 });
+
+function sair(){
+    localStorage.setItem('Logado', 'false');
+    localStorage.removeItem('nomeUsuario');
+    localStorage.removeItem('urlImagem67');
+    window.location.href = "/index.html";
+}

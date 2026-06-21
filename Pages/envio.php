@@ -6,7 +6,9 @@
     <title>Madeireira Nobre Prime - Excelência em Madeiras Nobres</title>
     <link rel="stylesheet" href="../Css/molde.css">
     <link rel="stylesheet" href="../Css/envio.css">
-    
+     <link rel="stylesheet" href="../Css/dropdown.css">
+
+     <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -22,7 +24,7 @@
 
             <h2>FRETE GRATIS PARA TODO BRASIL!</h2>
 
-            <nav>
+            <nav id="blocoV">
                 <div class="logo">
                     <img src="../Img/logosahurmadeireira.png" height="120" width="120" alt="">
                     <h1 class="logo-text">
@@ -51,7 +53,7 @@
                         <span>Entrega</span>
                     </button>
 
-                     <div onclick="sair()" id="usuario-container">
+                    <div id="usuario-container">
                         <div id="fotoPerfil"></div>
                         <div id="nomeUsuario"></div>
                     </div>
@@ -68,12 +70,47 @@
             </nav>
 
             <ul class="nav-categorias">
+<<<<<<< HEAD
+                <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                <li><a href="mdf.php">MDF</a></li>
+                <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                <li><a href="ferragens.php">Ferragens</a></li>
+                <li><a href="ferramentas.php">Ferramentas</a></li>
+=======
                 <li><a href="">Madeiras Brutas</a></li>
                 <li><a href="">Madeiras Finas</a></li>
                 <li><a href="">MDF</a></li>
                 <li><a href="">Portas e Janelas</a></li>
                 <li><a href="">Ferragens</a></li>
                 <li><a href="">Ferramentas</a></li>
+                
+                <li class="opcao">
+                    <a href="">Páginas</a>
+
+                    <ul class="dropdown">
+
+                        <li><a href="../Login.php">Faça login</a></li>
+                        <li><a href="index.php">Página inicial</a></li>
+                        <li><a href="Categorias.php">Nossos produtos</a></li>
+                        <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                        <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                        <li><a href="mdr.php">MDR</a></li>
+                        <li><a href="ferramentas.php">Ferramentas</a></li>
+                        <li><a href="ferragens.php">Ferragens</a></li>
+                        <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                        <li><a href="sobrenos.php">Sobre Nós</a></li>
+                        <li><a href="blog.php">Nosso Blog</a></li>
+                        <li><a href="contato.php">Entre em contato</a></li>
+                        <li><a href="adm.php">Login de ADM</a></li>
+                        <li><a href="pagADM.php">Página de ADM</a></li>
+                        <li><a href="Cadastro.php">Faça seu cadastro</a></li>
+                        <li><a href="usuario.php">Controle de usuários</a></li>
+
+                    </ul>
+
+                </li>
+>>>>>>> d04f41d (dropdown na pagina de envio)
             </ul>
 
         </header>
@@ -113,6 +150,9 @@ file_put_contents($bancoDados, $novoJsonTexto);
 
 echo "Mensagem enviada com sucesso!";
 ?>
+<a href="contato.php"><br><br>
+<button>Voltar?</button>
+</a>
 </div>
 
         </main>

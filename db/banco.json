@@ -371,15 +371,6 @@
             "UrlImage": "https:\/\/i.pinimg.com\/736x\/ef\/a0\/a1\/efa0a1aefbec47cb2ddf40b2ef14e5ab.jpg"
         },
         {
-            "id": 4,
-            "nome": "teste123",
-            "email": "cleiton.patricio@etec.sp.gov.br",
-            "senha": "123",
-            "idade": 51,
-            "endereco": "rua da lua 123",
-            "UrlImage": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQVifow9CbhdOfOH_TVl2LP2X_nzGmA3L22sUdtZa8tZO9CTbOzQ9HbQsun&s=10"
-        },
-        {
             "id": 5,
             "nome": "tung tung",
             "email": "tungtung987@gmail.com",

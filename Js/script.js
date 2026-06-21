@@ -15,19 +15,6 @@ document.addEventListener("visibilitychange", async () => {
   }
 });
 
-// Easter Egg de Administrador
-let historicoTeclas = '';
-document.addEventListener('keydown', (tecla) => {
-  historicoTeclas += tecla.key.toLowerCase();
-  if (historicoTeclas.length > 6) { 
-    historicoTeclas = historicoTeclas.slice(-6);
-  }
-  if (historicoTeclas === 'admphp') {
-    alert('Você não quer isso...');
-    window.location.href = "./Pages/adm.php";
-    historicoTeclas = '';
-  }
-});
 
 // Envio do formulário de pedidos
 function EnviarDados() {
@@ -45,7 +32,7 @@ function EnviarDados() {
     };
 
     try {
-      const enviarDados = await fetch('../Pages/API.php', {
+      const enviarDados = await fetch('../backend/API.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dados)
@@ -94,7 +81,7 @@ function login() {
         };
 
         try {
-            const resposta = await fetch('Pages/LoginController.php', {
+            const resposta = await fetch('backend/LoginController.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -155,5 +142,5 @@ function sair(){
     localStorage.setItem('Logado', 'false');
     localStorage.removeItem('nomeUsuario');
     localStorage.removeItem('urlImagem67');
-    window.location.href = "./index.html";
+    window.location.href = "/index.html";
 }
