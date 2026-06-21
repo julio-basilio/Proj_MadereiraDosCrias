@@ -160,44 +160,36 @@ session_start();
              
         </main>
 
-        <footer class="footer">
+                  <footer class="footer">
 
             <section class="footer-top">
-
-                <img src="Img/sahurFooter.png" alt="">
+                <img src="../Img/sahurFooter.png" alt="">
                 
                 <div class="social-area">
-
                     <h3>Acompanhe a Madeireira Sahur</h3>
-
                     <div class="social-links">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F%3Flocale%3Dpt_BR" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
-
             </section>
 
             <section class="footer-content">
-
                 <div class="footer-column">
                     <h4>Navegação</h4>
-
-                    <a href="#">Início</a>
-                    <a href="#">Produtos</a>
-                    <a href="#">Categorias</a>
-                    <a href="#">Contato</a>
+                    <a href="index.php">Início</a>
+                    <a href="mdf.php">Produtos</a>
+                    <a href="Categorias.php">Categorias</a>
+                    <a href="contato.php">Contato</a>
                 </div>
 
                 <div class="footer-column">
                     <h4>Categorias</h4>
-
-                    <a href="#">Madeiras Brutas</a>
-                    <a href="#">Madeiras Finas</a>
-                    <a href="#">MDF</a>
-                    <a href="#">Compensados</a>
+                    <a href="madeiras_brutas.php">Madeiras Brutas</a>
+                    <a href="madeiras-finas.php">Madeiras Finas</a>
+                    <a href="mdf.php">MDF</a>
                 </div>
 
                 <div class="footer-column">
@@ -206,17 +198,13 @@ session_start();
                         Este site é fictício e foi desenvolvido
                         apenas para fins de estudo e portfólio.
                     </p>
-
-                    <a href="https://github.com/seuusuario/seurepositorio" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
+                    <a href="https://github.com/julio-basilio/Proj_MadereiraDosCrias.git" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
                 </div>
-
             </section>
 
             <section class="footer-bottom">
-
                 <p>© 2026 Madeireira Sahur • Loja fictíca</p>
                 <p>Desenvolvido por David, Julio, Lucas, Pedro</p>
-
             </section>
 
         </footer>
