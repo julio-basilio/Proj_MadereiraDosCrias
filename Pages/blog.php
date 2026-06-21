@@ -6,6 +6,7 @@
     <title>Madeireira Nobre Prime - Excelência em Madeiras Nobres</title>
     <link rel="stylesheet" href="../Css/molde.css">
     <link rel="stylesheet" href="../Css/blog.css">
+    <link rel="stylesheet" href="../Css/dropdown.css">
     
     <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,12 +76,40 @@
                 <li><a href="portas-janelas.php">Portas e Janelas</a></li>
                 <li><a href="ferragens.php">Ferragens</a></li>
                 <li><a href="ferramentas.php">Ferramentas</a></li>
+
+            <li class="opcao">
+                    <a href="">Páginas</a>
+
+                    <ul class="dropdown">
+                        <div class="dropAlinhamento">
+                        <li><a href="../Login.php">Faça login</a></li>
+                        <li><a href="../Cadastro.php">Faça seu cadastro</a></li>
+                        <li><a href="index.php">Página inicial</a></li>
+                        <li><a href="Categorias.php">Nossos produtos</a></li>
+                        <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                        <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                        <li><a href="mdf.php">MDF</a></li>
+                        <li><a href="ferramentas.php">Ferramentas</a></li>
+                        <li><a href="ferragens.php">Ferragens</a></li>
+                        <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                        <li><a href="carrinho.php">verifique seu carrinho</a></li>
+                        <li><a href="calculofrete.php">Consulte o frete da sua região</a></li>
+                        <li><a href="sobrenos.php">Sobre Nós</a></li>
+                        <li><a href="contato.php">Entre em contato</a></li>
+                        <li><a href="blog.php">Nosso Blog</a></li>
+                        <li><a href="adm.php">Login de ADM</a></li>
+                        <li><a href="pagADM.php">Página de ADM</a></li>
+                        </div>
+                    </ul>
+
+                </li>
+
             </ul>
 
         </header>
 
         <main>
-    
+    <div class="fonteTexto">
             <h1>Blog da Madereira Sahur</h1>
             <h3>Tudo o que você precisa saber para escolher a madeira certa</h3>
 
@@ -174,7 +203,7 @@
             </h6>
 
             <h6>Ao identificar qualquer um desses sinais, é recomendável buscar tratamento especializado para evitar maiores prejuízos.</h6>
-
+            </div>
             
         </main>
 

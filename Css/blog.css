@@ -3,6 +3,11 @@
 display: grid;
 grid-template-columns: 1fr;
 grid-template-rows: 4fr;
+
+}
+.fonteTexto{
+    font-family: impact;
+    font-size: 70px;
 }
 
 ul{
@@ -25,3 +30,11 @@ main{
     align-items: center;
 
 }
+
+.dropAlinhamento{
+    text-align: left !important;
+    display: block !important;
+    width: 100% !important;
+    padding: 15px !important;
+}
+    

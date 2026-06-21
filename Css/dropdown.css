@@ -23,17 +23,19 @@
 .dropdown {
     display: none;
     position: absolute !important;
-    top: 60px !important;               
+    top: 100% !important;               
     left: auto !important;              
     
   
-    right: -180px !important;           
+    right: -225spx !important;           
     
     background: #3B2618 !important;
     list-style: none !important;
     padding: 12px 0 !important;         
-    width: 260px !important;            
-    z-index: 9999 !important;           
+    width: 260px !important;
+    min-width: max-content !important;            
+    z-index: 9999 !important; 
+    border-radius: 15px;          
 }
 
 .dropdown li {

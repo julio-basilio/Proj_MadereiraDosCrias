@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre - Madereira Sahur</title>
     <link rel="stylesheet" href="..\Css\sobreNos.css">
+     <link rel="stylesheet" href="..\Css\dropdown.css">
     <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <script src="../Js/teste.js"></script>
+    <script src="../Js/dropdown.js"></script>
 </head>
 
 <body>
@@ -20,10 +22,39 @@
 
             <div id="retangulo"></div>
             <div id="outraspaginas">
-                <p id="pg"> <a href="../index.html" class="textHeader">PÁGINA INICIAL</a></p>
-                <p id="produtos"><a href="" class="textHeader">PRODUTOS</a> </p>
-                <p id="contatos"> <a href="" class="textHeader">CONTATO</a></p>
-                <p id="orcamento"><a href="" class="textHeader">ORÇAMENTOS</a> </p>
+                <p id="pg"> <a href="index.php" class="textHeader">PÁGINA INICIAL</a></p>
+                <p id="produtos"><a href="Categorias.php" class="textHeader">PRODUTOS</a> </p>
+                <p id="contatos"> <a href="contato.php" class="textHeader">CONTATO</a></p>
+                <p id="orcamento"><a href="calculofrete.php" class="textHeader">ORÇAMENTOS</a> </p>
+
+ <li class="opcao">
+                    <a href="">PÁGINAS</a>
+
+                    <ul class="dropdown">
+
+                        <li><a href="../Login.php">Faça login</a></li>
+                        <li><a href="../Cadastro.php">Faça seu cadastro</a></li>
+                        <li><a href="index.php">Página inicial</a></li>
+                        <li><a href="Categorias.php">Nossos produtos</a></li>
+                        <li><a href="madeiras_brutas.php">Madeiras Brutas</a></li>
+                        <li><a href="madeiras-finas.php">Madeiras Finas</a></li>
+                        <li><a href="mdf.php">MDF</a></li>
+                        <li><a href="ferramentas.php">Ferramentas</a></li>
+                        <li><a href="ferragens.php">Ferragens</a></li>
+                        <li><a href="portas-janelas.php">Portas e Janelas</a></li>
+                        <li><a href="carrinho.php">verifique seu carrinho</a></li>
+                        <li><a href="calculofrete.php">Consulte o frete da sua região</a></li>
+                        <li><a href="sobrenos.php">Sobre Nós</a></li>
+                        <li><a href="contato.php">Entre em contato</a></li>
+                        <li><a href="blog.php">Nosso Blog</a></li>
+                        <li><a href="adm.php">Login de ADM</a></li>
+                        <li><a href="pagADM.php">Página de ADM</a></li>
+
+                    </ul>
+
+                </li>
+
+
             </div>
             <div onclick="sair()" id="usuario-container">
                         <div id="fotoPerfil"></div>
@@ -92,9 +123,6 @@
         </footer>
 
     </div>
-
-    <script src="../Js/script.js"></script>
-
 
 </body>
 
