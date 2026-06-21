@@ -20,6 +20,7 @@
             background-color: var(--color-bg);
             line-height: 1.6;
         }
+        
 
         /* ==================== HEADER & NAVBAR ==================== */
 
@@ -265,6 +266,45 @@
             color: var(--color-accent);
         }   
 
+
+#usuario-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    padding: 6px 16px;
+    background-color: #eee0ce; /* Cor idêntica ao fundo do seu footer/detalhes */
+    border-radius: 20px;
+    height: 45px; /* Altura controlada para alinhar com os outros ícones */
+    margin: 0 10px;
+}
+
+
+#fotoPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fotoPerfil img {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 2px solid #3B2618; /* Borda escura para dar contraste */
+}
+
+/* Ajuste do texto do nome do usuário */
+#nomeUsuario h3, #nomeUsuario span {
+    font-size: 13px !important;
+    color: #3B2618 !important; /* Cor escura para ler bem no fundo claro */
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+}
 
        /* vvvvvv  = Área do main =   vvvvv */
 
