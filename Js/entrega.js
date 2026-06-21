@@ -76,3 +76,19 @@ async function buscarCEP(){
     }
 
 }
+
+const nomeTela = localStorage.getItem('nomeUsuario');
+const fotoperfil = localStorage.getItem('urlImagem67');
+
+const divNome = document.getElementById('nomeUsuario');
+const divPerfil = document.getElementById('fotoPerfil');
+
+if (divNome && nomeTela) {
+    divNome.innerHTML = `<span>${nomeTela.toUpperCase()}</span>`;
+}
+
+if (divPerfil && fotoperfil) {
+    divPerfil.innerHTML = `<img src="${fotoperfil}" alt="Foto de Perfil" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" />`;
+}
+
+console.log("foto perfil: " + fotoperfil);
