@@ -455,7 +455,7 @@
         }
 
         .text-card1 h1 {
-            width: 800px;
+            width: 100%;
             color: white;
             font-size: 4rem;
             letter-spacing: -2px;
@@ -463,7 +463,7 @@
         }
         .text-card1 .subtitle {
             color: white;
-            width: 400px;
+            width: 100%;
         }
 
         .card2{
@@ -856,77 +856,174 @@
 }
 
         /* ==================== RESPONSIVE ==================== */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
+        /* ==================== TABLET ==================== */
 
-            .logo {
-                font-size: 1.3rem;
-            }
+@media (max-width: 1024px){
 
-            .nav-menu {
-                gap: 1.5rem;
-                font-size: 0.85rem;
-            }
+    nav{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+        height: auto;
+    }
 
-            .nav-icons {
-                gap: 1rem;
-            }
+    .search-box{
+        width: 100%;
+        max-width: 500px;
+    }
 
-            .icon-btn {
-                width: 36px;
-                height: 36px;
-            }
+    .logo{
+        justify-content: center;
+    }
 
-            .hero {
-                margin-top: 50px;
-                height: auto;
-                min-height: 70vh;
-                padding: 3rem 0;
-            }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
+    .card1,
+    .card2{
+        width: 100%;
+    }
 
-            .btn {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
+    .sobre{
+        flex-direction: column;
+        text-align: center;
+    }
 
-        @media (max-width: 600px) {
-            .nav-menu {
-                display: none;
-            }
+    .img-sobre img{
+        width: 100%;
+        height: auto;
+    }
 
-            .logo {
-                font-size: 1.1rem;
-            }
+    .maps iframe{
+        width: 100%;
+        height: 450px;
+    }
 
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1rem;
-                margin-bottom: 2rem;
-            }
-
-            .btn {
-                padding: 0.85rem 2rem;
-                font-size: 0.9rem;
-            }
-        }
+}
 
 
+/* ==================== CELULAR ==================== */
 
-        /* ==================== UTILITY ==================== */
-      
+@media (max-width:768px){
 
-        /* SVG Icons Styling */
-        svg {
-            display: block;
-        }
+    nav{
+        flex-direction:column;
+        margin:0;
+        padding:15px;
+        height:auto;
+    }
+
+    .logo{
+        flex-direction:column;
+        text-align:center;
+        margin:0;
+    }
+     .logo img{
+        width: 80px;
+        height: auto;
+    }
+    .logo-text,
+    .logo-span{
+        font-size: 1.5rem;
+    }
+
+
+
+    .search-box{
+        width:100%;
+        max-width:400px;
+        margin:15px 0;
+    }
+
+    .nav-icons{
+        flex-wrap:wrap;
+        justify-content:center;
+        margin:0;
+    }
+
+     .nav-categorias{
+        display: none;
+    }
+
+    .cards{
+        flex-direction:column;
+    }
+
+    .card1,
+    .card2{
+        width:100%;
+        height:auto;
+        min-height:350px;
+    }
+
+    .text-card1{
+        margin:20px;
+        text-align:center;
+    }
+
+    .text-card1 h1{
+        width:100%;
+        font-size:2rem;
+    }
+
+    .accent{
+        width:100%;
+        font-size: 2rem;
+    }
+
+    .subtitle{
+        width:100% !important;
+        font-size: 1rem;
+    }
+    .search-box{
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .sobre{
+        flex-direction:column;
+        margin:15px;
+    }
+
+    .img-sobre img{
+        width:100%;
+        height:auto;
+    }
+
+    .qualidades{
+        flex-direction:column;
+    }
+
+    .block,
+    .last-block{
+        border:none;
+        width:100%;
+    }
+
+    .texto-qualidades{
+        margin:0;
+        text-align:center;
+    }
+
+    .maps iframe{
+        width:100%;
+        height:300px;
+    }
+
+    .footer-top{
+        flex-direction:column;
+    }
+
+    .footer-top img{
+        width:100%;
+        max-width:350px;
+    }
+
+    .social-area h3{
+        font-size:2rem;
+    }
+
+}
