@@ -117,7 +117,16 @@
         </label><br><br>
         
         <input id="input2" type="submit" value="Entrar">
+
+        <div class="entrarDiv">
+            <label  id="pgEntrar" for="entrar">Não Possui Conta?</label>
+            <a id="entrar" href="login.php">Cadastrar</a>
+        </div>
+
     </form>
+
+    
+
 </main>
 
                   <footer class="footer">

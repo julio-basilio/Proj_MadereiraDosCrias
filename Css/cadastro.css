@@ -321,6 +321,30 @@
             border-color: #0066cc;
         }
 
+        #entrar{
+    color: #D73220;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s ease;
+    font-size: 13px;
+}
+
+    #pgEntrar{
+        font-size: 15px;
+    }
+    .entrarDiv{
+        position: relative;
+        top: 10px;
+    }
+
+
+
+
+#entrar:hover{
+    color: #855d08;
+
+}
+
 
               /* ==================== MAIN ==================== */
 

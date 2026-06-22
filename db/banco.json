@@ -396,6 +396,15 @@
             "idade": 19,
             "endereco": "bahia",
             "UrlImage": "https:\/\/i.ytimg.com\/vi\/8AAQzkzfEb4\/maxresdefault.jpg"
+        },
+        {
+            "id": 7,
+            "nome": "manuel",
+            "email": "manuel.123@gmail.com",
+            "senha": "M123",
+            "idade": 99,
+            "endereco": "rua 123",
+            "UrlImage": "https:\/\/img.itch.zone\/aW1nLzQ1MjUyMzEucG5n\/original\/eKVpL8.png"
         }
     ],
     "pedidos": [
