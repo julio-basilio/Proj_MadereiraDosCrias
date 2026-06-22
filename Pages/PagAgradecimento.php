@@ -72,6 +72,108 @@ body{
 }
 
 
+
+
+
+.agradecimento {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    min-height: 70vh;
+}
+
+.agradecimento-box {
+    background: white;
+    padding: 50px;
+    border-radius: 20px;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.agradecimento-box i {
+    font-size: 80px;
+    color: #3F6B34;
+    margin-bottom: 20px;
+}
+
+.agradecimento-box h1 {
+    color: #3B2618;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.agradecimento-box p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.pedido-info {
+    background: #eee0ce;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+
+.mensagem {
+    font-size: 1.1rem;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.btn-continuar {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 30px;
+
+    background: linear-gradient(
+        135deg,
+        #C8A96A,
+        #dd9c3e
+    );
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-family: 'Archivo Black', sans-serif;
+
+    box-shadow: 0 5px 15px rgba(200, 169, 106, 0.35);
+
+    transition: all .3s ease;
+}
+
+.btn-continuar:hover {
+    color: white;
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(200, 169, 106, 0.5);
+
+    background: linear-gradient(
+        135deg,
+        #dd9c3e,
+        #C8A96A
+    );
+}
+
+.btn-continuar:active {
+    transform: translateY(0);
+}
+
+
+
     </style>
 </head>
 <body>
@@ -111,128 +213,132 @@ body{
         </header>
 
         <main>
-           
-         <div class="container">
+            
+            <section class="agradecimento">
 
-        <div class="card">
+                <div class="agradecimento-box">
+                    <i class="fa-solid fa-circle-check"></i>
 
-            <h1>🎉 Compra Finalizada!</h1>
+                    <h1>Compra Realizada com Sucesso!</h1>
 
-            <p>
-            Obrigado pela sua compra.
-            </p>
+                    <p>Obrigado por comprar na <strong>Madeireira Sahur</strong>.
+                    Seu pedido foi recebido e já está sendo processado por nossa equipe.
+                    </p>
 
-            <hr>
-            <h2>Dados do Cliente</h2>
+                    <hr>
+                    <h2>Dados do Cliente</h2>
 
-            <p><strong>Nome:</strong> <?=$pedido["nome"]?></p>
+                    <p><strong>Nome:</strong> <?=$pedido["nome"]?></p>
 
-            <p><strong>Email:</strong> <?=$pedido["email"]?></p>
+                    <p><strong>Email:</strong> <?=$pedido["email"]?></p>
 
-            <p><strong>Telefone:</strong> <?=$pedido["telefone"]?></p>
+                    <p><strong>Telefone:</strong> <?=$pedido["telefone"]?></p>
 
-            <p><strong>Pagamento:</strong> <?=$pedido["pagamento"]?></p>
+                    <p><strong>Pagamento:</strong> <?=$pedido["pagamento"]?></p>
 
-            <hr>
+                    <hr>
 
-            <hr>
+                    <hr>
 
-            <h2>Endereço de Entrega</h2>
+                    <h2>Endereço de Entrega</h2>
 
-            <p>
-            <strong>CEP:</strong>
-            <?=$pedido["cep"]?>
-            </p>
+                    <p>
+                    <strong>CEP:</strong>
+                    <?=$pedido["cep"]?>
+                    </p>
 
-            <p>
-            <strong>Endereço:</strong>
-            <?=$pedido["rua"]?>,
-            <?=$pedido["numero"]?>
-            </p>
+                    <p>
+                    <strong>Endereço:</strong>
+                    <?=$pedido["rua"]?>,
+                    <?=$pedido["numero"]?>
+                    </p>
 
-            <?php if(!empty($pedido["complemento"])) { ?>
+                    <?php if(!empty($pedido["complemento"])) { ?>
 
-            <p>
-            <strong>Complemento:</strong>
-            <?=$pedido["complemento"]?>
-            </p>
+                    <p>
+                    <strong>Complemento:</strong>
+                    <?=$pedido["complemento"]?>
+                    </p>
 
-            <?php } ?>
+                    <?php } ?>
 
-            <p>
-            <strong>Bairro:</strong>
-            <?=$pedido["bairro"]?>
-            </p>
+                    <p>
+                    <strong>Bairro:</strong>
+                    <?=$pedido["bairro"]?>
+                    </p>
 
-            <p>
-            <strong>Cidade:</strong>
-            <?=$pedido["cidade"]?>
-            </p>
+                    <p>
+                    <strong>Cidade:</strong>
+                    <?=$pedido["cidade"]?>
+                    </p>
 
-            <p>
-            <strong>Estado:</strong>
-            <?=$pedido["estado"]?>
-            </p>
+                    <p>
+                    <strong>Estado:</strong>
+                    <?=$pedido["estado"]?>
+                    </p>
 
-            <p>
-            <strong>Frete:</strong>
-            Grátis para todo o Brasil
-            </p>
+                    <p>
+                    <strong>Frete:</strong>
+                    Grátis para todo o Brasil
+                    </p>
 
-            <h2>Produtos Comprados</h2>
+                    <h2>Produtos Comprados</h2>
 
-            <?php
+                    <?php
 
-            foreach($produtos as $produto)
-            {
-                if(in_array($produto["id"], $pedido["produtos"]))
-                {
-            ?>
+                    foreach($produtos as $produto)
+                    {
+                        if(in_array($produto["id"], $pedido["produtos"]))
+                        {
+                    ?>
 
-            <div>
+                    <div>
 
-                <h3><?=$produto["nome"]?></h3>
+                        <h3><?=$produto["nome"]?></h3>
 
-                <p>R$ <?=$produto["preco"]?></p>
+                        <p>R$ <?=$produto["preco"]?></p>
 
-            </div>
+                    </div>
 
-            <?php
+                    <?php
 
-                }
-            }
+                        }
+                    }
 
-            ?>
+                    ?>
 
-            <div class="resumo">
+                    <div class="resumo">
 
-                <h2>Resumo do Pedido</h2>
+                        <h2>Resumo do Pedido</h2>
 
-                <p>
-                    Subtotal:
-                    R$ <?=number_format($total,2,",",".")?>
-                </p>
+                        <p>
+                            Subtotal:
+                            R$ <?=number_format($total,2,",",".")?>
+                        </p>
 
-                <p>
-                    Frete:
-                    R$ 0,00
-                </p>
+                        <p>
+                            Frete:
+                            R$ 0,00
+                        </p>
 
-                <hr>
+                        <hr>
 
-                <h2>
-                    Total:
-                    R$ <?=number_format($total,2,",",".")?>
-                </h2>
+                        <h2>
+                            Total:
+                            R$ <?=number_format($total,2,",",".")?>
+                        </h2>
 
-            </div>
+                    </div>
 
-            <h2>Pedido Nº <?=rand(1000,9999)?></h2>
+                    <h2>Pedido Nº <?=rand(1000,9999)?></h2>
 
-        </div>
+                    <div class="botoes">
+                    <a href="index.php" class="btn-continuar">Continuar Comprando</a>
+                    </div>
 
-    </div>
+                </div>
 
+            </section>
 
 
         <?php
