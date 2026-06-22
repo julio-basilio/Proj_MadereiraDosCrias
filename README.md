@@ -98,7 +98,7 @@ Proj_MadereiraDosCrias/
 ### 1️⃣ Clone o repositório
 
 ```bash
-git clone https://github.com/seu-repositorio.git](https://github.com/julio-basilio/Proj_MadereiraDosCrias
+git clone https://github.com/julio-basilio/Proj_MadereiraDosCrias](https://github.com/julio-basilio/Proj_MadereiraDosCrias
 ```
 
 ### 2️⃣ Coloque o projeto no servidor local
