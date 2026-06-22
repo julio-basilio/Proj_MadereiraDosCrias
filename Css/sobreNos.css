@@ -109,9 +109,48 @@ header > img:last-child /*Carrinho de compras, apenas, pois ela é a imagem filh
   cursor: pointer;
 }
 
+#usuario-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    padding: 6px 16px;
+    background-color: #eee0ce;
+    border-radius: 20px;
+    height: 45px; 
+    margin: 0 10px;
+}
+
+
+#fotoPerfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fotoPerfil img {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 2px solid #3B2618; 
+}
+
+
+#nomeUsuario h3, #nomeUsuario span {
+    font-size: 13px !important;
+    color: #3B2618 !important; 
+    font-family: 'Archivo Black', sans-serif;
+    margin: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap;
+}
+
 /* ── MAIN ── */
 main {
-  background: linear-gradient(90deg, #dd9c3e, #d76d44); /*Fundo com gradiente, conforme a referencia que eu fiz(TTT.png nos arquivos de imagens)*/
+  background: linear-gradient(90deg, #dd9c3e, #d76d44); 
   grid-area: main;
   text-align: center;
 }

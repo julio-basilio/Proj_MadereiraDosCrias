@@ -14,3 +14,13 @@ body {
     word-break: break-word;
     overflow-wrap: break-word;
 }
+
+#voltar{
+    border-radius: 16px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: #eee0ce;
+    color: #3B2618;
+    border: none;
+}
+

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Css/molde.css">
     <link rel="stylesheet" href="../Css/contato.css">
     
+    <link rel="icon" type="image/x-icon" href="../Img/Logo Triple T.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
@@ -145,31 +146,18 @@
             <section class="footer-content">
                 <div class="footer-column">
                     <h4>Navegação</h4>
-<<<<<<< HEAD
-                    <a href="index.php">Início</a>
-                    <a href="mdf.php">Produtos</a>
-                    <a href="Categorias.php">Categorias</a>
-                    <a href="contato.php">Contato</a>
-=======
                     <a href="#">Início</a>
                     <a href="#">Produtos</a>
                     <a href="#">Categorias</a>
                     <a href="#">Contato</a>
->>>>>>> 0f17ec9 (Mudancas)
                 </div>
 
                 <div class="footer-column">
                     <h4>Categorias</h4>
-<<<<<<< HEAD
-                    <a href="madeiras_brutas.php">Madeiras Brutas</a>
-                    <a href="madeiras-finas.php">Madeiras Finas</a>
-                    <a href="mdf.php">MDF</a>
-=======
                     <a href="#">Madeiras Brutas</a>
                     <a href="#">Madeiras Finas</a>
                     <a href="#">MDF</a>
                     <a href="#">Compensados</a>
->>>>>>> 0f17ec9 (Mudancas)
                 </div>
 
                 <div class="footer-column">
@@ -178,11 +166,7 @@
                         Este site é fictício e foi desenvolvido
                         apenas para fins de estudo e portfólio.
                     </p>
-<<<<<<< HEAD
-                    <a href="https://github.com/julio-basilio/Proj_MadereiraDosCrias.git" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
-=======
                     <a href="https://github.com/seuusuario/seurepositorio" target="_blank" class="repo-link">Ver Repositório no GitHub</a>
->>>>>>> 0f17ec9 (Mudancas)
                 </div>
             </section>
 

@@ -387,6 +387,15 @@
             "idade": 89,
             "endereco": "rua six seven",
             "UrlImage": "https:\/\/cdn.dribbble.com\/userupload\/5606077\/file\/original-cdde5f5117af8be3d9e8f883a37f3315.png?resize=752x&vertical=center"
+        },
+        {
+            "id": 6,
+            "nome": "coletivo candiero",
+            "email": "coletivo@gmail.com",
+            "senha": "coletivo",
+            "idade": 19,
+            "endereco": "bahia",
+            "UrlImage": "https:\/\/i.ytimg.com\/vi\/8AAQzkzfEb4\/maxresdefault.jpg"
         }
     ],
     "pedidos": [
@@ -443,34 +452,9 @@
             "mensagem": "tun tun utn tun tung sahur"
         },
         {
-            "nameUsuario": null,
-            "email": null,
-            "mensagem": null
-        },
-        {
-            "nameUsuario": null,
-            "email": null,
-            "mensagem": null
-        },
-        {
-            "nameUsuario": null,
-            "email": null,
-            "mensagem": null
-        },
-        {
-            "nameUsuario": null,
-            "email": null,
-            "mensagem": null
-        },
-        {
-            "nameUsuario": null,
-            "email": null,
-            "mensagem": null
-        },
-        {
-            "nameUsuario": null,
-            "email": null,
-            "mensagem": null
+            "nameUsuario": "Nolan Grayson",
+            "email": "ominiman@gmail.com",
+            "mensagem": "Olá, equipe Madereira Sahur.Escrevo para solicitar o cancelamento e estorno da compra realizada no dia 24\/09\/2001, no valor de R$67,00. Motivo:  Não reconheço essa transação. "
         }
     ]
 }

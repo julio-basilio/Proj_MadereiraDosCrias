@@ -110,7 +110,7 @@
 <?php
 
 $nome = $_POST['nome'];
-$email = $_POST['emailUsuario'];
+$email = $_POST['email'];
 $mensagem = $_POST['mensagem'];
 
 
@@ -141,7 +141,7 @@ file_put_contents($bancoDados, $novoJsonTexto);
 echo "Mensagem enviada com sucesso!";
 ?>
 <a href="contato.php"><br><br>
-<button>Voltar?</button>
+<button id="voltar">Voltar?</button>
 </a>
 </div>
 
