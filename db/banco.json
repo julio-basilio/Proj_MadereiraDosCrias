@@ -405,6 +405,15 @@
             "idade": 99,
             "endereco": "rua 123",
             "UrlImage": "https:\/\/img.itch.zone\/aW1nLzQ1MjUyMzEucG5n\/original\/eKVpL8.png"
+        },
+        {
+            "id": 8,
+            "nome": "zezinho",
+            "email": "zezinho123@gmail.com",
+            "senha": "124",
+            "idade": 25,
+            "endereco": "rua do zezinho 123",
+            "UrlImage": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQg5m1bMzkzIgjknAWx1b7h-snVOkfbEX3oGsJbRTGntItvopz6"
         }
     ],
     "pedidos": [
@@ -464,6 +473,21 @@
             "nameUsuario": "Nolan Grayson",
             "email": "ominiman@gmail.com",
             "mensagem": "Olá, equipe Madereira Sahur.Escrevo para solicitar o cancelamento e estorno da compra realizada no dia 24\/09\/2001, no valor de R$67,00. Motivo:  Não reconheço essa transação. "
+        },
+        {
+            "nameUsuario": "Zezinho",
+            "email": "zezinho123@gmail.com",
+            "mensagem": "Oi"
+        },
+        {
+            "nameUsuario": "Zezinho",
+            "email": "zezinho123@gmail.com",
+            "mensagem": "Entendo a sua posição, mas também é muito importante que haja o reconhecimento do esforço e da qualidade depositados neste produto. A relação de valor precisa ser mútua para funcionar bem."
+        },
+        {
+            "nameUsuario": "",
+            "email": "",
+            "mensagem": "OLA EQUIPE"
         }
     ]
 }

@@ -149,9 +149,9 @@ session_start();
         </header>
         <main >
 
-            <div class="formTamanho">
+            <div class="form">
 
-                <form action="envio.php" method="POST">
+                <form action="envio.php" method="POST" id="form123">
                     <label for="nome">Nome: </label>
                     <input type="text" name ="nome"id="nome"><br>
 
